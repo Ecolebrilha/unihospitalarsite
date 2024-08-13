@@ -38,13 +38,13 @@
           <div class="valores-grid">
             <span>Respeito às relações humanas</span>
             <span>Relacionamento</span>
+            <span>Orientação para o mercado</span>
             <span>Integridade</span>
             <span>Compromisso</span>
             <span>Agilidade</span>
-            <span>Ética</span>
-            <span>Orientação para o mercado</span>
             <span>Objetividade</span>
             <span>Simplicidade</span>
+            <span>Ética</span>
           </div>
         </div>
       </section>
@@ -59,7 +59,7 @@
           <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
         </div>
         <div class="footer-desenvolvedor">
-          <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a></p>
+          <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a> ツ</p>
         </div>
       </div>
     </footer>
@@ -163,6 +163,7 @@ main {
 .about-left,
 .about-right {
   width: 48%;
+  height: 95%;
   text-align: left;
   background-color: #ffffff;
   padding: 20px;
@@ -170,28 +171,27 @@ main {
   border-radius: 10px;
 }
 
-.about-left h2 {
-  font-size: 1.8em;
-  color: #343a40;
+.about-left h2,
+.about-right h2 {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #AE2C2A;
   margin-bottom: 15px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 5px;
 }
 
 .about-left p {
-  font-size: 1.1em;
-  line-height: 1.8em;
+  font-size: 1em;
+  line-height: 1.6em;
   color: #6c757d;
-  margin-bottom: 20px;
-}
-
-.about-right h2 {
-  font-size: 1.6em;
-  color: #495057;
-  margin-bottom: 15px;
+  margin-bottom: 60px;
 }
 
 .about-right img {
   width: 100%;
   height: auto;
+  margin-top: 5px;
   margin-bottom: 20px;
   border-radius: 10px;
   object-fit: cover;
@@ -202,12 +202,14 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   font-size: 1.1em;
+  margin-top: 40px;
   color: #6c757d;
 }
 
 .valores-grid span {
   background-color: #f8f9fa;
   padding: 10px;
+  margin: 10px 0px;
   border-radius: 5px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
