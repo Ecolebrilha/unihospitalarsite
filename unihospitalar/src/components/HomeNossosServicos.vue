@@ -132,48 +132,61 @@ nav a {
 nav a:hover {
     color: #99997C;
 }
-  
-  main {
+
+main {
     display: flex;
     justify-content: center;
     padding: 40px 0;
-  }
-  
-  .about-content {
+}
+
+.about-content {
     display: flex;
     justify-content: space-between;
     width: 80%;
-  }
-  
-  .about-left {
-    width: 45%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-left {
+    width: 50%;
     text-align: left;
-  }
-  
-  .about-left h2 {
-    margin-bottom: 10px;
-  }
-  
-  .about-left p {
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.about-left h2 {
+    font-size: 1.8em;
+    color: #AE2C2A;
+    margin-bottom: 15px;
+}
+
+.about-left p {
     margin-bottom: 20px;
-  }
-  
-  .about-right {
-    width: 45%;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-left span {
+    font-weight: bold;
+    color: #AE2C2A;
+}
+
+.about-right {
+    width: 50%;
     text-align: left;
-  }
-  
-  .about-right img {
+    padding-left: 20px;
+}
+
+.about-right img {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-  }
-  
-  .about-right h2 {
-    margin-bottom: 10px;
-  }
-  
-  footer {
+    border-radius: 10px;
+}
+
+footer {
     background-color: #EBEBEB;
     padding: 40px 0;
 }
@@ -204,4 +217,5 @@ nav a:hover {
 .footer-desenvolvedor a:hover {
     text-decoration: underline;
 }
+
   </style>
