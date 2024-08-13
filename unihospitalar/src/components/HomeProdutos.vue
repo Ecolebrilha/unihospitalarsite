@@ -33,13 +33,12 @@
 
             <h2>MEDICAMENTOS HOSPITALARES</h2>
             <p>São medicamentos utilizados em ambiente hospitalar necessários aos procedimentos médico-cirúrgicos.</p>
-
-            <button>CLIQUE AQUI PARA BAIXAR NOSSA LINHA DE PRODUTOS</button>
             
-          </div>
-  
+          </div>                
         </section>
       </main>
+
+      <a href="https://www.unihospitalar.com.br/site/uni-hospitalar-produtos.pdf"><button class="btn-produtos">CLIQUE AQUI PARA BAIXAR NOSSA LINHA DE PRODUTOS</button></a>
   
       <footer>
             <div class="footer-content">
@@ -50,7 +49,7 @@
                     <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
                 </div>
                 <div class="footer-desenvolvedor">
-                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a></p>
+                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a> ツ</p>
                 </div>
             </div>
         </footer>
@@ -138,46 +137,64 @@ nav a:hover {
     color: #99997C;
 }
   
-  main {
-    display: flex;
-    justify-content: center;
-    padding: 40px 0;
-  }
-  
-  .about-content {
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.about-content {
     display: flex;
     justify-content: space-between;
     width: 80%;
-  }
-  
-  .about-left {
-    width: 45%;
-    text-align: left;
-  }
-  
-  .about-left h2 {
-    margin-bottom: 10px;
-  }
-  
-  .about-left p {
-    margin-bottom: 20px;
-  }
-  
-  .about-right {
-    width: 45%;
-    text-align: left;
-  }
-  
-  .about-right img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .about-right h2 {
-    margin-bottom: 10px;
-  }
-  
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-center {
+    width: 50%;
+    text-align: center;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.about-center h2 {
+    font-size: 1.5em;
+  font-weight: 800;
+  color: #AE2C2A;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 5px;
+}
+
+.about-center p {
+    margin-bottom: 50px;
+    font-size: 1em;
+  line-height: 1.6em;
+  color: #6c757d;
+}
+
+.about-center span {
+    font-weight: bold;
+    color: #AE2C2A;
+}
+
+.btn-produtos {
+  font-weight: 800;
+  font-size: 1.0em;
+  margin-bottom: 80px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  color: #AE2C2A;
+}
+
+.btn-produtos:hover {
+  background-color: #AE2C2A;
+  color: #FFFFFF;
+}
+
   footer {
     background-color: #EBEBEB;
     padding: 40px 0;
