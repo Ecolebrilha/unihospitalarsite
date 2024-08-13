@@ -45,7 +45,7 @@
                     <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
                 </div>
                 <div class="footer-desenvolvedor">
-                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a></p>
+                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a> ツ</p>
                 </div>
             </div>
         </footer>
@@ -157,15 +157,19 @@ main {
 }
 
 .about-left h2 {
-    font-size: 1.8em;
-    color: #AE2C2A;
-    margin-bottom: 15px;
+    font-size: 1.5em;
+  font-weight: 800;
+  color: #AE2C2A;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 5px;
 }
 
 .about-left p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: #333;
+    margin-bottom: 50px;
+    font-size: 1em;
+  line-height: 1.6em;
+  color: #6c757d;
 }
 
 .about-left span {
