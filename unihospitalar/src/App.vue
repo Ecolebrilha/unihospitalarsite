@@ -1,26 +1,13 @@
 <template>
   <div id="app">
-    <HomePrincipal />
-    <HomeSobre />
-    <HomeDiferenciais />
-    <HomeNossosServicos />
-    <HomeProdutos />
-    <HomeParceiros />
-    <HomeContato />
-    
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
-import HomePrincipal from '@/components/HomePrincipal.vue';
-
+<script>  
 export default {
-  name: 'App',
-  components: {
-    HomePrincipal
-    
-  }
-}
+  name: 'App', 
+};
 </script>
 
 <style>

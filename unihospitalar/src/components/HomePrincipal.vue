@@ -8,13 +8,13 @@
             <hr class="linha">
             <nav>
                 <ul>
-                    <li><a href="HomePrincipal.vue">Principal</a></li>
-                    <li><a href="HomeSobre.vue">Uni Hospitalar</a></li>
-                    <li><a href="HomeDiferenciais.vue">Diferenciais</a></li>
-                    <li><a href="HomeNossosServicos.vue">Nossos Serviços</a></li>
-                    <li><a href="HomeProdutos.vue">Linha de Produtos</a></li>
-                    <li><a href="HomeParceiros.vue">Parceiros</a></li>
-                    <li><a href="HomeContato.vue">Fale Conosco</a></li>
+        <li><router-link to="/">Principal</router-link></li>
+        <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
+        <li><router-link to="/diferenciais">Diferenciais</router-link></li>
+        <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
+        <li><router-link to="/produtos">Linha de Produtos</router-link></li>
+        <li><router-link to="/parceiros">Parceiros</router-link></li>
+        <li><router-link to="/contato">Fale Conosco</router-link></li>
                 </ul>
             </nav>
         </header>
