@@ -33,8 +33,10 @@
             <h2>UNIDADE DE NEGÓCIOS</h2>
             <p>Buscando uma melhor prestação de serviço, sempre atendendo e surpreendendo as expectativas da Indústria Farmacêutica e dos nossos clientes finais, estamos abrindo uma nova empresa em Fortaleza.</p>
             
-            <h2>DIFERENCIAIS</h2>
-            <p>Estoque – Garantia de fornecimento. Sempre evitar rupturas no fornecimento; Cultura voltada para o negócio; Logística – Garantia de entrega nos locais que trabalhamos; Equipe – Profissionais preparados e alinhados com a cultura da empresa.</p>
+            <div class="right-dif">
+                <h2>DIFERENCIAIS</h2>
+                <p>Estoque – Garantia de fornecimento. Sempre evitar rupturas no fornecimento;<br> Cultura voltada para o negócio;<br> Logística – Garantia de entrega nos locais que trabalhamos;<br> Equipe – Profissionais preparados e alinhados com a cultura da empresa.</p>
+            </div>
           </div>
         </section>
       </main>
@@ -48,7 +50,7 @@
                     <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
                 </div>
                 <div class="footer-desenvolvedor">
-                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a>ツ</p>
+                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a> ツ</p>
                 </div>
             </div>
         </footer>
@@ -62,7 +64,6 @@ export default {
 </script>
   
 <style scoped>
-
 .about {
     text-align: center;
     margin: 0;
@@ -150,6 +151,10 @@ main {
   gap: 30px;
 }
 
+.right-dif {
+    margin-top: 70px;
+}
+
 .diferenciais-left,
 .diferenciais-right {
   width: 48%;
@@ -163,6 +168,50 @@ main {
 .diferenciais-left h2,
 .diferenciais-right h2 {
   font-size: 1.5em;
+  font-weight: 800;
+  color: #AE2C2A;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 5px;
+}
+
+.diferenciais-left p,
+.diferenciais-right p {
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #6c757d;
+  margin-bottom: 20px;
+}main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.diferenciais-content {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  gap: 30px;
+}
+
+.right-dif {
+    margin-top: 70px;
+}
+
+.diferenciais-left,
+.diferenciais-right {
+  width: 48%;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 25px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.diferenciais-left h2,
+.diferenciais-right h2 {
+  font-size: 1.5em;
+  font-weight: 800;
   color: #AE2C2A;
   margin-bottom: 15px;
   border-bottom: 2px solid #FF8888;
