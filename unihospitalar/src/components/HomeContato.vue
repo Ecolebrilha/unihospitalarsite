@@ -57,7 +57,7 @@
                     <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
                 </div>
                 <div class="footer-desenvolvedor">
-                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a></p>
+                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a> ツ</p>
                 </div>
             </div>
         </footer>
