@@ -9,41 +9,53 @@
           <nav>
               <ul>
                 <li><router-link to="/">Principal</router-link></li>
-        <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
-        <li><router-link to="/diferenciais">Diferenciais</router-link></li>
-        <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
-        <li><router-link to="/produtos">Linha de Produtos</router-link></li>
-        <li><router-link to="/parceiros">Parceiros</router-link></li>
-        <li><router-link to="/contato">Fale Conosco</router-link></li>
+                <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
+                <li><router-link to="/diferenciais">Diferenciais</router-link></li>
+                <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
+                <li><router-link to="/produtos">Linha de Produtos</router-link></li>
+                <li><router-link to="/parceiros">Parceiros</router-link></li>
+                <li><router-link to="/contato">Fale Conosco</router-link></li>
               </ul>
           </nav>
       </header>
   
       <main>
-        <section class="about-content">
-          <div class="about-left">
+        <section class="contact-content">
+          <div class="contact-info-sections">
             <h2>COMERCIAL</h2>
-            <p>+55 81 3472 7224
-                <a href="vendas@unihospitalar.com.br"></a></p>
+            <p>+55 81 3472 7224 <a href="mailto:vendas@unihospitalar.com.br"><br>vendas@unihospitalar.com.br</a></p>
             
             <h2>LICITAÇÃO</h2>
-            <p>+55 81 3472 7215
-                <a href="licitacao@unihospitalar.com.br"></a></p>
+            <p>+55 81 3472 7215 <a href="mailto:licitacao@unihospitalar.com.br"><br>licitacao@unihospitalar.com.br</a></p>
             
             <h2>FINANCEIRO</h2>
-            <p>+55 81 3472 7202
-                <a href="financeiro@unihospitalar.com.br"></a></p>
+            <p>+55 81 3472 7202 <a href="mailto:financeiro@unihospitalar.com.br"><br>financeiro@unihospitalar.com.br</a></p>
           </div>
   
-          <div class="about-right">
+          <div class="contact-form">
             <h2>FALE CONOSCO</h2>
-            <p> <strong>UNI Hospitalar Ltda.</strong>
-                Rua Alagoas, 253
-                Ipsep Recife-PE
-                Fone +55 81 3472 7201
-                CNPJ 07.484.373/0001-24</p>
-                <p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p>
-                <button>Enviar mensagem</button>
+            <p><strong>UNI Hospitalar Ltda.</strong><br>
+               Rua Alagoas, 253<br>
+               Ipsep Recife-PE<br>
+               Fone: +55 81 3472 7201<br>
+               CNPJ: 07.484.373/0001-24</p>
+            <p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p>
+            
+            <form>
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar mensagem</button>
+            </form>
           </div>
         </section>
       </main>
@@ -63,15 +75,8 @@
         </footer>
     </div>
 </template>
-  
-  <script>
-  export default {
-    name: 'HomeContato',
-  };
-  </script>
-  
-  <style scoped>
-  .contato {
+<style scoped>
+.contato {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -144,48 +149,110 @@ nav a {
 nav a:hover {
     color: #99997C;
 }
-  
-  main {
+
+main {
     display: flex;
     justify-content: center;
     padding: 40px 0;
-  }
-  
-  .about-content {
+    background-color: #f8f8f8;
+}
+
+.contact-content {
     display: flex;
     justify-content: space-between;
     width: 80%;
-  }
-  
-  .about-left {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-info-sections {
     width: 45%;
     text-align: left;
-  }
-  
-  .about-left h2 {
-    margin-bottom: 10px;
-  }
-  
-  .about-left p {
+}
+
+.contact-info-sections h2 {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #AE2C2A;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 5px;
+}
+
+.contact-info-sections p {
     margin-bottom: 20px;
-  }
-  
-  .about-right {
+    line-height: 1.6;
+    margin-bottom: 80px;
+}
+
+.contact-info-sections a {
+  color: #f95454;
+}
+
+.contact-form {
     width: 45%;
     text-align: left;
-  }
-  
-  .about-right img {
+}
+
+.contact-form h2 {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #AE2C2A;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 5px;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .about-right h2 {
-    margin-bottom: 10px;
-  }
-  
-  footer {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #AE2C2A;
+    box-shadow: 0 0 8px rgba(174, 44, 42, 0.2);
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #AE2C2A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8e2322;
+}
+
+footer {
     background-color: #EBEBEB;
     padding: 40px 0;
 }
@@ -216,4 +283,4 @@ nav a:hover {
 .footer-desenvolvedor a:hover {
     text-decoration: underline;
 }
-  </style>
+</style>
