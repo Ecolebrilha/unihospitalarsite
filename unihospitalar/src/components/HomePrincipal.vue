@@ -209,6 +209,19 @@
 <script>
 export default {
     name: "HomePrincipal",
+    mounted() {
+        const track = document.querySelector(".parceiros-track");
+        const slides = Array.from(track.children);
+        const totalSlides = slides.length;
+
+        // Duplicar slides para efeito infinito
+        slides.forEach((slide) => {
+            const clone = slide.cloneNode(true);
+            track.appendChild(clone);
+        });
+
+        track.style.width = `${totalSlides * 2 * 100}%`;
+    },
 };
 </script>
 
@@ -486,37 +499,48 @@ nav a:hover {
     font-size: 2.2em;
 }
 
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .parceiros-carousel {
     position: relative;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    animation: slide 100s infinite;
+    animation: slide 60s linear infinite;
 }
 
 .parceiros-track {
     display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
+    width: calc(26 * 100%);
+    animation: moveSlideshow 500s linear infinite;
+}
+
+@keyframes moveSlideshow {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .parceiros-slide {
-    min-width: 3%;
+    min-width: calc(-200% / 26);
     box-sizing: border-box;
     padding: 0 15px;
 }
 
 .parceiros-slide img {
-    width: 200%;
-    max-width: 100px; 
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    width: 70%;
+    height: auto;
 }
 
 footer {
