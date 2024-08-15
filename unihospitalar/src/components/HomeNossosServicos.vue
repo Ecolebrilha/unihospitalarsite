@@ -157,6 +157,7 @@ main {
 }
 
 .about-left h2 {
+    text-align: center;
     font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
@@ -170,6 +171,7 @@ main {
     font-size: 1em;
   line-height: 1.6em;
   color: #6c757d;
+  text-align: justify;
 }
 
 .about-left span {
@@ -211,6 +213,8 @@ footer {
 .footer-mensagem {
     text-align: center;
     font-size: 0.9em;
+    color: rgb(97, 97, 97);
+    font-weight: 700;
 }
 
 .footer-desenvolvedor a {
