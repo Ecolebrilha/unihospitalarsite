@@ -161,7 +161,7 @@ main {
 }
 
 .about-center h2 {
-    font-size: 1.5em;
+  font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
   margin-bottom: 25px;
@@ -170,8 +170,9 @@ main {
 }
 
 .about-center p {
-    margin-bottom: 50px;
-    font-size: 1em;
+  margin-bottom: 50px;
+  text-align: justify;
+  font-size: 1em;
   line-height: 1.6em;
   color: #6c757d;
 }
@@ -216,6 +217,8 @@ main {
 .footer-mensagem {
     text-align: center;
     font-size: 0.9em;
+    color: rgb(97, 97, 97);
+    font-weight: 700;
 }
 
 .footer-desenvolvedor a {
