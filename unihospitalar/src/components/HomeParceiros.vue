@@ -218,6 +218,8 @@ footer {
 .footer-mensagem {
     text-align: center;
     font-size: 0.9em;
+    color: rgb(97, 97, 97);
+    font-weight: 700;
 }
 
 .footer-desenvolvedor a {
