@@ -173,6 +173,7 @@ main {
 }
 
 .contact-info-sections h2 {
+    text-align: center;
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
@@ -197,6 +198,7 @@ main {
 }
 
 .contact-form h2 {
+    text-align: center;
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
@@ -273,6 +275,8 @@ footer {
 .footer-mensagem {
     text-align: center;
     font-size: 0.9em;
+    color: rgb(97, 97, 97);
+    font-weight: 700;
 }
 
 .footer-desenvolvedor a {
