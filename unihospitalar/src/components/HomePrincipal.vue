@@ -2,21 +2,26 @@
     <div class="home">
         <header>
             <div class="contact-info">
-                <span><i class="fas fa-phone"></i>+55 81 3472 7201</span>
-                <span><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</span>
-            </div>
-            <hr class="linha">
-            <nav>
-                <ul>
-        <li><router-link to="/">Principal</router-link></li>
-        <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
-        <li><router-link to="/diferenciais">Diferenciais</router-link></li>
-        <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
-        <li><router-link to="/produtos">Linha de Produtos</router-link></li>
-        <li><router-link to="/parceiros">Parceiros</router-link></li>
-        <li><router-link to="/contato">Fale Conosco</router-link></li>
-                </ul>
-            </nav>
+                <span class="phone-number">                  
+                    <i class="fas fa-phone"></i>
+                    <span class="small-numbers">+55 81 </span> 3472 7201</span>
+                    <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
+                </div>
+                <hr class="linha">
+                <nav>
+                    <ul>
+                        <li><router-link to="/">Principal</router-link></li>
+                        <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
+                        <li><router-link to="/diferenciais">Diferenciais</router-link></li>
+                        <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
+                        <li><router-link to="/produtos">Linha de Produtos</router-link></li>
+                        <li><router-link to="/parceiros">Parceiros</router-link></li>
+                        <li><router-link to="/contato">Fale Conosco</router-link></li>
+                    </ul>
+                </nav>
+                <!-- <div class="img-logo">
+                    <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar">
+                </div> -->
         </header>
 
         <main>
@@ -39,7 +44,7 @@
                 <img src="@/assets/estoque.jpg" alt="Bloco 1">
                 <h3>ESTOQUE</h3>
             </div>
-            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <a href="HomeDiferenciais.vue">Saiba mais.</a></p>
+            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <a href="@/components/HomeDiferenciais.vue">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
@@ -245,14 +250,31 @@ header {
     margin-top: -60px;
 }
 
+/* .img-logo {
+    display: flex; 
+    margin-right: 73%;
+    justify-content: left;
+    background-color: #E5E5E5;
+} */
+
 .contact-info {
     display: flex;
-    justify-content: center;
-    width: 90%;
+    justify-content: right;
+    width: 42%;
+    margin-left: 2%;
     margin-bottom: 10px;
 }
 
 .contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
     display: flex;
     align-items: center;
     color: #FF8888;
@@ -267,12 +289,22 @@ header {
     margin-right: 8px;
 }
 
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
+}
+
 .linha {
-    width: 70%;
+    width: 65%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin: 10px auto;
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
+
+nav {
+    margin-left: 30%;
 }
 
 nav ul {
@@ -399,6 +431,7 @@ nav a:hover {
 .block p {
     margin-top: 15px;
     font-size: 1em;
+    text-align: justify;
 }
 
 .block a {
@@ -442,6 +475,7 @@ nav a:hover {
 .news-item p {
     margin: 0;
     color: #333;
+    text-align: justify;
 }
 
 .news-item a {
@@ -564,6 +598,8 @@ footer {
 .footer-mensagem {
     text-align: center;
     font-size: 0.9em;
+    color: rgb(97, 97, 97);
+    font-weight: 700;
 }
 
 .footer-desenvolvedor a {
