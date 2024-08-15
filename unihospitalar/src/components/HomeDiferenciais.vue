@@ -2,8 +2,10 @@
   <div class="diferenciais">
       <header>
           <div class="contact-info">
-              <span><i class="fas fa-phone"></i>+55 81 3472 7201</span>
-              <span><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</span>
+            <span class="phone-number">                  
+                    <i class="fas fa-phone"></i>
+                    <span class="small-numbers">+55 81 </span> 3472 7201</span>
+                    <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
           </div>
           <hr class="linha">
           <nav>
@@ -80,17 +82,27 @@ header {
     padding: 35px 0;
     box-sizing: border-box;
     font-size: 1.2em;
-    margin-top: -60px;
+    margin: -3% -0.4% 0.5% -0.4%;
 }
 
 .contact-info {
     display: flex;
-    justify-content: center;
-    width: 90%;
+    justify-content: right;
+    width: 42%;
+    margin-left: 2%;
     margin-bottom: 10px;
 }
 
 .contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
     display: flex;
     align-items: center;
     color: #FF8888;
@@ -103,6 +115,11 @@ header {
 
 .contact-info i {
     margin-right: 8px;
+}
+
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
 }
 
 .linha {
@@ -149,49 +166,7 @@ main {
   justify-content: space-between;
   width: 85%;
   gap: 30px;
-}
-
-.right-dif {
-    margin-top: 70px;
-}
-
-.diferenciais-left,
-.diferenciais-right {
-  width: 48%;
-  text-align: left;
-  background-color: #ffffff;
-  padding: 25px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.diferenciais-left h2,
-.diferenciais-right h2 {
-  font-size: 1.5em;
-  font-weight: 800;
-  color: #AE2C2A;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #FF8888;
-  padding-bottom: 5px;
-}
-
-.diferenciais-left p,
-.diferenciais-right p {
-  font-size: 1em;
-  line-height: 1.6em;
-  color: #6c757d;
-  margin-bottom: 20px;
-}main {
-  display: flex;
-  justify-content: center;
-  padding: 40px 0;
-}
-
-.diferenciais-content {
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-  gap: 30px;
+  margin-bottom: 7.1%;
 }
 
 .right-dif {
@@ -230,7 +205,8 @@ main {
 
 footer {
     background-color: #EBEBEB;
-    padding: 40px 0;
+    padding: 40px;
+    margin: 0% -5% 0% 0%;
 }
 
 .footer-content {

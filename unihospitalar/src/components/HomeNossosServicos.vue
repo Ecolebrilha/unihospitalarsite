@@ -2,8 +2,10 @@
   <div class="nossosServicos">
       <header>
           <div class="contact-info">
-              <span><i class="fas fa-phone"></i>+55 81 3472 7201</span>
-              <span><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</span>
+            <span class="phone-number">                  
+                    <i class="fas fa-phone"></i>
+                    <span class="small-numbers">+55 81 </span> 3472 7201</span>
+                    <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
           </div>
           <hr class="linha">
           <nav>
@@ -80,12 +82,22 @@ header {
 
 .contact-info {
     display: flex;
-    justify-content: center;
-    width: 90%;
+    justify-content: right;
+    width: 42%;
+    margin-left: 2%;
     margin-bottom: 10px;
 }
 
 .contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
     display: flex;
     align-items: center;
     color: #FF8888;
@@ -98,6 +110,11 @@ header {
 
 .contact-info i {
     margin-right: 8px;
+}
+
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
 }
 
 .linha {
@@ -147,6 +164,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 .about-left {
@@ -195,6 +213,7 @@ main {
 footer {
     background-color: #EBEBEB;
     padding: 40px 0;
+    margin: -0.6%;
 }
 
 .footer-content {

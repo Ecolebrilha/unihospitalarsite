@@ -247,7 +247,7 @@ header {
     padding: 35px 0;
     box-sizing: border-box;
     font-size: 1.2em;
-    margin-top: -60px;
+    margin: -3% -0.6% 0.5% -0.6%;
 }
 
 /* .img-logo {
@@ -334,7 +334,7 @@ nav a:hover {
 
 .banner {
     width: 100%;
-    background-color: #AE2C2A;
+    background-color: #EBEBEB;
     padding: 20px 0; 
     margin: 0; 
     box-sizing: border-box; 
