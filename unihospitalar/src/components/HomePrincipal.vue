@@ -1,4 +1,5 @@
 <template>
+    <!-- imagens do mercado da indústria de medicamentos hospitalares -->
     <div class="home">
         <header>
             <div class="logo-container">
@@ -190,10 +191,10 @@
                     <div class="parceiros-slide">
                         <img src="@/assets/parceiro26.jpg" alt="Parceiro 26">
                     </div>
-              
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <a href="HomeParceiros.vue"><button class="partners-button">ver todos os parceiros</button></a>
         </main>
 
         <footer>
@@ -220,7 +221,6 @@ export default {
         const slides = Array.from(track.children);
         const totalSlides = slides.length;
 
-        // Duplicar slides para efeito infinito
         slides.forEach((slide) => {
             const clone = slide.cloneNode(true);
             track.appendChild(clone);
@@ -250,19 +250,19 @@ header {
     box-sizing: border-box;
     top: -60px;
     font-size: 1.2em;
-    position: relative; /* Para posicionar a logo dentro do header */
+    position: relative;
 }
 
 .logo-container {
     position: absolute;
-    top: -9px; /* Ajuste conforme necessário */
-    left: 0px; /* Ajuste conforme necessário */
-    background-color: #E5E5E5; /* Background cinza */
-    padding: 39px 100px;
+    top: 0.4px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 34.5px 100px;
 }
 
 .logo {
-    height: 80px; /* Ajuste conforme necessário */
+    height: 80px;
 }
 
 .trademark-symbol {
@@ -270,7 +270,7 @@ header {
     margin-left: 5px;
     color: #000000;
     position: relative;
-    top: -50px; /* Ajuste essa posição conforme necessário */
+    top: -50px;
 }
 
 .contact-info {
@@ -278,7 +278,7 @@ header {
     justify-content: flex-end;
     width: 42%;
     margin-bottom: 10px;
-    padding-left: 30px;
+    padding-right: 10%;
 }
 
 .contact-info span {
@@ -311,16 +311,16 @@ header {
 }
 
 .linha {
-    width: 60%;
+    width: 50%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin-right: 80px;
+    margin-right: 22%;
     margin-bottom: 20px;
 }
 
 nav {
-    margin-left: 35%;
+    margin-left: 10%;
 }
 
 nav ul {
@@ -361,17 +361,17 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: -80px 0 0 0;
 }
 
 .banner-content {
-    width: 50%;
+    width: 100%;
     background-color: rgba(174, 44, 42, 0.8);
     color: #FFFFFF;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 8px;
 }
 
 .banner-content button {
@@ -403,7 +403,7 @@ nav a:hover {
 }
 
 .main-content {
-    padding: 40px 0;
+    padding: 40px 80px;
 }
 
 .blocks {
@@ -425,6 +425,7 @@ nav a:hover {
 }
 
 .image-wrapper img {
+    color: black;
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -459,7 +460,7 @@ nav a:hover {
 }
 
 .ultimas-noticias {
-    padding: 40px 0;
+    padding: 40px 100px;
     background-color: #EBEBEB;
 }
 
@@ -474,17 +475,17 @@ nav a:hover {
 .news {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .news-item {
-    width: 45%;
+    width: 40%;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -499,6 +500,7 @@ nav a:hover {
     font-weight: bold;
     margin-top: 60px; 
     display: inline-block; 
+    padding-left: 40%;
 }
 
 .news-item a:hover {
@@ -506,14 +508,15 @@ nav a:hover {
 }
 
 .news-item img {
-    width: 40%;
+    width: 32%;
     margin-right: 20px;
     border-radius: 5px;
 }
 
 .news-button {
-    background-color: #007BFF; 
-    color: #fff; 
+    background-color: #AE2C2A;
+    color: #FFFFFF;
+    margin: 30px 0 10px 0;
     padding: 12px 24px; 
     font-size: 16px; 
     border: none; 
@@ -533,6 +536,33 @@ nav a:hover {
 }
 
 .news-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.partners-button {
+    background-color: #AE2C2A;
+    color: #FFFFFF;
+    margin: 40px 0;
+    padding: 12px 24px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+}
+
+.partners-button:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-3px); 
+}
+
+.partners:active {
     transform: translateY(1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
 }
@@ -596,6 +626,7 @@ nav a:hover {
 footer {
     background-color: #EBEBEB;
     padding: 40px 0;
+    margin: 0 0 -0.4% 0;
 }
 
 .footer-content {
@@ -608,7 +639,8 @@ footer {
 }
 
 .footer-logo img {
-    width: 120px;
+    height: 80px;
+    width: 150px;
 }
 
 .footer-mensagem {

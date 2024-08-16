@@ -1,9 +1,15 @@
 <template>
   <div class="contato">
       <header>
+        <div class="logo-container">
+                <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
+                <span class="trademark-symbol">®</span>
+            </div>
           <div class="contact-info">
-              <span><i class="fas fa-phone"></i>+55 81 3472 7201</span>
-              <span><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</span>
+            <span class="phone-number">                  
+                    <i class="fas fa-phone"></i>
+                    <span class="small-numbers">+55 81 </span> 3472 7201</span>
+                    <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
           </div>
           <hr class="linha">
           <nav>
@@ -91,18 +97,49 @@ header {
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
+    top: -60px;
     font-size: 1.2em;
-    margin: -3% -0.6% 0.5% -0.6%;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0.4px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 34.5px 100px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.trademark-symbol {
+    font-size: 1.5em;
+    margin-left: 5px;
+    color: #000000;
+    position: relative;
+    top: -50px;
 }
 
 .contact-info {
     display: flex;
-    justify-content: center;
-    width: 90%;
+    justify-content: flex-end;
+    width: 42%;
     margin-bottom: 10px;
+    padding-right: 10%;
 }
 
 .contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
     display: flex;
     align-items: center;
     color: #FF8888;
@@ -117,12 +154,22 @@ header {
     margin-right: 8px;
 }
 
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
+}
+
 .linha {
-    width: 70%;
+    width: 50%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin: 10px auto;
+    margin-right: 22%;
+    margin-bottom: 20px;
+}
+
+nav {
+    margin-left: 10%;
 }
 
 nav ul {
@@ -259,7 +306,7 @@ main {
 footer {
     background-color: #EBEBEB;
     padding: 40px 0;
-    margin: -0.6%;
+    margin: 0 0 -0.4% 0;
 }
 
 .footer-content {
@@ -272,7 +319,8 @@ footer {
 }
 
 .footer-logo img {
-    width: 120px;
+    height: 80px;
+    width: 150px;
 }
 
 .footer-mensagem {
