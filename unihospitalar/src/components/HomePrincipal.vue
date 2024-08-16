@@ -1,6 +1,10 @@
 <template>
     <div class="home">
         <header>
+            <div class="logo-container">
+                <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
+                <span class="trademark-symbol">®</span>
+            </div>
             <div class="contact-info">
                 <span class="phone-number">                  
                     <i class="fas fa-phone"></i>
@@ -19,9 +23,6 @@
                         <li><router-link to="/contato">Fale Conosco</router-link></li>
                     </ul>
                 </nav>
-                <!-- <div class="img-logo">
-                    <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar">
-                </div> -->
         </header>
 
         <main>
@@ -231,6 +232,7 @@ export default {
 </script>
 
 <style scoped>
+
 .home {
     text-align: center;
     margin: 0;
@@ -246,23 +248,37 @@ header {
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
+    top: -60px;
     font-size: 1.2em;
-    margin: -3% -0.6% 0.5% -0.6%;
+    position: relative; /* Para posicionar a logo dentro do header */
 }
 
-/* .img-logo {
-    display: flex; 
-    margin-right: 73%;
-    justify-content: left;
-    background-color: #E5E5E5;
-} */
+.logo-container {
+    position: absolute;
+    top: -9px; /* Ajuste conforme necessário */
+    left: 0px; /* Ajuste conforme necessário */
+    background-color: #E5E5E5; /* Background cinza */
+    padding: 39px 100px;
+}
+
+.logo {
+    height: 80px; /* Ajuste conforme necessário */
+}
+
+.trademark-symbol {
+    font-size: 1.5em;
+    margin-left: 5px;
+    color: #000000;
+    position: relative;
+    top: -50px; /* Ajuste essa posição conforme necessário */
+}
 
 .contact-info {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     width: 42%;
-    margin-left: 2%;
     margin-bottom: 10px;
+    padding-left: 30px;
 }
 
 .contact-info span {
@@ -295,7 +311,7 @@ header {
 }
 
 .linha {
-    width: 65%;
+    width: 60%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
@@ -304,7 +320,7 @@ header {
 }
 
 nav {
-    margin-left: 30%;
+    margin-left: 35%;
 }
 
 nav ul {
@@ -546,15 +562,15 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    animation: slide 60s linear infinite;
+    animation: slide 400s linear infinite;
 }
 
 .parceiros-track {
     display: flex;
     width: calc(26 * 100%);
-    animation: moveSlideshow 500s linear infinite;
+    animation: moveSlideshow 2000s linear infinite;
 }
 
 @keyframes moveSlideshow {
