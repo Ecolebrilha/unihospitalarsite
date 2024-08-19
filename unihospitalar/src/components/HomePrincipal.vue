@@ -625,37 +625,46 @@ nav a:hover {
 
 footer {
     background-color: #EBEBEB;
-    padding: 40px 0;
-    margin: 0 0 -0.4% 0;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-logo, .footer-mensagem, .footer-desenvolvedor {
+    flex: 1;
 }
 
 .footer-logo img {
-    height: 80px;
-    width: 150px;
+    text-align: left;
 }
 
 .footer-mensagem {
     text-align: center;
-    font-size: 0.9em;
     color: rgb(97, 97, 97);
     font-weight: 700;
+    white-space: nowrap;
+}
+
+.footer-desenvolvedor {
+    text-align: right;
 }
 
 .footer-desenvolvedor a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-desenvolvedor a:hover {
-    text-decoration: underline;
+    color: #99997C;
 }
 </style>

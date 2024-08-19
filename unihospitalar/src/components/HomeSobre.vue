@@ -25,6 +25,10 @@
       </nav>
     </header>
 
+    <div class="banner-container">
+      <img src="@/assets/foto-sobre.avif" alt="Imagem do Banner">
+    </div>
+
     <main>
       <section class="about-content">
         <div class="about-left">
@@ -101,10 +105,10 @@ header {
 
 .logo-container {
     position: absolute;
-    top: 0.4px;
+    top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 34.5px 100px;
+    padding: 35px 69px;
 }
 
 .logo {
@@ -166,7 +170,7 @@ header {
 }
 
 nav {
-    margin-left: 10%;
+    margin-left: 30%;
 }
 
 nav ul {
@@ -192,6 +196,18 @@ nav a {
 
 nav a:hover {
     color: #99997C;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.banner-container img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
 }
 
 main {
