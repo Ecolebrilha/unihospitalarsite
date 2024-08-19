@@ -255,10 +255,12 @@ header {
 
 .logo-container {
     position: absolute;
-    top: 0.4px;
+    top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 34.5px 100px;
+    padding: 29px 0;
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -275,10 +277,10 @@ header {
 
 .contact-info {
     display: flex;
-    justify-content: flex-end;
-    width: 42%;
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Ocupa toda a largura disponível */
     margin-bottom: 10px;
-    padding-right: 10%;
+    padding-right: 0; /* Remove o padding à direita */
 }
 
 .contact-info span {
@@ -311,16 +313,18 @@ header {
 }
 
 .linha {
-    width: 50%;
+    width: 50%; /* Mantém a largura da linha */
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin-right: 22%;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto; /* Centraliza a linha horizontalmente */
 }
 
 nav {
-    margin-left: 10%;
+    margin: 0 auto; /* Centraliza o nav */
+    width: 100%; /* Ocupa a largura total disponível */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro do nav */
 }
 
 nav ul {
@@ -328,7 +332,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: auto; /* Ajusta a largura ao conteúdo */
     margin: 0;
 }
 
@@ -348,58 +352,56 @@ nav a:hover {
     color: #99997C;
 }
 
-.banner {
-    width: 100%;
-    background-color: #EBEBEB;
-    padding: 20px 0; 
-    margin: 0; 
-    box-sizing: border-box; 
-}
-
-.banner-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: -80px 0 0 0;
-}
-
 .banner-content {
     width: 100%;
-    background-color: rgba(174, 44, 42, 0.8);
+    background: linear-gradient(90deg, rgba(174, 44, 42, 0.8) 0%, rgba(220, 70, 60, 0.8) 100%);
     color: #FFFFFF;
-    padding: 20px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.banner-content:hover {
+    background: linear-gradient(90deg, rgba(220, 70, 60, 0.8) 0%, rgba(174, 44, 42, 0.8) 100%);
+    transform: scale(1.05);
+}
+
+.banner-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .banner-content button {
-    background-color: #5E5A59;
+    background-color: #FF8888;
     border: none;
-    cursor: pointer;
-    color: white;
-    font-style: italic;
+    padding: 15px 30px;
+    font-size: 1.2em;
     font-weight: bold;
-    border-radius: 10px;
-    padding: 10px 15px; 
-    max-width: 500px; 
-    height: 60px;
-    align-self: center; 
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .banner-content button:hover {
-    background-color: #232323;
-}
-
-.banner h2 {
-    font-style: italic;
-    font-size: 2.2em;
-}
-
-.banner p {
-    font-style: italic;
-    font-size: 1.4em;
+    background-color: #FF5555;
 }
 
 .main-content {
