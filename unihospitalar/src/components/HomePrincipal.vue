@@ -600,7 +600,7 @@ nav a:hover {
 .parceiros-track {
     display: flex;
     width: calc(26 * 100%);
-    animation: moveSlideshow 2000s linear infinite;
+    animation: moveSlideshow 6000s linear infinite;
 }
 
 @keyframes moveSlideshow {
@@ -613,20 +613,20 @@ nav a:hover {
 }
 
 .parceiros-slide {
-    min-width: calc(-200% / 26);
+    min-width: calc(-1% / 26);
     box-sizing: border-box;
     padding: 0 15px;
 }
 
 .parceiros-slide img {
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 
 footer {
     background-color: #EBEBEB;
-    padding: 20px 0;
-    text-align: center;
+    padding: 30px 0;
+    margin: 0 0 -30px 0;
 }
 
 .footer-content {

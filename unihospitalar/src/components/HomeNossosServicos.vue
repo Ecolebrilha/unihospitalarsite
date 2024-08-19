@@ -24,6 +24,10 @@
               </ul>
           </nav>
       </header>
+
+      <div class="banner-container">
+      <img src="@/assets/nossos-servicos1.avif" alt="Imagem do Banner">
+    </div>
   
       <main>
         <section class="about-content">
@@ -37,7 +41,7 @@
           </div>
   
           <div class="about-right">
-            <!-- <img src="@/assets/banner1.jpg" alt="Imagem da Empresa"> -->
+            <img src="@/assets/nossos-servicos2.avif" alt="Imagem da Empresa">
           </div>
         </section>
       </main>
@@ -180,6 +184,18 @@ nav a:hover {
     color: #99997C;
 }
 
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.banner-container img {
+    width: 40%;
+    height: 400px;
+    object-fit: cover;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -215,11 +231,13 @@ main {
 }
 
 .about-left p {
+    margin-top: 50px;
     margin-bottom: 50px;
     font-size: 1em;
   line-height: 1.6em;
   color: #6c757d;
   text-align: justify;
+  padding: 0 0 80px 0;
 }
 
 .about-left span {
@@ -235,45 +253,54 @@ main {
 
 .about-right img {
     width: 100%;
-    height: auto;
+    height: 76vh;
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
 footer {
     background-color: #EBEBEB;
-    padding: 40px 0;
-    margin: 0 0 -0.4% 0;
+    padding: 20px 0;
+    margin: 0 0 -30px 0;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-logo, .footer-mensagem, .footer-desenvolvedor {
+    flex: 1;
 }
 
 .footer-logo img {
-    height: 80px;
-    width: 150px;
+    text-align: left;
 }
 
 .footer-mensagem {
     text-align: center;
-    font-size: 0.9em;
     color: rgb(97, 97, 97);
     font-weight: 700;
+    white-space: nowrap;
+}
+
+.footer-desenvolvedor {
+    text-align: right;
 }
 
 .footer-desenvolvedor a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-desenvolvedor a:hover {
-    text-decoration: underline;
+    color: #99997C;
 }
 
   </style>

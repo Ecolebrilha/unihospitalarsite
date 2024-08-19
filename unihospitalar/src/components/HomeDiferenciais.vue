@@ -24,6 +24,10 @@
               </ul>
           </nav>
       </header>
+
+      <div class="banner-container">
+      <img src="@/assets/foto-diferenciais.avif" alt="Imagem do Banner">
+    </div>
   
       <main>
         <section class="diferenciais-content">
@@ -70,12 +74,13 @@ export default {
 </script>
   
 <style scoped>
-.about {
+
+.diferenciais {
     text-align: center;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4
 }
 
 header {
@@ -185,6 +190,18 @@ nav a:hover {
     color: #99997C;
 }
 
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.banner-container img {
+    width: 40%;
+    height: 400px;
+    object-fit: cover;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -235,37 +252,46 @@ main {
 
 footer {
     background-color: #EBEBEB;
-    padding: 40px;
-    margin: 0 0 -0.4% 0;
+    padding: 20px 0;
+    margin: 0 0 -30px 0;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-logo, .footer-mensagem, .footer-desenvolvedor {
+    flex: 1;
 }
 
 .footer-logo img {
-    height: 80px;
-    width: 150px;
+    text-align: left;
 }
 
 .footer-mensagem {
     text-align: center;
-    font-size: 0.9em;
     color: rgb(97, 97, 97);
     font-weight: 700;
+    white-space: nowrap;
+}
+
+.footer-desenvolvedor {
+    text-align: right;
 }
 
 .footer-desenvolvedor a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-desenvolvedor a:hover {
-    text-decoration: underline;
+    color: #99997C;
 }
 </style>

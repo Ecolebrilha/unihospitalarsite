@@ -24,10 +24,14 @@
               </ul>
           </nav>
       </header>
+
+      <div class="banner-container">
+      <img src="@/assets/foto-produtos1.avif" alt="Imagem do Banner">
+    </div>
   
       <main>
         <section class="about-content">
-          <div class="about-center">
+          <div class="about-left">
             <h2>LINHA DE PRODUTOS</h2>
             <p>A Uni Hospitalar trabalha com uma extensa linha de produtos, procurando sempre ser complementar e oferecendo desta forma soluções no tratamento das mais diversas patologias.</p>
             
@@ -38,9 +42,12 @@
             <p>São medicamentos quimioterápicos utilizados para o tratamento do câncer.</p>
 
             <h2>MEDICAMENTOS HOSPITALARES</h2>
-            <p>São medicamentos utilizados em ambiente hospitalar necessários aos procedimentos médico-cirúrgicos.</p>
-            
-          </div>                
+            <p>São medicamentos utilizados em ambiente hospitalar necessários aos procedimentos médico-cirúrgicos.</p>        
+          </div> 
+          
+          <div class="about-right">
+            <img src="@/assets/foto-produtos2.avif" alt="Imagem da Empresa">
+          </div>
         </section>
       </main>
 
@@ -183,6 +190,18 @@ nav a {
 nav a:hover {
     color: #99997C;
 }
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.banner-container img {
+    width: 40%;
+    height: 400px;
+    object-fit: cover;
+}
   
 main {
   display: flex;
@@ -198,17 +217,19 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
-.about-center {
+.about-left {
     width: 50%;
-    text-align: center;
+    text-align: left;
     padding-right: 20px;
     border-right: 1px solid #ccc;
 }
 
-.about-center h2 {
-  font-size: 1.5em;
+.about-left h2 {
+    text-align: center;
+    font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
   margin-bottom: 25px;
@@ -216,17 +237,27 @@ main {
   padding-bottom: 5px;
 }
 
-.about-center p {
-  margin-bottom: 50px;
-  text-align: justify;
-  font-size: 1em;
+.about-left p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 1em;
   line-height: 1.6em;
   color: #6c757d;
+  text-align: justify;
+  padding: 0 0 20px 0;
 }
 
-.about-center span {
-    font-weight: bold;
-    color: #AE2C2A;
+.about-right {
+    width: 50%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.about-right img {
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .btn-produtos {
@@ -243,39 +274,48 @@ main {
   color: #FFFFFF;
 }
 
-  footer {
+footer {
     background-color: #EBEBEB;
-    padding: 40px 0;
-    margin: 0 0 -0.4% 0;
+    padding: 20px 0;
+    margin: 0 0 -30px 0;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-logo, .footer-mensagem, .footer-desenvolvedor {
+    flex: 1;
 }
 
 .footer-logo img {
-    height: 80px;
-    width: 150px;
+    text-align: left;
 }
 
 .footer-mensagem {
     text-align: center;
-    font-size: 0.9em;
     color: rgb(97, 97, 97);
     font-weight: 700;
+    white-space: nowrap;
+}
+
+.footer-desenvolvedor {
+    text-align: right;
 }
 
 .footer-desenvolvedor a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-desenvolvedor a:hover {
-    text-decoration: underline;
+    color: #99997C;
 }
   </style>

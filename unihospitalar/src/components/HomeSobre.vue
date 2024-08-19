@@ -44,6 +44,7 @@
 
         <div class="about-right">
           <img src="@/assets/uni.png" alt="Imagem da Empresa">
+          <span class="trademark-symbol2">®</span>
           <h2>VALORES</h2>
           <div class="valores-grid">
             <span>Respeito às relações humanas</span>
@@ -83,6 +84,7 @@ export default {
 </script>
 
 <style scoped>
+
 .about {
     text-align: center;
     margin: 0;
@@ -108,7 +110,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 35px 69px;
+    padding: 34.5px 100px;
 }
 
 .logo {
@@ -162,6 +164,7 @@ header {
 
 .linha {
     width: 50%;
+    text-align: center;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
@@ -170,7 +173,8 @@ header {
 }
 
 nav {
-    margin-left: 30%;
+    text-align: center;
+    margin-left: 10%;
 }
 
 nav ul {
@@ -205,8 +209,8 @@ nav a:hover {
 }
 
 .banner-container img {
-    width: 50%;
-    height: auto;
+    width: 40%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -234,12 +238,22 @@ main {
   border-radius: 10px;
 }
 
-.about-left h2,
+.about-left h2 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #AE2C2A;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 5px;
+}
+
 .about-right h2 {
   text-align: center;
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
+  margin-top: 72px;
   margin-bottom: 15px;
   border-bottom: 2px solid #FF8888;
   padding-bottom: 5px;
@@ -254,12 +268,20 @@ main {
 }
 
 .about-right img {
-  width: 100%;
+  margin-top: 20px;
+  width: 40%;
+  margin-left: 26%;
   height: auto;
-  margin-top: 5px;
-  margin-bottom: 20px;
   border-radius: 10px;
   object-fit: cover;
+}
+
+.trademark-symbol2 {
+    font-size: 2em;
+    margin-left: 5px;
+    color: #000000;
+    position: relative;
+    top: -75px;
 }
 
 .valores-grid {
@@ -282,38 +304,47 @@ main {
 
 footer {
     background-color: #EBEBEB;
-    padding: 40px 0;
-    margin: 0 0 -0.4% 0;
+    padding: 20px 0;
+    margin: 0 0 -30px 0;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-logo, .footer-mensagem, .footer-desenvolvedor {
+    flex: 1;
 }
 
 .footer-logo img {
-    height: 80px;
-    width: 150px;
+    text-align: left;
 }
 
 .footer-mensagem {
     text-align: center;
-    font-size: 0.9em;
     color: rgb(97, 97, 97);
     font-weight: 700;
+    white-space: nowrap;
+}
+
+.footer-desenvolvedor {
+    text-align: right;
 }
 
 .footer-desenvolvedor a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-desenvolvedor a:hover {
-    text-decoration: underline;
+    color: #99997C;
 }
 
 </style>
