@@ -26,7 +26,7 @@
       </header>
 
       <div class="banner-container">
-      <img src="@/assets/foto-parceiros.avif" alt="Imagem do Banner">
+      <img src="@/assets/header-parceiros.jpg" alt="Imagem do Banner">
     </div>
   
       <main>
@@ -110,10 +110,12 @@ header {
 
 .logo-container {
     position: absolute;
-    top: 0.4px;
+    top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 34.5px 100px;
+    padding: 29.5px 0;
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -130,10 +132,10 @@ header {
 
 .contact-info {
     display: flex;
-    justify-content: flex-end;
-    width: 42%;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 10px;
-    padding-right: 10%;
+    padding-right: 0;
 }
 
 .contact-info span {
@@ -170,12 +172,14 @@ header {
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin-right: 22%;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 nav {
-    margin-left: 10%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -183,7 +187,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: auto;
     margin: 0;
 }
 
@@ -211,8 +215,8 @@ nav a:hover {
 }
 
 .banner-container img {
-    width: 40%;
-    height: 400px;
+    width: 60%;
+    height: auto;
     object-fit: cover;
 }
 

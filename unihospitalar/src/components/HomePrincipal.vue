@@ -1,5 +1,9 @@
+<!-- https://oncoexo.com.br -->
+<!-- https://www.drogafonte.com.br -->
+<!-- https://eurofarma.com.br -->
+<!-- https://grupoelfa.com.br -->
+<!-- Fazer as telas de Compliance e LGPD que tem na Oncoexo -->
 <template>
-    <!-- imagens do mercado da indústria de medicamentos hospitalares -->
     <div class="home">
         <header>
             <div class="logo-container">
@@ -258,7 +262,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 29px 0;
+    padding: 29.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -277,10 +281,10 @@ header {
 
 .contact-info {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    width: 100%; /* Ocupa toda a largura disponível */
+    justify-content: center;
+    width: 100%;
     margin-bottom: 10px;
-    padding-right: 0; /* Remove o padding à direita */
+    padding-right: 0;
 }
 
 .contact-info span {
@@ -313,18 +317,18 @@ header {
 }
 
 .linha {
-    width: 50%; /* Mantém a largura da linha */
+    width: 50%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin: 0 auto 20px auto; /* Centraliza a linha horizontalmente */
+    margin: 0 auto 20px auto;
 }
 
 nav {
-    margin: 0 auto; /* Centraliza o nav */
-    width: 100%; /* Ocupa a largura total disponível */
+    margin: 0 auto;
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo dentro do nav */
+    justify-content: center;
 }
 
 nav ul {
@@ -332,7 +336,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    width: auto; /* Ajusta a largura ao conteúdo */
+    width: auto;
     margin: 0;
 }
 
@@ -353,7 +357,7 @@ nav a:hover {
 }
 
 .banner-content {
-    width: 100%;
+    width: 98%;
     background: linear-gradient(90deg, rgba(174, 44, 42, 0.8) 0%, rgba(220, 70, 60, 0.8) 100%);
     color: #FFFFFF;
     padding: 40px 20px;
@@ -364,8 +368,7 @@ nav a:hover {
     text-align: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
-    border-radius: 8px;
-    margin-top: 20px;
+    margin-top: -52px;
 }
 
 .banner-content:hover {
@@ -532,7 +535,7 @@ nav a:hover {
 }
 
 .news-button:hover {
-    background-color: #0056b3; 
+    background-color: #FF5555; 
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
     transform: translateY(-3px); 
 }
@@ -559,7 +562,7 @@ nav a:hover {
 }
 
 .partners-button:hover {
-    background-color: #0056b3; 
+    background-color: #FF5555; 
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
     transform: translateY(-3px); 
 }

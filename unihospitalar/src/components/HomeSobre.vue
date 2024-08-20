@@ -26,7 +26,7 @@
     </header>
 
     <div class="banner-container">
-      <img src="@/assets/foto-sobre.avif" alt="Imagem do Banner">
+      <img src="@/assets/header-sobre.jpg" alt="Imagem do Banner">
     </div>
 
     <main>
@@ -110,7 +110,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 34.5px 0;
+    padding: 29.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -129,10 +129,10 @@ header {
 
 .contact-info {
     display: flex;
-    justify-content: flex-end;
-    width: 42%;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 10px;
-    padding-right: 10%;
+    padding-right: 0;
 }
 
 .contact-info span {
@@ -166,17 +166,17 @@ header {
 
 .linha {
     width: 50%;
-    text-align: center;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin-right: 22%;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 nav {
-    text-align: center;
-    margin-left: 10%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -184,7 +184,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: auto;
     margin: 0;
 }
 
@@ -211,8 +211,8 @@ nav a:hover {
 }
 
 .banner-container img {
-    width: 40%;
-    height: 400px;
+    width: 60%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -224,18 +224,18 @@ main {
 
 .about-content {
   display: flex;
-  justify-content: space-between;
-  width: 85%;
+  justify-content: center;
+  width: 70%;
   gap: 30px;
+  margin-bottom: 7.1%;
 }
 
 .about-left,
 .about-right {
-  width: 48%;
-  height: 95%;
+  width: 40%;
   text-align: left;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -255,7 +255,7 @@ main {
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
-  margin-top: 72px;
+  margin-top: 90px;
   margin-bottom: 15px;
   border-bottom: 2px solid #FF8888;
   padding-bottom: 5px;
@@ -270,7 +270,7 @@ main {
 }
 
 .about-right img {
-  margin-top: 20px;
+  margin-top: 60px;
   width: 40%;
   margin-left: 26%;
   height: auto;
@@ -283,7 +283,7 @@ main {
     margin-left: 5px;
     color: #000000;
     position: relative;
-    top: -75px;
+    top: -48px;
 }
 
 .valores-grid {
@@ -291,7 +291,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   font-size: 1.1em;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #6c757d;
 }
 
@@ -306,7 +306,7 @@ main {
 
 footer {
     background-color: #EBEBEB;
-    padding: 20px 0;
+    padding: 30px 0;
     margin: 0 0 -30px 0;
 }
 

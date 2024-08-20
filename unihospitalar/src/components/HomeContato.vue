@@ -24,6 +24,10 @@
               </ul>
           </nav>
       </header>
+
+      <div class="banner-container">
+      <img src="@/assets/header-contato.jpg" alt="Imagem do Banner">
+    </div>
   
       <main>
         <section class="contact-content">
@@ -42,7 +46,7 @@
             <h2>FALE CONOSCO</h2>
             <article class="esq"><p><strong>UNI Hospitalar Ltda.</strong><br>
                Rua Alagoas, 253<br>
-               Ipsep Recife-PE<br>
+               Ipsep, Recife-PE<br>
                Fone: +55 81 3472 7201<br>
                CNPJ: 07.484.373/0001-24</p>
             </article>
@@ -50,7 +54,7 @@
                 <iframe id="map_canvas1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" class="scrolloff"></iframe>
             </article>
             <div class="info-msg">
-                <p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p>
+                <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
             </div>
             
             <form>
@@ -63,9 +67,18 @@
                     <input type="email" id="email" placeholder="Seu e-mail" required>
                 </div>
                 <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="Seu telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" id="empresa" placeholder="Sua empresa" required>
+                </div>
+                <div class="form-group">
                     <label for="message">Mensagem:</label>
                     <textarea id="message" rows="5" placeholder="Sua mensagem" required></textarea>
                 </div>
+                <div class="lbl-box"><label><input name="news" type="checkbox" value="1">&nbsp;&nbsp; Desejo receber novidades do Uni Hospitalar por e-mail.</label></div>
                 <button type="submit" class="submit-btn">Enviar mensagem</button>
             </form>
           </div>
@@ -110,10 +123,12 @@ header {
 
 .logo-container {
     position: absolute;
-    top: 0.4px;
+    top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 34.5px 100px;
+    padding: 29.5px 0;
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -130,10 +145,10 @@ header {
 
 .contact-info {
     display: flex;
-    justify-content: flex-end;
-    width: 42%;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 10px;
-    padding-right: 10%;
+    padding-right: 0;
 }
 
 .contact-info span {
@@ -170,12 +185,14 @@ header {
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
-    margin-right: 22%;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 nav {
-    margin-left: 10%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -183,7 +200,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: auto;
     margin: 0;
 }
 
@@ -203,21 +220,35 @@ nav a:hover {
     color: #99997C;
 }
 
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    margin-bottom: 80px;
+}
+
+.banner-container img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+
 main {
     display: flex;
     justify-content: center;
     padding: 40px 0;
-    background-color: #f8f8f8;
+    background-color: #F4F4F4;
 }
 
 .contact-content {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 60%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f8f8f8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin-top: -70px;
 }
 
 .contact-info-sections {
@@ -245,6 +276,7 @@ main {
 
 .contact-info-sections a {
   color: #f95454;
+  text-decoration: none;
 }
 
 .contact-form {
@@ -277,11 +309,29 @@ article.esq {
 article.dir {
     width: 66.10169%;
     float: right;
+    margin-top: 15px;
     margin-right: 0;
 }
 
 .info-msg {
-    margin-bottom: 45
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+#name {
+    display: block;
+}
+
+#email {
+    display: block;
+}
+
+#telefone {
+    display: block;
+}
+
+#empresa {
+    display: block;
 }
 
 .form-group {
@@ -309,6 +359,15 @@ article.dir {
     outline: none;
     border-color: #AE2C2A;
     box-shadow: 0 0 8px rgba(174, 44, 42, 0.2);
+}
+
+.lbl-box {
+    font-size: 14px;
+    color: #999;
+    line-height: 25px;
+    display: block;
+    margin-bottom: 15px;
+    cursor: default;
 }
 
 .submit-btn {
