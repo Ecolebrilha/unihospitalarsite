@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="news">
     <header>
       <div class="logo-container">
                 <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
@@ -14,13 +14,13 @@
       <hr class="linha">
       <nav>
         <ul>
-          <li><router-link to="/">Principal</router-link></li>
-          <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
-          <li><router-link to="/diferenciais">Diferenciais</router-link></li>
-          <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
-          <li><router-link to="/produtos">Linha de Produtos</router-link></li>
-          <li><router-link to="/parceiros">Parceiros</router-link></li>
-          <li><router-link to="/contato">Fale Conosco</router-link></li>
+            <li><router-link to="/">PRINCIPAL</router-link></li> 
+            <li><router-link to="/diferenciais">DIFERENCIAIS</router-link></li>
+            <li><router-link to="/produtos">PRODUTOS</router-link></li>
+            <li><router-link to="/noticias">NOTÍCIAS</router-link></li>
+            <li><router-link to="/compliance">COMPLIANCE</router-link></li>
+            <li><router-link to="/lgpd">LGPD</router-link></li>
+            <li><router-link to="/contato">CONTATO</router-link></li>
         </ul>
       </nav>
     </header>
@@ -30,8 +30,8 @@
     </div>
 
     <main>
-      <section class="about-content">
-        <div class="about-left">
+      <section class="news-content">
+        <div class="news-left">
           <h2>QUEM SOMOS</h2>
           <p>Há 10 anos no mercado, a Uni Hospitalar vem conquistando espaço no mercado de distribuição de medicamentos de forma sólida e acima de tudo consolidada pela forma com que enxerga e interpreta o mercado farmacêutico.</p>
 
@@ -42,7 +42,7 @@
           <p>Transparência e respeito com as relações humanas.</p>
         </div>
 
-        <div class="about-right">
+        <div class="news-right">
           <img src="@/assets/uni.png" alt="Imagem da Empresa">
           <span class="trademark-symbol2">®</span>
           <h2>VALORES</h2>
@@ -79,13 +79,13 @@
 
 <script>
 export default {
-  name: 'HomeSobre',
+  name: 'HomeNoticias',
 };
 </script>
 
 <style scoped>
 
-.about {
+.news {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -196,6 +196,7 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     font-style: italic;
+    font-weight: bold;
     font-size: 0.8em;
     white-space: nowrap;
 }
@@ -222,7 +223,7 @@ main {
   padding: 50px 0;
 }
 
-.about-content {
+.news-content {
   display: flex;
   justify-content: center;
   width: 70%;
@@ -230,8 +231,8 @@ main {
   margin-bottom: 7.1%;
 }
 
-.about-left,
-.about-right {
+.news-left,
+.news-right {
   width: 40%;
   text-align: left;
   background-color: #ffffff;
@@ -240,7 +241,7 @@ main {
   border-radius: 10px;
 }
 
-.about-left h2 {
+.news-left h2 {
   text-align: center;
   font-size: 1.5em;
   font-weight: 800;
@@ -250,7 +251,7 @@ main {
   padding-bottom: 5px;
 }
 
-.about-right h2 {
+.news-right h2 {
   text-align: center;
   font-size: 1.5em;
   font-weight: 800;
@@ -261,7 +262,7 @@ main {
   padding-bottom: 5px;
 }
 
-.about-left p {
+.news-left p {
   font-size: 1em;
   text-align: justify;
   line-height: 1.6em;
@@ -269,7 +270,7 @@ main {
   margin-bottom: 60px;
 }
 
-.about-right img {
+.news-right img {
   margin-top: 60px;
   width: 40%;
   margin-left: 26%;

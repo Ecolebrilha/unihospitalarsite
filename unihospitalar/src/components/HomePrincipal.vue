@@ -3,8 +3,10 @@
 <!-- https://eurofarma.com.br -->
 <!-- https://grupoelfa.com.br -->
 <!-- Fazer as telas de Compliance e LGPD que tem na Oncoexo -->
+<!-- Fontes recomendáveis (Open Source): Droid Sans, Droid Serif, M+ 2c(Fonts) -->
+<!-- Baixar o Power Toys -->
 <template>
-    <div class="home">
+    <div class="principal">
         <header>
             <div class="logo-container">
                 <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
@@ -19,13 +21,13 @@
                 <hr class="linha">
                 <nav>
                     <ul>
-                        <li><router-link to="/">Principal</router-link></li>
-                        <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
-                        <li><router-link to="/diferenciais">Diferenciais</router-link></li>
-                        <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
-                        <li><router-link to="/produtos">Linha de Produtos</router-link></li>
-                        <li><router-link to="/parceiros">Parceiros</router-link></li>
-                        <li><router-link to="/contato">Fale Conosco</router-link></li>
+                        <li><router-link to="/">PRINCIPAL</router-link></li> 
+                        <li><router-link to="/diferenciais">DIFERENCIAIS</router-link></li>
+                        <li><router-link to="/produtos">PRODUTOS</router-link></li>
+                        <li><router-link to="/noticias">NOTÍCIAS</router-link></li>
+                        <li><router-link to="/compliance">COMPLIANCE</router-link></li>
+                        <li><router-link to="/lgpd">LGPD</router-link></li>
+                        <li><router-link to="/contato">CONTATO</router-link></li>
                     </ul>
                 </nav>
         </header>
@@ -237,7 +239,7 @@ export default {
 
 <style scoped>
 
-.home {
+.principal {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -348,6 +350,7 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     font-style: italic;
+    font-weight: bold;
     font-size: 0.8em;
     white-space: nowrap;
 }

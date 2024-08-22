@@ -14,13 +14,13 @@
           <hr class="linha">
           <nav>
               <ul>
-                <li><router-link to="/">Principal</router-link></li>
-        <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
-        <li><router-link to="/diferenciais">Diferenciais</router-link></li>
-        <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
-        <li><router-link to="/produtos">Linha de Produtos</router-link></li>
-        <li><router-link to="/parceiros">Parceiros</router-link></li>
-        <li><router-link to="/contato">Fale Conosco</router-link></li>
+                <li><router-link to="/">PRINCIPAL</router-link></li> 
+                <li><router-link to="/diferenciais">DIFERENCIAIS</router-link></li>
+                <li><router-link to="/produtos">PRODUTOS</router-link></li>
+                <li><router-link to="/noticias">NOTÍCIAS</router-link></li>
+                <li><router-link to="/compliance">COMPLIANCE</router-link></li>
+                <li><router-link to="/lgpd">LGPD</router-link></li>
+                <li><router-link to="/contato">CONTATO</router-link></li>
               </ul>
           </nav>
       </header>
@@ -30,8 +30,8 @@
     </div>
   
       <main>
-        <section class="about-content">
-          <div class="about-left">
+        <section class="produtos-content">
+          <div class="produtos-left">
             <h2>LINHA DE PRODUTOS</h2>
             <p>A Uni Hospitalar trabalha com uma extensa linha de produtos, procurando sempre ser complementar e oferecendo desta forma soluções no tratamento das mais diversas patologias.</p>
             
@@ -45,7 +45,7 @@
             <p>São medicamentos utilizados em ambiente hospitalar necessários aos procedimentos médico-cirúrgicos.</p>        
           </div> 
           
-          <div class="about-right">
+          <div class="produtos-right">
             <!-- <img src="@/assets/header-produtos.jpg" alt="Imagem da Empresa"> -->
           </div>
         </section>
@@ -187,6 +187,7 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     font-style: italic;
+    font-weight: bold;
     font-size: 0.8em;
     white-space: nowrap;
 }
@@ -213,7 +214,7 @@ main {
   padding: 40px 0;
 }
 
-.about-content {
+.produtos-content {
     display: flex;
     justify-content: space-between;
     width: 60%;
@@ -224,14 +225,14 @@ main {
     margin-bottom: 50px;
 }
 
-.about-left {
+.produtos-left {
     width: 50%;
     text-align: left;
     padding-right: 20px;
     border-right: 1px solid #ccc;
 }
 
-.about-left h2 {
+.produtos-left h2 {
     text-align: center;
     font-size: 1.5em;
   font-weight: 800;
@@ -241,7 +242,7 @@ main {
   padding-bottom: 5px;
 }
 
-.about-left p {
+.produtos-left p {
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 1em;
@@ -251,13 +252,13 @@ main {
   padding: 0 0 20px 0;
 }
 
-.about-right {
+.produtos-right {
     width: 50%;
     text-align: left;
     padding-left: 20px;
 }
 
-.about-right img {
+.produtos-right img {
     width: 100%;
     height: 90vh;
     margin-bottom: 20px;

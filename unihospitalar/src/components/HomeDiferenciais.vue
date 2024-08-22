@@ -14,13 +14,13 @@
           <hr class="linha">
           <nav>
               <ul>
-                <li><router-link to="/">Principal</router-link></li>
-                <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
-                <li><router-link to="/diferenciais">Diferenciais</router-link></li>
-                <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
-                <li><router-link to="/produtos">Linha de Produtos</router-link></li>
-                <li><router-link to="/parceiros">Parceiros</router-link></li>
-                <li><router-link to="/contato">Fale Conosco</router-link></li>
+                <li><router-link to="/">PRINCIPAL</router-link></li> 
+                <li><router-link to="/diferenciais">DIFERENCIAIS</router-link></li>
+                <li><router-link to="/produtos">PRODUTOS</router-link></li>
+                <li><router-link to="/noticias">NOTÍCIAS</router-link></li>
+                <li><router-link to="/compliance">COMPLIANCE</router-link></li>
+                <li><router-link to="/lgpd">LGPD</router-link></li>
+                <li><router-link to="/contato">CONTATO</router-link></li>
               </ul>
           </nav>
       </header>
@@ -186,6 +186,7 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     font-style: italic;
+    font-weight: bold;
     font-size: 0.8em;
     white-space: nowrap;
 }

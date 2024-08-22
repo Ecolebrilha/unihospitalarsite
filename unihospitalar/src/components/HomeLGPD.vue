@@ -1,5 +1,5 @@
 <template>
-  <div class="nossosServicos">
+  <div class="lgpd">
       <header>
         <div class="logo-container">
                 <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
@@ -14,13 +14,13 @@
           <hr class="linha">
           <nav>
               <ul>
-                <li><router-link to="/">Principal</router-link></li>
-        <li><router-link to="/sobre">Uni Hospitalar</router-link></li>
-        <li><router-link to="/diferenciais">Diferenciais</router-link></li>
-        <li><router-link to="/nossos-servicos">Nossos Serviços</router-link></li>
-        <li><router-link to="/produtos">Linha de Produtos</router-link></li>
-        <li><router-link to="/parceiros">Parceiros</router-link></li>
-        <li><router-link to="/contato">Fale Conosco</router-link></li>
+                <li><router-link to="/">PRINCIPAL</router-link></li> 
+                <li><router-link to="/diferenciais">DIFERENCIAIS</router-link></li>
+                <li><router-link to="/produtos">PRODUTOS</router-link></li>
+                <li><router-link to="/noticias">NOTÍCIAS</router-link></li>
+                <li><router-link to="/compliance">COMPLIANCE</router-link></li>
+                <li><router-link to="/lgpd">LGPD</router-link></li>
+                <li><router-link to="/contato">CONTATO</router-link></li>
               </ul>
           </nav>
       </header>
@@ -30,8 +30,8 @@
     </div>
   
       <main>
-        <section class="about-content">
-          <div class="about-left">
+        <section class="lgpd-content">
+          <div class="lgpd-left">
             <h2>NOSSOS SERVIÇOS</h2>
             <p>A Uni Hospitalar busca atender de forma eficiente os segmentos públicos e privados, através de profissionais capacitados para interpretar o mercado e assim dar respostas compatíveis e definitivas para o bom atendimento da cadeia de distribuição.</p>
             
@@ -40,7 +40,7 @@
             <p> <span>Segmento Público - </span>formado internamente por um Setor de Licitações, composto por profissionais capacitados e orientados para o mercado, buscando informações através da captação de editais e outras formas a fim de gerar novos negócios. Este setor se completa através da presença de consultores externos que visitam sistematicamente todos os órgãos públicos que trabalhamos.</p>
           </div>
   
-          <div class="about-right">
+          <div class="lgpd-right">
             <img src="@/assets/nossos-servicos.jpg" alt="Imagem da Empresa">
           </div>
         </section>
@@ -64,12 +64,12 @@
   
   <script>
   export default {
-    name: 'HomeNossosServicos',
+    name: 'HomeLGPD',
   };
   </script>
   
   <style scoped>
-  .nossosServicos {
+  .lgpd {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -180,6 +180,7 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     font-style: italic;
+    font-weight: bold;
     font-size: 0.8em;
     white-space: nowrap;
 }
@@ -206,7 +207,7 @@ main {
     padding: 40px 0;
 }
 
-.about-content {
+.lgpd-content {
     display: flex;
     justify-content: space-between;
     width: 60%;
@@ -217,14 +218,14 @@ main {
     margin-bottom: 4%;
 }
 
-.about-left {
+.lgpd-left {
     width: 50%;
     text-align: left;
     padding-right: 20px;
     border-right: 1px solid #ccc;
 }
 
-.about-left h2 {
+.lgpd-left h2 {
     text-align: center;
     font-size: 1.5em;
   font-weight: 800;
@@ -234,7 +235,7 @@ main {
   padding-bottom: 5px;
 }
 
-.about-left p {
+.lgpd-left p {
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 1em;
@@ -244,18 +245,18 @@ main {
   padding: 0 0 80px 0;
 }
 
-.about-left span {
+.lgpd-left span {
     font-weight: bold;
     color: #AE2C2A;
 }
 
-.about-right {
+.lgpd-right {
     width: 50%;
     text-align: left;
     padding-left: 20px;
 }
 
-.about-right img {
+.lgpd-right img {
     width: 100%;
     height: 76vh;
     margin-bottom: 20px;
