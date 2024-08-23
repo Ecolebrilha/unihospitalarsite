@@ -100,7 +100,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 29.5px 0;
+    padding: 31.5px 0;
     width: 20%;
     box-sizing: border-box;
 }

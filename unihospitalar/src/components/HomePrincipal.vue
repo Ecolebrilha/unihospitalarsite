@@ -3,8 +3,10 @@
 <!-- https://eurofarma.com.br -->
 <!-- https://grupoelfa.com.br -->
 <!-- Fazer as telas de Compliance e LGPD que tem na Oncoexo -->
-<!-- Fontes recomendáveis (Open Source): Droid Sans, Droid Serif, M+ 2c(Fonts) -->
+<!-- Fontes recomendáveis (Open Source): Droid Sans, Droid Serif, M+ 2c(Fonts), Sans Serif (em geral) -->
 <!-- Baixar o Power Toys -->
+<!-- Usar o https://goadopt.io/ no site pro LGPD e Cookies -->
+<!-- Site gratuito de ícones sem licença: https://uxwing.com/ -->
 <template>
     <div class="principal">
         <header>
@@ -21,13 +23,13 @@
                 <hr class="linha">
                 <nav>
                     <ul>
-                        <li><router-link to="/">PRINCIPAL</router-link></li> 
-                        <li><router-link to="/diferenciais">DIFERENCIAIS</router-link></li>
-                        <li><router-link to="/produtos">PRODUTOS</router-link></li>
-                        <li><router-link to="/noticias">NOTÍCIAS</router-link></li>
-                        <li><router-link to="/compliance">COMPLIANCE</router-link></li>
-                        <li><router-link to="/lgpd">LGPD</router-link></li>
-                        <li><router-link to="/contato">CONTATO</router-link></li>
+                        <li><router-link to="/" exact-active-class="active">PRINCIPAL</router-link></li> 
+                        <li><router-link to="/diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+                        <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
+                        <li><router-link to="/noticias" exact-active-class="active">NOTÍCIAS</router-link></li>
+                        <li><router-link to="/compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+                        <li><router-link to="/lgpd" exact-active-class="active">LGPD</router-link></li>
+                        <li><router-link to="/contato" exact-active-class="active">CONTATO</router-link></li>
                     </ul>
                 </nav>
         </header>
@@ -264,7 +266,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 29.5px 0;
+    padding: 31.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -344,19 +346,46 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
     font-size: 0.8em;
     white-space: nowrap;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
 }
 
-nav a:hover {
-    color: #99997C;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #FF8888;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li.active a::after {
+    width: 100%;
+}
+
+nav ul li a.router-link-active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #848484;
 }
 
 .banner-content {
