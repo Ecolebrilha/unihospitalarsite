@@ -19,30 +19,29 @@
         <hr class="linha">
         <nav>
           <ul>
-            <li><router-link to="/" exact-active-class="active">PRINCIPAL</router-link></li>
-            <li><router-link to="/diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-            <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
-            <li><router-link to="/noticias" exact-active-class="active">NOTÍCIAS</router-link></li>
-            <li><router-link to="/compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-            <li><router-link to="/lgpd" exact-active-class="active">LGPD</router-link></li>
-            <li><router-link to="/contato" exact-active-class="active">CONTATO</router-link></li>
+            <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li>
+            <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+            <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
+            <li><router-link to="/Notícias" exact-active-class="active">NOTÍCIAS</router-link></li>
+            <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+            <li><router-link to="/LGPD" exact-active-class="active">LGPD</router-link></li>
+            <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
           </ul>
         </nav>
       </header>
   
       <div class="banner-container">
-        <img src="@/assets/header-diferenciais.jpg" alt="Imagem do Banner">
+        <img src="@/assets/header-servicos.jpg" alt="Imagem do Banner">
       </div>
   
       <main>
         <div class="lgpd-container">
-          <!-- Seção de Título Principal -->
-          <header class="lgpd-header">
+          
+          <div class="lgpd-header">
             <h1>Protegendo seus dados com responsabilidade</h1>
             <h2>Nosso compromisso com a segurança e a LGPD</h2>
-          </header>
+          </div>
   
-          <!-- Seção 1: Introdução -->
           <section class="lgpd-section">
             <div class="section-content">
               <p>
@@ -54,7 +53,6 @@
             </div>
           </section>
   
-          <!-- Seção 2: Nosso Compromisso -->
           <section class="lgpd-section">
             <div class="section-content">
               <p>
@@ -67,7 +65,6 @@
             </div>
           </section>
   
-          <!-- Seção 3: Política de Privacidade e Termos de Uso -->
           <section class="lgpd-section">
             <div class="section-content">
               <p>
@@ -83,7 +80,6 @@
             </div>
           </section>
   
-          <!-- Seção 4: Dúvidas e Contato -->
           <section class="lgpd-section">
             <div class="section-content">
               <p>
@@ -91,7 +87,7 @@
                 informações, entre em contato conosco. Estamos à disposição para
                 esclarecer qualquer questão.
               </p>
-              <button @click="navigateTo('contact')">Fale Conosco</button>
+              <button class="contact-btn" @click="navigateTo('contato')">Fale Conosco</button>
             </div>
           </section>
         </div>
@@ -117,12 +113,11 @@
 export default {
   methods: {
     navigateTo(page) {
-      // Implementação do método de navegação
       if (page === 'privacy') {
         this.$router.push('/privacy-policy');
       } else if (page === 'terms') {
         this.$router.push('/terms-of-use');
-      } else if (page === 'contact') {
+      } else if (page === 'contato') {
         this.$router.push('/contato');
       }
     }
@@ -131,6 +126,166 @@ export default {
 </script>
   
   <style scoped>
+  .lgpd {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AE2C2A;
+    padding: 35px 0;
+    box-sizing: border-box;
+    top: -60px;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0.3px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 31.5px 0;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 80px;
+}
+
+.trademark-symbol {
+    font-size: 1.5em;
+    margin-left: 5px;
+    color: #000000;
+    position: relative;
+    top: -48px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 0;
+}
+
+.contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info span:last-child {
+    margin-right: 0;
+}
+
+.contact-info i {
+    margin-right: 8px;
+}
+
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
+}
+
+.linha {
+    width: 50%;
+    color: #FF8888;
+    border: 0;
+    border-top: 2px solid #FF8888;
+    margin: 0 auto 20px auto;
+}
+
+nav {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.8em;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #FF8888;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li.active a::after {
+    width: 100%;
+}
+
+nav ul li a.router-link-active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #848484;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    margin-bottom: 80px;
+}
+
+.banner-container img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+
   .lgpd-container {
     font-family: 'Arial', sans-serif;
     background-color: #f2f2f2;
@@ -138,6 +293,7 @@ export default {
     padding: 30px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 50px;
     border-radius: 12px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   }
@@ -148,15 +304,15 @@ export default {
   }
   
   .lgpd-header h1 {
-    color: #0056b3;
+    color: #AE2C2A;
     font-size: 36px;
     margin-bottom: 10px;
   }
   
   .lgpd-header h2 {
-    color: #555;
+    color: #f05454;
     font-size: 24px;
-    font-weight: normal;
+    font-weight: 700;
   }
   
   .lgpd-section {
@@ -173,7 +329,7 @@ export default {
   }
   
   .lgpd-section p {
-    font-size: 18px;
+    font-size: 1.1em;
     line-height: 1.8;
   }
   
@@ -185,57 +341,125 @@ export default {
   }
   
   .lgpd-buttons button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .lgpd-buttons button:hover {
-    background-color: #003d82;
-    transform: translateY(-2px);
-  }
+    padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: #f05454;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: slideInRight 2s ease-out;
+}
+
+.lgpd-buttons button:hover {
+  background-color: #d04343;
+  transform: scale(1.05);
+}
   
   .lgpd-buttons button:active {
     transform: translateY(0);
   }
+
+  .contact-btn {
+    background-color: #AE2C2A;
+    color: #FFFFFF;
+    margin: 40px 0;
+    padding: 12px 24px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+}
+
+.contact-btn:hover {
+    background-color: #FF5555; 
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-3px); 
+}
   
   footer {
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 12px;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .footer-content {
+    background-color: #EBEBEB;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
-  }
-  
-  .footer-logo img {
-    max-height: 50px;
-  }
-  
-  .footer-mensagem {
-    flex-grow: 1;
-  }
-  
-  .footer-desenvolvedor a {
-    color: #f39c12;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-mensagem {
+    color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.footer-desenvolvedor a {
+    color: #FF5555;
     text-decoration: none;
-  }
-  
-  .footer-desenvolvedor a:hover {
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-desenvolvedor a:hover {
+    color: #AE2C2A;
     text-decoration: underline;
-  }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
+}
   </style>
   

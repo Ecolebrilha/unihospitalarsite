@@ -23,13 +23,13 @@
                 <hr class="linha">
                 <nav>
                     <ul>
-                        <li><router-link to="/" exact-active-class="active">PRINCIPAL</router-link></li> 
-                        <li><router-link to="/diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+                        <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li> 
+                        <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
                         <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
-                        <li><router-link to="/noticias" exact-active-class="active">NOTÍCIAS</router-link></li>
-                        <li><router-link to="/compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-                        <li><router-link to="/lgpd" exact-active-class="active">LGPD</router-link></li>
-                        <li><router-link to="/contato" exact-active-class="active">CONTATO</router-link></li>
+                        <li><router-link to="/Notícias" exact-active-class="active">NOTÍCIAS</router-link></li>
+                        <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+                        <li><router-link to="/LGPD" exact-active-class="active">LGPD</router-link></li>
+                        <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
                     </ul>
                 </nav>
         </header>
@@ -40,7 +40,7 @@
           <div class="header-content">
           <h2>Respeito às relações humanas</h2>
           <p>O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
-          <button>CONHEÇA NOSSOS SERVIÇOS</button>
+          <button @click="navigateTo('diferenciais')">CONHEÇA NOSSOS SERVIÇOS</button>
           </div>
         </div>
 
@@ -48,7 +48,7 @@
     <div class="blocks">
         <div class="block">
             <div class="icon-wrapper">
-                <i class="fas fa-warehouse"></i> <!-- Ícone -->
+                <i class="fas fa-warehouse"></i>
             </div>
             <div class="image-wrapper">
                 <img src="@/assets/estoque.jpg" alt="Bloco 1">
@@ -58,7 +58,7 @@
         </div>
         <div class="block">
             <div class="icon-wrapper">
-                <i class="fas fa-star"></i> <!-- Ícone -->
+                <i class="fas fa-star"></i>
             </div>
             <div class="image-wrapper">
                 <img src="@/assets/diferenciais.jpg" alt="Bloco 2">
@@ -68,7 +68,7 @@
         </div>
         <div class="block">
             <div class="icon-wrapper">
-                <i class="fas fa-truck"></i> <!-- Ícone -->
+                <i class="fas fa-truck"></i>
             </div>
             <div class="image-wrapper">
                 <img src="@/assets/logistica.jpg" alt="Bloco 3">
@@ -78,7 +78,7 @@
         </div>
         <div class="block">
             <div class="icon-wrapper">
-                <i class="fas fa-briefcase"></i> <!-- Ícone -->
+                <i class="fas fa-briefcase"></i>
             </div>
             <div class="image-wrapper">
                 <img src="@/assets/principais-clientes.jpg" alt="Bloco 4">
@@ -88,7 +88,7 @@
         </div>
         <div class="block">
             <div class="icon-wrapper">
-                <i class="fas fa-user-friends"></i> <!-- Ícone -->
+                <i class="fas fa-user-friends"></i>
             </div>
             <div class="image-wrapper">
                 <img src="@/assets/principais-produtos.jpg" alt="Bloco 5">
@@ -98,7 +98,7 @@
         </div>
         <div class="block">
             <div class="icon-wrapper">
-                <i class="fas fa-pills"></i> <!-- Ícone -->
+                <i class="fas fa-pills"></i>
             </div>
             <div class="image-wrapper">
                 <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 6">
@@ -249,9 +249,10 @@ export default {
             track.appendChild(clone);
         });
 
-        track.style.width = `${totalSlides * 2 * 100}%`;
+        track.style.width = `${totalSlides * 6 * 100}%`;
     },
 };
+
 </script>
 
 <style scoped>
@@ -295,7 +296,7 @@ header {
     margin-left: 5px;
     color: #000000;
     position: relative;
-    top: -50px;
+    top: -48px;
 }
 
 .contact-info {
@@ -463,7 +464,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 400px; /* Ajuste conforme necessário */
+  height: 400px; 
   overflow: hidden;
   margin-top: -60px;
 }
@@ -507,8 +508,8 @@ nav ul li a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao botão */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s ease, transform 0.3s ease;
   animation: slideInRight 2s ease-out;
 }
@@ -518,7 +519,6 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* Animações */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -538,29 +538,29 @@ nav ul li a:hover {
 .blocks {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre os blocos */
-    justify-content: center; /* Centraliza os blocos */
+    gap: 20px;
+    justify-content: center;
 }
 
 .block {
-    background-color: #f9f9f9; /* Cor de fundo dos blocos */
+    background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 300px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Transições para interatividade */
+    position: relative;
 }
 
 .block:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao passar o mouse */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .icon-wrapper {
     font-size: 30px;
-    color: #4CAF50; /* Cor dos ícones */
+    color: #f05454;
     margin-bottom: 15px;
 }
 
@@ -571,17 +571,17 @@ nav ul li a:hover {
 .image-wrapper img {
     border-radius: 5px;
     margin-bottom: 15px;
-    width: 100%; /* Ajusta a imagem para ocupar toda a largura */
+    width: 100%;
     height: auto;
 }
 
 .image-wrapper h3 {
     position: absolute;
-    bottom: 10px; /* Alinha o texto próximo ao fundo da imagem */
-    top: 45%; /* Centraliza verticalmente */
+    bottom: 10px;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -45%);
-    color: #AE2C2A; /* Cor do texto */
+    color: #f05454;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 22px;
@@ -595,19 +595,20 @@ nav ul li a:hover {
 }
 
 .block a {
-    color: #4CAF50;
+    color: #f05454;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .block a:hover {
-    color: #388E3C; /* Cor do link ao passar o mouse */
+    color: #AE2C2A;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
     .block {
-        max-width: 100%; /* Ajusta a largura dos blocos em telas menores */
+        max-width: 100%;
     }
 }
 
@@ -746,7 +747,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    animation: slide 400s linear infinite;
+    animation-iteration-count: infinite;
 }
 
 .parceiros-track {
@@ -778,7 +779,8 @@ nav ul li a:hover {
 footer {
     background-color: #EBEBEB;
     color: #FFFFFF;
-    padding: 20px 0;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

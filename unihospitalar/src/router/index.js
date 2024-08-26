@@ -10,37 +10,37 @@ import HomeContato from '@/components/HomeContato.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/Principal',
     name: 'HomePrincipal',
     component: HomePrincipal,
   },
   {
-    path: '/diferenciais',
+    path: '/Diferenciais',
     name: 'HomeDiferenciais',
     component: HomeDiferenciais,
   },
   {
-    path: '/produtos',
+    path: '/Produtos',
     name: 'HomeProdutos',
     component: HomeProdutos,
   },
   {
-    path: '/noticias',
+    path: '/Notícias',
     name: 'HomeNoticias',
     component: HomeNoticias,
   },
   {
-    path: '/compliance',
+    path: '/Compliance',
     name: 'HomeCompliance',
     component: HomeCompliance,
   },
   {
-    path: '/lgpd',
+    path: '/LGPD',
     name: 'HomeLGPD',
     component: HomeLGPD,
   },
   {
-    path: '/contato',
+    path: '/Contato',
     name: 'HomeContato',
     component: HomeContato,
   },

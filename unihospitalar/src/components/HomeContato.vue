@@ -14,13 +14,13 @@
           <hr class="linha">
           <nav>
               <ul>
-                <li><router-link to="/" exact-active-class="active">PRINCIPAL</router-link></li> 
-                <li><router-link to="/diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-                <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
-                <li><router-link to="/noticias" exact-active-class="active">NOTÍCIAS</router-link></li>
-                <li><router-link to="/compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-                <li><router-link to="/lgpd" exact-active-class="active">LGPD</router-link></li>
-                <li><router-link to="/contato" exact-active-class="active">CONTATO</router-link></li>
+                <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li> 
+                <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+                <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
+                <li><router-link to="/Notícias" exact-active-class="active">NOTÍCIAS</router-link></li>
+                <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+                <li><router-link to="/LGPD" exact-active-class="active">LGPD</router-link></li>
+                <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
               </ul>
           </nav>
       </header>
@@ -149,7 +149,7 @@ header {
     margin-left: 5px;
     color: #000000;
     position: relative;
-    top: -50px;
+    top: -48px;
 }
 
 .contact-info {
@@ -318,7 +318,7 @@ main {
 }
 
 .contact-info-sections a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
 }
 
 .contact-form {
@@ -369,11 +369,11 @@ article.dir {
 
 .form-group {
     flex: 1;
-    margin-right: 10px; /* Espaço entre os campos */
+    margin-right: 10px;
 }
 
 .form-group:last-child {
-    margin-right: 0; /* Remove o espaço do último campo na linha */
+    margin-right: 0;
 }
 
 .form-group label {
@@ -413,64 +413,110 @@ article.dir {
 }
 
 .submit-btn {
-    padding: 12px 20px;
     background-color: #AE2C2A;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #FFFFFF;
+    margin: 40px 0;
+    padding: 12px 24px; 
+    font-size: 12px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    text-transform: uppercase; 
+    font-weight: 700; 
+    letter-spacing: 1px; 
 }
 
 .submit-btn:hover {
-    background-color: #8e2322;
+    background-color: #FF5555; 
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
-/* Ajustes específicos para a visualização dos campos */
 .contact-form .form-row:nth-child(1) .form-group {
     flex: 1;
-    min-width: 0; /* Ajusta o tamanho mínimo dos campos */
+    min-width: 0;
 }
 
 .contact-form .form-row:nth-child(2) .form-group {
     flex: 1;
-    min-width: 0; /* Ajusta o tamanho mínimo dos campos */
+    min-width: 0;
 }
 
 footer {
     background-color: #EBEBEB;
-    padding: 40px 0;
-    margin: 0 0 -0.4% 0;
-}
-
-.footer-content {
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-    height: 80px;
-    width: 150px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
 }
 
 .footer-mensagem {
+    color: rgb(97, 97, 97);
+    flex: 1;
     text-align: center;
     font-size: 0.9em;
-    color: rgb(97, 97, 97);
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
     font-weight: 700;
 }
 
-.footer-desenvolvedor a {
+.footer-desenvolvedor {
     color: black;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.footer-desenvolvedor a {
+    color: #FF5555;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-desenvolvedor a:hover {
+    color: #AE2C2A;
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
 </style>

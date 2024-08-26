@@ -14,13 +14,13 @@
           <hr class="linha">
           <nav>
               <ul>
-                <li><router-link to="/" exact-active-class="active">PRINCIPAL</router-link></li> 
-                <li><router-link to="/diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-                <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
-                <li><router-link to="/noticias" exact-active-class="active">NOTÍCIAS</router-link></li>
-                <li><router-link to="/compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-                <li><router-link to="/lgpd" exact-active-class="active">LGPD</router-link></li>
-                <li><router-link to="/contato" exact-active-class="active">CONTATO</router-link></li>
+                <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li> 
+                <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+                <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
+                <li><router-link to="/Notícias" exact-active-class="active">NOTÍCIAS</router-link></li>
+                <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+                <li><router-link to="/LGPD" exact-active-class="active">LGPD</router-link></li>
+                <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
               </ul>
           </nav>
       </header>
@@ -114,7 +114,7 @@ header {
     margin-left: 5px;
     color: #000000;
     position: relative;
-    top: -50px;
+    top: -48px;
 }
 
 .contact-info {
@@ -284,46 +284,77 @@ main {
 
 footer {
     background-color: #EBEBEB;
-    padding: 20px 0;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
     margin: 0 0 -30px 0;
-}
-
-.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
-.footer-logo, .footer-mensagem, .footer-desenvolvedor {
-    flex: 1;
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-    text-align: left;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
 }
 
 .footer-mensagem {
-    text-align: center;
     color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
     font-weight: 700;
-    white-space: nowrap;
 }
 
 .footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
     text-align: right;
 }
 
 .footer-desenvolvedor a {
-    color: black;
+    color: #FF5555;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-desenvolvedor a:hover {
-    color: #99997C;
+    color: #AE2C2A;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
 </style>
