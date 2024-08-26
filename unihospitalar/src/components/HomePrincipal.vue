@@ -40,7 +40,7 @@
           <div class="header-content">
           <h2>Respeito às relações humanas</h2>
           <p>O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
-          <button @click="navigateTo('diferenciais')">CONHEÇA NOSSOS SERVIÇOS</button>
+          <a href="Diferenciais"><button>CONHEÇA NOSSOS SERVIÇOS</button></a>
           </div>
         </div>
 
@@ -54,7 +54,7 @@
                 <img src="@/assets/estoque.jpg" alt="Bloco 1">
                 <h3>ESTOQUE</h3>
             </div>
-            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <a href="@/components/HomeDiferenciais.vue">Saiba mais.</a></p>
+            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="icon-wrapper">
@@ -64,7 +64,7 @@
                 <img src="@/assets/diferenciais.jpg" alt="Bloco 2">
                 <h3>DIFERENCIAIS</h3>
             </div>
-            <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <a href="HomeDiferenciais.vue">Saiba mais.</a></p>
+            <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="icon-wrapper">
@@ -74,7 +74,7 @@
                 <img src="@/assets/logistica.jpg" alt="Bloco 3">
                 <h3>LOGÍSTICA</h3>
             </div>
-            <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <a href="HomeDiferenciais.vue">Saiba mais.</a></p>
+            <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="icon-wrapper">
@@ -84,7 +84,7 @@
                 <img src="@/assets/principais-clientes.jpg" alt="Bloco 4">
                 <h3>UNIDADE DE NEGÓCIOS</h3>
             </div>
-            <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <a href="HomeDiferenciais.vue">Saiba mais.</a></p>
+            <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="icon-wrapper">
@@ -94,7 +94,7 @@
                 <img src="@/assets/principais-produtos.jpg" alt="Bloco 5">
                 <h3>PRINCIPAIS CLIENTES</h3>
             </div>
-            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <a href="HomeParceiros.vue">Saiba mais.</a></p>
+            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <a href="Compliance">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="icon-wrapper">
@@ -104,7 +104,7 @@
                 <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 6">
                 <h3>PRINCIPAIS PRODUTOS</h3>
             </div>
-            <p>Foco na distribuição e padronização de medicamentos hospitalares, oncológicos e excepcionais, trabalhando em nichos específicos. <a href="HomeProdutos.vue">Saiba mais.</a></p>       
+            <p>Foco na distribuição e padronização de medicamentos hospitalares, oncológicos e excepcionais, trabalhando em nichos específicos. <a href="Produtos">Saiba mais.</a></p>       
         </div>                 
     </div>
 </section>
@@ -217,7 +217,7 @@
                 </div>
             </div>
         </section>
-        <a href="HomeParceiros.vue"><button class="partners-button">ver todos os parceiros</button></a>
+        <a href="Compliance"><button class="partners-button">ver todos os parceiros</button></a>
         </main>
 
         <footer>
@@ -753,7 +753,7 @@ nav ul li a:hover {
 .parceiros-track {
     display: flex;
     width: calc(26 * 100%);
-    animation: moveSlideshow 6000s linear infinite;
+    animation: moveSlideshow 8000s linear infinite;
 }
 
 @keyframes moveSlideshow {
