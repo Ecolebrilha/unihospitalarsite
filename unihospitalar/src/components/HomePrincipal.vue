@@ -35,21 +35,21 @@
         </header>
 
         <main>
-            <div class="banner">
-    <div class="banner-item">
-        <div class="banner-content">
-            <!-- <img class="img-left" src="@/assets/uni.png" alt="Logo da Uni"> -->
-            <!-- <img class="img-right" src="@/assets/seloMaior.png" alt="Selo da Uni"> -->
-            <h2>Respeito às relações humanas</h2>
-            <p>O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
-            <button>CONHEÇA NOSSOS SERVIÇOS</button>
+            <div class="header-background">
+          <img src="@/assets/header.jpg" alt="Imagem do Header" class="header-image">
+          <div class="header-content">
+          <h2>Respeito às relações humanas</h2>
+          <p>O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
+          <button>CONHEÇA NOSSOS SERVIÇOS</button>
+          </div>
         </div>
-    </div>
-</div>
 
-<section class="main-content">
+        <section class="main-content">
     <div class="blocks">
         <div class="block">
+            <div class="icon-wrapper">
+                <i class="fas fa-warehouse"></i> <!-- Ícone -->
+            </div>
             <div class="image-wrapper">
                 <img src="@/assets/estoque.jpg" alt="Bloco 1">
                 <h3>ESTOQUE</h3>
@@ -57,6 +57,9 @@
             <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <a href="@/components/HomeDiferenciais.vue">Saiba mais.</a></p>
         </div>
         <div class="block">
+            <div class="icon-wrapper">
+                <i class="fas fa-star"></i> <!-- Ícone -->
+            </div>
             <div class="image-wrapper">
                 <img src="@/assets/diferenciais.jpg" alt="Bloco 2">
                 <h3>DIFERENCIAIS</h3>
@@ -64,6 +67,9 @@
             <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <a href="HomeDiferenciais.vue">Saiba mais.</a></p>
         </div>
         <div class="block">
+            <div class="icon-wrapper">
+                <i class="fas fa-truck"></i> <!-- Ícone -->
+            </div>
             <div class="image-wrapper">
                 <img src="@/assets/logistica.jpg" alt="Bloco 3">
                 <h3>LOGÍSTICA</h3>
@@ -71,6 +77,9 @@
             <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <a href="HomeDiferenciais.vue">Saiba mais.</a></p>
         </div>
         <div class="block">
+            <div class="icon-wrapper">
+                <i class="fas fa-briefcase"></i> <!-- Ícone -->
+            </div>
             <div class="image-wrapper">
                 <img src="@/assets/principais-clientes.jpg" alt="Bloco 4">
                 <h3>UNIDADE DE NEGÓCIOS</h3>
@@ -78,6 +87,9 @@
             <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <a href="HomeDiferenciais.vue">Saiba mais.</a></p>
         </div>
         <div class="block">
+            <div class="icon-wrapper">
+                <i class="fas fa-user-friends"></i> <!-- Ícone -->
+            </div>
             <div class="image-wrapper">
                 <img src="@/assets/principais-produtos.jpg" alt="Bloco 5">
                 <h3>PRINCIPAIS CLIENTES</h3>
@@ -85,6 +97,9 @@
             <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <a href="HomeParceiros.vue">Saiba mais.</a></p>
         </div>
         <div class="block">
+            <div class="icon-wrapper">
+                <i class="fas fa-pills"></i> <!-- Ícone -->
+            </div>
             <div class="image-wrapper">
                 <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 6">
                 <h3>PRINCIPAIS PRODUTOS</h3>
@@ -94,7 +109,7 @@
     </div>
 </section>
 
-            <section class="ultimas-noticias">
+            <!-- <section class="ultimas-noticias">
                 <h2>Últimas Notícias</h2>
                 <div class="news">
                     <div class="news-item">
@@ -115,7 +130,7 @@
                     </div>
                 </div>
                 <button class="news-button">ver todas as notícias</button>
-            </section>
+            </section> -->
 
             <section class="parceiros">
         <h2>Nossos Parceiros</h2>
@@ -443,57 +458,157 @@ nav ul li a:hover {
     padding: 40px 80px;
 }
 
+.header-background {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 400px; /* Ajuste conforme necessário */
+  overflow: hidden;
+  margin-top: -60px;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.header-content {
+  position: absolute;
+  right: 10%;
+  text-align: right;
+  color: #fff;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.header-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  animation: slideInRight 1.5s ease-out;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  line-height: 1.5;
+  animation: slideInRight 1.8s ease-out;
+}
+
+.header-content button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: #f05454;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao botão */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: slideInRight 2s ease-out;
+}
+
+.header-content button:hover {
+  background-color: #d04343;
+  transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .blocks {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre os blocos */
+    justify-content: center; /* Centraliza os blocos */
 }
 
 .block {
-    width: 30%;
-    margin-bottom: 20px;
-    position: relative;
+    background-color: #f9f9f9; /* Cor de fundo dos blocos */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Transições para interatividade */
+}
+
+.block:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao passar o mouse */
+}
+
+.icon-wrapper {
+    font-size: 30px;
+    color: #4CAF50; /* Cor dos ícones */
+    margin-bottom: 15px;
 }
 
 .image-wrapper {
     position: relative;
-    width: 100%;
-    height: auto;
 }
 
 .image-wrapper img {
-    color: black;
-    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura */
     height: auto;
-    border-radius: 8px;
 }
 
 .image-wrapper h3 {
     position: absolute;
-    top: 40%;
+    bottom: 10px; /* Alinha o texto próximo ao fundo da imagem */
+    top: 45%; /* Centraliza verticalmente */
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: #AE2C2A;
-    padding: 10px 20px;
+    transform: translate(-50%, -45%);
+    color: #AE2C2A; /* Cor do texto */
+    padding: 5px 10px;
     border-radius: 5px;
-    font-size: 2.0em;
-    text-align: center;
-    width: 80%;
-    font-weight: bolder;
+    font-size: 22px;
+    white-space: nowrap;
 }
 
 .block p {
+    font-size: 16px;
+    color: #555;
     margin-top: 15px;
-    font-size: 1em;
-    text-align: justify;
 }
 
 .block a {
-    color: black;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .block a:hover {
-    color: red;
+    color: #388E3C; /* Cor do link ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .block {
+        max-width: 100%; /* Ajusta a largura dos blocos em telas menores */
+    }
 }
 
 .ultimas-noticias {
@@ -662,46 +777,76 @@ nav ul li a:hover {
 
 footer {
     background-color: #EBEBEB;
-    padding: 30px 0;
-    margin: 0 0 -30px 0;
-}
-
-.footer-content {
+    color: #FFFFFF;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
-.footer-logo, .footer-mensagem, .footer-desenvolvedor {
-    flex: 1;
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-    text-align: left;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
 }
 
 .footer-mensagem {
-    text-align: center;
     color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
     font-weight: 700;
-    white-space: nowrap;
 }
 
 .footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
     text-align: right;
 }
 
 .footer-desenvolvedor a {
-    color: black;
+    color: #FF5555;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-desenvolvedor a:hover {
-    color: #99997C;
+    color: #AE2C2A;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
 </style>

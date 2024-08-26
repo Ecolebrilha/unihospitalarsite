@@ -58,27 +58,36 @@
             </div>
             
             <form>
-                <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" placeholder="Seu nome completo" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" placeholder="Seu e-mail" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" placeholder="Seu e-mail" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" placeholder="Seu telefone" required>
-                </div>
-                <div class="form-group">
-                    <label for="empresa">Empresa:</label>
-                    <input type="text" id="empresa" placeholder="Sua empresa" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" placeholder="Seu telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa:</label>
+                        <input type="text" id="empresa" placeholder="Sua empresa" required>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="message">Mensagem:</label>
                     <textarea id="message" rows="5" placeholder="Sua mensagem" required></textarea>
                 </div>
-                <div class="lbl-box"><label><input name="news" type="checkbox" value="1">&nbsp;&nbsp; Desejo receber novidades do Uni Hospitalar por e-mail.</label></div>
+                <div class="lbl-box">
+                    <label>
+                        <input name="news" type="checkbox" value="1">
+                        &nbsp;&nbsp; Desejo receber novidades do Uni Hospitalar por e-mail.
+                    </label>
+                </div>
                 <button type="submit" class="submit-btn">Enviar mensagem</button>
             </form>
           </div>
@@ -281,8 +290,9 @@ main {
 
 .contact-info-sections {
     border-right: 1px solid #ccc;
-    padding-right: 5.2%;
-    width: 45%;
+    padding-right: 3.2%;
+    max-width: 600px;
+    margin: 0 auto;
     text-align: left;
 }
 
@@ -307,9 +317,20 @@ main {
   text-decoration: none;
 }
 
+.contact-info-sections a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
 .contact-form {
-    width: 45%;
+    width: 65%;
     text-align: left;
+    margin: 0 auto;
+}
+
+.contact-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .contact-form h2 {
@@ -346,24 +367,13 @@ article.dir {
     margin-bottom: 30px;
 }
 
-#name {
-    display: block;
-}
-
-#email {
-    display: block;
-}
-
-#telefone {
-    display: block;
-}
-
-#empresa {
-    display: block;
-}
-
 .form-group {
-    margin-bottom: 20px;
+    flex: 1;
+    margin-right: 10px; /* Espaço entre os campos */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove o espaço do último campo na linha */
 }
 
 .form-group label {
@@ -415,6 +425,17 @@ article.dir {
 
 .submit-btn:hover {
     background-color: #8e2322;
+}
+
+/* Ajustes específicos para a visualização dos campos */
+.contact-form .form-row:nth-child(1) .form-group {
+    flex: 1;
+    min-width: 0; /* Ajusta o tamanho mínimo dos campos */
+}
+
+.contact-form .form-row:nth-child(2) .form-group {
+    flex: 1;
+    min-width: 0; /* Ajusta o tamanho mínimo dos campos */
 }
 
 footer {

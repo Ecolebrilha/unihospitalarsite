@@ -1,338 +1,241 @@
 <template>
-  <div class="lgpd">
+    <div class="lgpd">
       <header>
         <div class="logo-container">
-                <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
-                <span class="trademark-symbol">®</span>
-            </div>
-          <div class="contact-info">
-            <span class="phone-number">                  
-                    <i class="fas fa-phone"></i>
-                    <span class="small-numbers">+55 81 </span> 3472 7201</span>
-                    <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
-          </div>
-          <hr class="linha">
-          <nav>
-              <ul>
-                <li><router-link to="/" exact-active-class="active">PRINCIPAL</router-link></li> 
-                <li><router-link to="/diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-                <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
-                <li><router-link to="/noticias" exact-active-class="active">NOTÍCIAS</router-link></li>
-                <li><router-link to="/compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-                <li><router-link to="/lgpd" exact-active-class="active">LGPD</router-link></li>
-                <li><router-link to="/contato" exact-active-class="active">CONTATO</router-link></li>
-              </ul>
-          </nav>
+          <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
+          <span class="trademark-symbol">®</span>
+        </div>
+        <div class="contact-info">
+          <span class="phone-number">
+            <i class="fas fa-phone"></i>
+            <span class="small-numbers">+55 81 </span> 3472 7201
+          </span>
+          <span>
+            <a href="mailto:contato@unihospitalar.com.br">
+              <i class="fas fa-envelope"></i> contato@unihospitalar.com.br
+            </a>
+          </span>
+        </div>
+        <hr class="linha">
+        <nav>
+          <ul>
+            <li><router-link to="/" exact-active-class="active">PRINCIPAL</router-link></li>
+            <li><router-link to="/diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+            <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
+            <li><router-link to="/noticias" exact-active-class="active">NOTÍCIAS</router-link></li>
+            <li><router-link to="/compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+            <li><router-link to="/lgpd" exact-active-class="active">LGPD</router-link></li>
+            <li><router-link to="/contato" exact-active-class="active">CONTATO</router-link></li>
+          </ul>
+        </nav>
       </header>
-
+  
       <div class="banner-container">
-      <img src="@/assets/header-servicos.jpg" alt="Imagem do Banner">
-    </div>
+        <img src="@/assets/header-diferenciais.jpg" alt="Imagem do Banner">
+      </div>
   
       <main>
-        <section class="lgpd-content">
-          <div class="lgpd-left">
-            <h2>NOSSOS SERVIÇOS</h2>
-            <p>A Uni Hospitalar busca atender de forma eficiente os segmentos públicos e privados, através de profissionais capacitados para interpretar o mercado e assim dar respostas compatíveis e definitivas para o bom atendimento da cadeia de distribuição.</p>
-            
-            <p> <span>Segmento Privado - </span>formado internamente por um telemarketing que funciona alinhado com uma equipe de consultores externos, visando sempre dar respostas rápidas e eficazes, a fim de atender o nosso cliente da melhor forma possível.</p>
-            
-            <p> <span>Segmento Público - </span>formado internamente por um Setor de Licitações, composto por profissionais capacitados e orientados para o mercado, buscando informações através da captação de editais e outras formas a fim de gerar novos negócios. Este setor se completa através da presença de consultores externos que visitam sistematicamente todos os órgãos públicos que trabalhamos.</p>
-          </div>
+        <div class="lgpd-container">
+          <!-- Seção de Título Principal -->
+          <header class="lgpd-header">
+            <h1>Protegendo seus dados com responsabilidade</h1>
+            <h2>Nosso compromisso com a segurança e a LGPD</h2>
+          </header>
   
-          <div class="lgpd-right">
-            <img src="@/assets/nossos-servicos.jpg" alt="Imagem da Empresa">
-          </div>
-        </section>
+          <!-- Seção 1: Introdução -->
+          <section class="lgpd-section">
+            <div class="section-content">
+              <p>
+                Somos a Uni Hospitalar, uma empresa dedicada à excelência em serviços de
+                saúde e comprometida com a proteção dos seus dados pessoais. Valorizamos
+                a segurança e a privacidade dos nossos clientes, parceiros e
+                colaboradores.
+              </p>
+            </div>
+          </section>
+  
+          <!-- Seção 2: Nosso Compromisso -->
+          <section class="lgpd-section">
+            <div class="section-content">
+              <p>
+                Na Uni Hospitalar, reconhecemos a importância da Lei Geral de Proteção
+                de Dados (LGPD) e reafirmamos nosso compromisso em tratar seus dados
+                pessoais com responsabilidade e transparência. Implementamos medidas
+                rigorosas de segurança para garantir que suas informações estejam
+                protegidas.
+              </p>
+            </div>
+          </section>
+  
+          <!-- Seção 3: Política de Privacidade e Termos de Uso -->
+          <section class="lgpd-section">
+            <div class="section-content">
+              <p>
+                Para mais detalhes sobre como tratamos seus dados, você pode acessar
+                nossa Política de Privacidade e os Termos Legais de Uso do nosso site.
+                Esses documentos explicam de forma clara e detalhada como utilizamos,
+                armazenamos e protegemos suas informações.
+              </p>
+              <div class="lgpd-buttons">
+                <button @click="navigateTo('privacy')">Política de Privacidade</button>
+                <button @click="navigateTo('terms')">Termos Legais de Uso</button>
+              </div>
+            </div>
+          </section>
+  
+          <!-- Seção 4: Dúvidas e Contato -->
+          <section class="lgpd-section">
+            <div class="section-content">
+              <p>
+                Caso tenha dúvidas sobre como seus dados são tratados ou precise de mais
+                informações, entre em contato conosco. Estamos à disposição para
+                esclarecer qualquer questão.
+              </p>
+              <button @click="navigateTo('contact')">Fale Conosco</button>
+            </div>
+          </section>
+        </div>
       </main>
   
       <footer>
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
-                </div>
-                <div class="footer-mensagem">
-                    <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
-                </div>
-                <div class="footer-desenvolvedor">
-                    <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a> ツ</p>
-                </div>
-            </div>
-        </footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
+          </div>
+          <div class="footer-mensagem">
+            <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
+          </div>
+          <div class="footer-desenvolvedor">
+            <p>Desenvolvido por <a href="https://github.com/Ecolebrilha" target="_blank">Fernando Leite</a> ツ</p>
+          </div>
+        </div>
+      </footer>
     </div>
-</template>
-  
-  <script>
-  export default {
-    name: 'HomeLGPD',
-  };
-  </script>
+  </template>
+
+<script>
+export default {
+  methods: {
+    navigateTo(page) {
+      // Implementação do método de navegação
+      if (page === 'privacy') {
+        this.$router.push('/privacy-policy');
+      } else if (page === 'terms') {
+        this.$router.push('/terms-of-use');
+      } else if (page === 'contact') {
+        this.$router.push('/contato');
+      }
+    }
+  }
+}
+</script>
   
   <style scoped>
-  .lgpd {
+  .lgpd-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lgpd-header {
     text-align: center;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #AE2C2A;
-    padding: 35px 0;
-    box-sizing: border-box;
-    top: -60px;
-    font-size: 1.2em;
-    position: relative;
-}
-
-.logo-container {
-    position: absolute;
-    top: 0.3px;
-    left: 0px;
-    background-color: #E5E5E5;
-    padding: 31.5px 0;
-    width: 20%;
-    box-sizing: border-box;
-}
-
-.logo {
-    height: 80px;
-}
-
-.trademark-symbol {
-    font-size: 1.5em;
-    margin-left: 5px;
-    color: #000000;
-    position: relative;
-    top: -50px;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .lgpd-header h1 {
+    color: #0056b3;
+    font-size: 36px;
     margin-bottom: 10px;
-    padding-right: 0;
-}
-
-.contact-info span {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #FF8888;
-    margin-right: 30px;
-}
-
-.contact-info a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #FF8888;
-    margin-right: 30px;
-}
-
-.contact-info span:last-child {
-    margin-right: 0;
-}
-
-.contact-info i {
-    margin-right: 8px;
-}
-
-.small-numbers {
-    font-size: 0.8em;
-    padding-right: 5px;
-}
-
-.linha {
-    width: 50%;
-    color: #FF8888;
-    border: 0;
-    border-top: 2px solid #FF8888;
-    margin: 0 auto 20px auto;
-}
-
-nav {
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    width: auto;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-    position: relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 0.8em;
-    white-space: nowrap;
-    padding-bottom: 5px;
-    display: inline-block;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background-color: #FF8888;
-    transition: width 0.3s ease-in-out;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li.active a::after {
-    width: 100%;
-}
-
-nav ul li a.router-link-active::after {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: #848484;
-}
-
-.banner-container {
-    display: flex;
-    justify-content: center;
-    margin-top: -60px;
-}
-
-.banner-container img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    padding: 40px 0;
-}
-
-.lgpd-content {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lgpd-header h2 {
+    color: #555;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .lgpd-section {
+    margin-bottom: 40px;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 4%;
-}
-
-.lgpd-left {
-    width: 50%;
-    text-align: left;
-    padding-right: 20px;
-    border-right: 1px solid #ccc;
-}
-
-.lgpd-left h2 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lgpd-section .section-content {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .lgpd-section p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .lgpd-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .lgpd-buttons button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .lgpd-buttons button:hover {
+    background-color: #003d82;
+    transform: translateY(-2px);
+  }
+  
+  .lgpd-buttons button:active {
+    transform: translateY(0);
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 20px;
     text-align: center;
-    font-size: 1.5em;
-  font-weight: 800;
-  color: #AE2C2A;
-  margin-bottom: 25px;
-  border-bottom: 2px solid #FF8888;
-  padding-bottom: 5px;
-}
-
-.lgpd-left p {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 1em;
-  line-height: 1.6em;
-  color: #6c757d;
-  text-align: justify;
-  padding: 0 0 80px 0;
-}
-
-.lgpd-left span {
-    font-weight: bold;
-    color: #AE2C2A;
-}
-
-.lgpd-right {
-    width: 50%;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.lgpd-right img {
-    width: 100%;
-    height: 76vh;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #EBEBEB;
-    padding: 20px 0;
-    margin: 0 0 -30px 0;
-}
-
-.footer-content {
+  }
+  
+  .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.footer-logo, .footer-mensagem, .footer-desenvolvedor {
-    flex: 1;
-}
-
-.footer-logo img {
-    text-align: left;
-}
-
-.footer-mensagem {
-    text-align: center;
-    color: rgb(97, 97, 97);
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.footer-desenvolvedor {
-    text-align: right;
-}
-
-.footer-desenvolvedor a {
-    color: black;
+    margin: auto;
+  }
+  
+  .footer-logo img {
+    max-height: 50px;
+  }
+  
+  .footer-mensagem {
+    flex-grow: 1;
+  }
+  
+  .footer-desenvolvedor a {
+    color: #f39c12;
     text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-desenvolvedor a:hover {
-    color: #99997C;
-}
-
+  }
+  
+  .footer-desenvolvedor a:hover {
+    text-decoration: underline;
+  }
   </style>
+  
