@@ -1,10 +1,10 @@
 <template>
   <div class="news">
     <header>
-      <div class="logo-container">
+      <a href="/"><div class="logo-container">
         <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
         <span class="trademark-symbol">®</span>
-      </div>
+      </div></a>
       <div class="contact-info">
         <span class="phone-number">
           <i class="fas fa-phone"></i>
@@ -19,12 +19,21 @@
       <hr class="linha">
       <nav>
         <ul>
-          <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/Sobre" exact-active-class="active">SOBRE</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+          <li><router-link to="/Serviços" exact-active-class="active">SERVIÇOS</router-link></li>
           <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
-          <li><router-link to="/Sobre" exact-active-class="active">NOTÍCIAS</router-link></li>
           <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-          <li><router-link to="/LGPD" exact-active-class="active">LGPD</router-link></li>
+          <li class="dropdown">
+            <router-link to="/LGPD" exact-active-class="active">
+                LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+        </li>
           <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
         </ul>
       </nav>
@@ -42,7 +51,7 @@
           </div>
           <div class="text-content">
             <h2>QUEM SOMOS</h2>
-            <p>Há 19 anos no mercado, a Uni Hospitalar vem conquistando espaço na distribuição de medicamentos de forma sólida e consolidada, comprometida com a saúde e bem-estar da sociedade. Fornecemos produtos de alta qualidade e serviços excepcionais, sempre com uma visão aprofundada do mercado farmacêutico.</p>
+            <p class="p-geral">Há 19 anos no mercado, a Uni Hospitalar vem conquistando espaço na distribuição de medicamentos de forma sólida e consolidada, comprometida com a saúde e bem-estar da sociedade. Fornecemos produtos de alta qualidade e serviços excepcionais, sempre com uma visão aprofundada do mercado farmacêutico.</p>
           </div>
         </div>
         <div class="item">
@@ -51,7 +60,7 @@
           </div>
           <div class="text-content">
             <h2>MISSÃO</h2>
-            <p>Ser uma empresa sólida e confiável na distribuição de medicamentos, surpreendendo os clientes com a melhor prestação de serviços, e fornecer soluções de saúde acessíveis, inovadoras e de alta qualidade. Contribuímos para o bem-estar e qualidade de vida das pessoas, sempre com ética, responsabilidade e compromisso com nossos valores.</p>
+            <p class="p-geral">Ser uma empresa sólida e confiável na distribuição de medicamentos, surpreendendo os clientes com a melhor prestação de serviços, e fornecer soluções de saúde acessíveis, inovadoras e de alta qualidade. Contribuímos para o bem-estar e qualidade de vida das pessoas, sempre com ética, responsabilidade e compromisso com nossos valores.</p>
           </div>
         </div>
         <div class="item">
@@ -60,7 +69,26 @@
           </div>
           <div class="text-content">
             <h2>VISÃO</h2>
-            <p>Ser reconhecida como a principal distribuidora de medicamentos do Brasil, expandindo nossas operações para novas regiões e setores, sempre buscando excelência em tudo o que fazemos, mantendo a transparência e respeito com as relações humanas.</p>
+            <p class="p-geral">Ser reconhecida como a principal distribuidora de medicamentos do Brasil, expandindo nossas operações para novas regiões e setores, sempre buscando excelência em tudo o que fazemos, mantendo a transparência e respeito com as relações humanas.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon-container">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="text-content">
+            <h2>NOSSOS SERVIÇOS</h2>
+            <p class="p-services">A Uni Hospitalar busca atender de forma eficiente os segmentos públicos e privados, através de profissionais capacitados para interpretar o mercado e assim dar respostas compatíveis e definitivas para o bom atendimento da cadeia de distribuição.</p>
+            <div class="services-grid">
+              <div class="service-item">
+                <h3>Segmento Privado</h3>
+                <p class="p-services">Formado internamente por um telemarketing que funciona alinhado com uma equipe de consultores externos, visando sempre dar respostas rápidas e eficazes, a fim de atender o nosso cliente da melhor forma possível.</p>
+              </div>
+              <div class="service-item">
+                <h3>Segmento Público</h3>
+                <p class="p-services">Formado internamente por um Setor de Licitações, composto por profissionais capacitados e orientados para o mercado, buscando informações através da captação de editais e outras formas a fim de gerar novos negócios. Este setor se completa através da presença de consultores externos que visitam sistematicamente todos os órgãos públicos que trabalhamos.</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="item">
@@ -69,7 +97,7 @@
           </div>
           <div class="text-content">
             <h2>VALORES</h2>
-            <p>Nosso trabalho é guiado pelos seguintes valores fundamentais:</p>
+            <p class="p-valores">Nosso trabalho é guiado pelos seguintes valores fundamentais:</p>
             <div class="valores-grid">
               <span>Ética</span>
               <span>Qualidade</span>
@@ -80,25 +108,6 @@
               <span>Agilidade</span>
               <span>Objetividade</span>
               <span>Integridade</span>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="icon-container">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <div class="text-content">
-            <h2>Nossos Serviços</h2>
-            <p>A Uni Hospitalar busca atender de forma eficiente os segmentos públicos e privados, através de profissionais capacitados para interpretar o mercado e assim dar respostas compatíveis e definitivas para o bom atendimento da cadeia de distribuição.</p>
-            <div class="services-grid">
-              <div class="service-item">
-                <h3>Segmento Privado</h3>
-                <p>Formado internamente por um telemarketing que funciona alinhado com uma equipe de consultores externos, visando sempre dar respostas rápidas e eficazes, a fim de atender o nosso cliente da melhor forma possível.</p>
-              </div>
-              <div class="service-item">
-                <h3>Segmento Público</h3>
-                <p>Formado internamente por um Setor de Licitações, composto por profissionais capacitados e orientados para o mercado, buscando informações através da captação de editais e outras formas a fim de gerar novos negócios. Este setor se completa através da presença de consultores externos que visitam sistematicamente todos os órgãos públicos que trabalhamos.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -137,132 +146,190 @@ export default {
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #AE2C2A;
-  padding: 35px 0;
-  box-sizing: border-box;
-  font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AE2C2A;
+    padding: 35px 0;
+    box-sizing: border-box;
+    top: -60px;
+    font-size: 1.2em;
+    position: relative;
 }
 
 .logo-container {
-  position: absolute;
-  top: 0.3px;
-  left: 0px;
-  background-color: #E5E5E5;
-  padding: 31.5px 0;
-  width: 20%;
-  box-sizing: border-box;
+    position: absolute;
+    top: 0.3px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 32.5px 0;
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .logo {
-  height: 80px;
+    height: 80px;
 }
 
 .trademark-symbol {
-  font-size: 1.5em;
-  margin-left: 5px;
-  color: #000000;
-  position: relative;
-  top: -48px;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-left: 3px;
+    color: #000000;
+    position: relative;
+    top: -55px;
 }
 
 .contact-info {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 0;
 }
 
 .contact-info span {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: #FF8888;
-  margin-right: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
 }
 
 .contact-info a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: #FF8888;
-  margin-right: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info span:last-child {
+    margin-right: 0;
 }
 
 .contact-info i {
-  margin-right: 8px;
+    margin-right: 8px;
+}
+
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
 }
 
 .linha {
-  width: 50%;
-  color: #FF8888;
-  border: 0;
-  border-top: 2px solid #FF8888;
-  margin: 0 auto 20px auto;
+    width: 50%;
+    color: #FF8888;
+    border: 0;
+    border-top: 2px solid #FF8888;
+    margin: 0 auto 20px auto;
 }
 
 nav {
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
-  position: relative;
+    margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 0.8em;
-  padding-bottom: 5px;
-  transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.8em;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: #FF8888;
-  transition: width 0.3s ease-in-out;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #FF8888;
+    transition: width 0.3s ease-in-out;
 }
 
 nav ul li a:hover::after {
-  width: 100%;
+    width: 100%;
+}
+
+nav ul li.active a::after {
+    width: 100%;
+}
+
+nav ul li a.router-link-active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #848484;
+}
+
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AE2C2A;
+  top: 100%;
+  right: 80%;
+  transform: translateX(80%);
+  min-width: 180px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+nav ul li .dropdown-content li {
+  padding: 10px;
+  text-align: left;
+}
+
+nav ul li .dropdown-content li a {
+  color: #FFFFFF;
+  padding: 0;
+}
+
+nav ul li .dropdown-content li a:hover {
+  color: #848484;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .banner-container {
-  display: flex;
-  justify-content: center;
-  margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    background-color: #F9F9F9;
 }
 
 .banner-container img {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
-  filter: brightness(0.9);
-  transition: filter 0.3s ease-in-out;
-}
-
-.banner-container img:hover {
-  filter: brightness(1);
+    width: 60%;
+    height: auto;
+    object-fit: cover;
 }
 
 main {
@@ -276,7 +343,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-  width: 80%;
+  width: 65%;
 }
 
 .item {
@@ -297,7 +364,7 @@ main {
 .icon-container {
   background-color: #AE2C2A;
   color: #ffffff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -315,18 +382,42 @@ main {
   flex: 1;
   padding-top: 40px;
   margin-top: -70px;
+  padding-left: 20px;
 }
 
 .text-content h2 {
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
+  border-bottom: 2px solid #FF8888;
   margin-bottom: 10px;
 }
 
-.text-content p {
+.text-content h3 {
+  color: #f05454;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #FF8888;
+  font-weight: 800
+}
+
+.p-geral {
   font-size: 1.2em;
-  color: #666666;
+  color: #707070;
+  text-align: justify;
+}
+
+.p-valores {
+  font-size: 1.2em;
+  color: #707070;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.p-services {
+  font-size: 1.2em;
+  color: #707070;
+  margin-bottom: 50px;
+  text-align: justify;
 }
 
 .valores-grid {
@@ -352,47 +443,78 @@ main {
 }
 
 footer {
-  background-color: #333333;
-  color: #ffffff;
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: #EBEBEB;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-  height: 80px;
-  margin-right: 20px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
 }
 
 .footer-mensagem {
-  flex: 1;
+    color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
+    font-weight: 700;
 }
 
 .footer-desenvolvedor {
-  flex: 1;
-  text-align: right;
-}
-
-.footer-desenvolvedor p {
-  font-size: 1.2em;
-  color: #FF8888;
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
 }
 
 .footer-desenvolvedor a {
-  text-decoration: none;
-  color: #FF8888;
-  transition: color 0.3s ease;
+    color: #FF5555;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-desenvolvedor a:hover {
-  color: #FF5555;
+    color: #AE2C2A;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
 </style>

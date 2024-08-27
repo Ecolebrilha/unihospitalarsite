@@ -1,10 +1,10 @@
 <template>
   <div class="produtos">
       <header>
-        <div class="logo-container">
-                <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
-                <span class="trademark-symbol">®</span>
-            </div>
+        <a href="/"><div class="logo-container">
+        <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
+        <span class="trademark-symbol">®</span>
+      </div></a>
           <div class="contact-info">
             <span class="phone-number">                  
                     <i class="fas fa-phone"></i>
@@ -14,12 +14,21 @@
           <hr class="linha">
           <nav>
               <ul>
-                <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li> 
+                <li><router-link to="/" exact-active-class="active"></router-link></li> 
+                <li><router-link to="/Sobre" exact-active-class="active">SOBRE</router-link></li>
                 <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+                <li><router-link to="/Serviços" exact-active-class="active">SERVIÇOS</router-link></li>
                 <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
-                <li><router-link to="/Notícias" exact-active-class="active">NOTÍCIAS</router-link></li>
                 <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-                <li><router-link to="/LGPD" exact-active-class="active">LGPD</router-link></li>
+                <li class="dropdown">
+            <router-link to="/LGPD" exact-active-class="active">
+                LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+        </li>
                 <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
               </ul>
           </nav>
@@ -101,7 +110,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 31.5px 0;
+    padding: 32.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -111,11 +120,12 @@ header {
 }
 
 .trademark-symbol {
-    font-size: 1.5em;
-    margin-left: 5px;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-left: 3px;
     color: #000000;
     position: relative;
-    top: -48px;
+    top: -55px;
 }
 
 .contact-info {
@@ -221,6 +231,40 @@ nav ul li a.router-link-active::after {
 
 nav ul li a:hover {
     color: #848484;
+}
+
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AE2C2A;
+  top: 100%;
+  right: 80%;
+  transform: translateX(80%);
+  min-width: 180px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+nav ul li .dropdown-content li {
+  padding: 10px;
+  text-align: left;
+}
+
+nav ul li .dropdown-content li a {
+  color: #FFFFFF;
+  padding: 0;
+}
+
+nav ul li .dropdown-content li a:hover {
+  color: #848484;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .banner-container {

@@ -1,16 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePrincipal from '@/components/HomePrincipal.vue';
 import HomeDiferenciais from '@/components/HomeDiferenciais.vue';
+import NossosServicos from '@/components/NossosServicos.vue';
 import HomeProdutos from '@/components/HomeProdutos.vue';
 import HomeSobre from '@/components/HomeSobre.vue';
 import HomeCompliance from '@/components/HomeCompliance.vue';
 import HomeLGPD from '@/components/HomeLGPD.vue';
+import PoliticaPrivacidade from '@/components/PoliticaPrivacidade.vue';
+import TermosLegais from '@/components/TermosLegais.vue';
 import HomeContato from '@/components/HomeContato.vue';
 
 
 const routes = [
   {
-    path: '/Principal',
+    path: '/',
     name: 'HomePrincipal',
     component: HomePrincipal,
   },
@@ -18,6 +21,11 @@ const routes = [
     path: '/Diferenciais',
     name: 'HomeDiferenciais',
     component: HomeDiferenciais,
+  },
+  {
+    path: '/Serviços',
+    name: 'NossosServicos',
+    component: NossosServicos,
   },
   {
     path: '/Produtos',
@@ -38,6 +46,16 @@ const routes = [
     path: '/LGPD',
     name: 'HomeLGPD',
     component: HomeLGPD,
+  },
+  {
+    path: '/PoliticaPrivacidade',
+    name: 'PoliticaPrivacidade',
+    component: PoliticaPrivacidade,
+  },
+  {
+    path: '/TermosLegais',
+    name: 'TermosLegais',
+    component: TermosLegais,
   },
   {
     path: '/Contato',
