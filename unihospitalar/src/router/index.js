@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePrincipal from '@/components/HomePrincipal.vue';
 import HomeDiferenciais from '@/components/HomeDiferenciais.vue';
 import HomeProdutos from '@/components/HomeProdutos.vue';
-import HomeNoticias from '@/components/HomeNoticias.vue';
+import HomeSobre from '@/components/HomeSobre.vue';
 import HomeCompliance from '@/components/HomeCompliance.vue';
 import HomeLGPD from '@/components/HomeLGPD.vue';
 import HomeContato from '@/components/HomeContato.vue';
@@ -25,9 +25,9 @@ const routes = [
     component: HomeProdutos,
   },
   {
-    path: '/Notícias',
-    name: 'HomeNoticias',
-    component: HomeNoticias,
+    path: '/Sobre',
+    name: 'HomeSobre',
+    component: HomeSobre,
   },
   {
     path: '/Compliance',

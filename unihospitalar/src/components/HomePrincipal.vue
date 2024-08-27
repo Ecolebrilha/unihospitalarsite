@@ -22,16 +22,24 @@
                 </div>
                 <hr class="linha">
                 <nav>
-                    <ul>
-                        <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li> 
-                        <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-                        <li><router-link to="/produtos" exact-active-class="active">PRODUTOS</router-link></li>
-                        <li><router-link to="/Notícias" exact-active-class="active">NOTÍCIAS</router-link></li>
-                        <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
-                        <li><router-link to="/LGPD" exact-active-class="active">LGPD</router-link></li>
-                        <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
-                    </ul>
-                </nav>
+    <ul>
+        <li><router-link to="/Principal" exact-active-class="active">PRINCIPAL</router-link></li> 
+        <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
+        <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
+        <li><router-link to="/Sobre" exact-active-class="active">SOBRE</router-link></li>
+        <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+        <li class="dropdown">
+            <router-link to="/LGPD" exact-active-class="active">
+                LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+        </li>
+        <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
+    </ul>
+</nav>
         </header>
 
         <main>
@@ -402,6 +410,40 @@ nav ul li a.router-link-active::after {
 
 nav ul li a:hover {
     color: #848484;
+}
+
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AE2C2A;
+  top: 100%;
+  right: 80%;
+  transform: translateX(80%);
+  min-width: 180px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+nav ul li .dropdown-content li {
+  padding: 10px;
+  text-align: left;
+}
+
+nav ul li .dropdown-content li a {
+  color: #FFFFFF;
+  padding: 0;
+}
+
+nav ul li .dropdown-content li a:hover {
+  color: #848484;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .banner-content {

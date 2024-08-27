@@ -297,7 +297,7 @@ main {
 }
 
 .contact-info-sections h2 {
-    text-align: center;
+  text-align: center;
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
