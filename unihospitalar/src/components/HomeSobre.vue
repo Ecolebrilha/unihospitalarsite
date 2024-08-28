@@ -16,6 +16,12 @@
           </a>
         </span>
       </div>
+      <div class="language-selector">
+        <select @change="changeLanguage($event)">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </div>
       <hr class="linha">
       <nav>
         <ul>
@@ -74,25 +80,6 @@
         </div>
         <div class="item">
           <div class="icon-container">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <div class="text-content">
-            <h2>NOSSOS SERVIÇOS</h2>
-            <p class="p-services">A Uni Hospitalar busca atender de forma eficiente os segmentos públicos e privados, através de profissionais capacitados para interpretar o mercado e assim dar respostas compatíveis e definitivas para o bom atendimento da cadeia de distribuição.</p>
-            <div class="services-grid">
-              <div class="service-item">
-                <h3>Segmento Privado</h3>
-                <p class="p-services">Formado internamente por um telemarketing que funciona alinhado com uma equipe de consultores externos, visando sempre dar respostas rápidas e eficazes, a fim de atender o nosso cliente da melhor forma possível.</p>
-              </div>
-              <div class="service-item">
-                <h3>Segmento Público</h3>
-                <p class="p-services">Formado internamente por um Setor de Licitações, composto por profissionais capacitados e orientados para o mercado, buscando informações através da captação de editais e outras formas a fim de gerar novos negócios. Este setor se completa através da presença de consultores externos que visitam sistematicamente todos os órgãos públicos que trabalhamos.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="icon-container">
             <i class="fas fa-heart"></i>
           </div>
           <div class="text-content">
@@ -131,9 +118,14 @@
 </template>
 
 <script>
-export default {
-  name: 'HomeNoticias',
-};
+  export default {
+  name: 'HomeSobre',
+  methods: {
+    changeLanguage(event) {
+      this.$i18n.locale = event.target.value;
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -146,15 +138,14 @@ export default {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #AE2C2A;
+  position: fixed; /* Fixa o header no topo da página */
+    top: 0; /* Posiciona o header no topo da página */
+    left: 0; /* Alinha o header à esquerda da página */
+    width: 100%; /* Faz o header ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que o header fique acima dos outros elementos */
+    background-color: #AE2C2A; /* Cor de fundo do header, ajuste conforme necessário */
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
-    font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -215,6 +206,20 @@ header {
 .small-numbers {
     font-size: 0.8em;
     padding-right: 5px;
+}
+
+.language-selector {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 .linha {
@@ -320,6 +325,7 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .banner-container {
+  padding-top: 145px;
     display: flex;
     justify-content: center;
     margin-top: -60px;
@@ -335,7 +341,7 @@ nav ul li.dropdown:hover .dropdown-content {
 main {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding-top: 150px;
   background-color: #f9f9f9;
 }
 
