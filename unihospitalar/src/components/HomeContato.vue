@@ -11,6 +11,12 @@
                     <span class="small-numbers">+55 81 </span> 3472 7201</span>
                     <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
           </div>
+          <div class="language-selector">
+        <select @change="changeLanguage($event)">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </div>
           <hr class="linha">
           <nav>
               <ul>
@@ -118,6 +124,18 @@
         </footer>
     </div>
 </template>
+
+<script>
+  export default {
+  name: 'HomeSobre',
+  methods: {
+    changeLanguage(event) {
+      this.$i18n.locale = event.target.value;
+    }
+  }
+}
+</script>
+
 <style scoped>
 .contato {
     text-align: center;
@@ -197,6 +215,20 @@ header {
 .small-numbers {
     font-size: 0.8em;
     padding-right: 5px;
+}
+
+.language-selector {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 .linha {

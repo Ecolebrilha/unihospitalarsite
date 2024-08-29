@@ -4,19 +4,17 @@ const messages = {
   en: {
     message: {
       hello: 'Hello World'
-      // Traduções em inglês
     }
   },
   pt: {
     message: {
       hello: 'Olá Mundo'
-      // Traduções em português
     }
   }
 };
 
 const i18n = createI18n({
-  locale: 'pt', // Idioma padrão
+  locale: 'pt',
   fallbackLocale: 'en',
   messages,
 });

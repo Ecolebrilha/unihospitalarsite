@@ -16,6 +16,12 @@
             </a>
           </span>
         </div>
+        <div class="language-selector">
+        <select @change="changeLanguage($event)">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </div>
         <hr class="linha">
         <nav>
           <ul>
@@ -119,16 +125,11 @@
   </template>
 
 <script>
-export default {
+  export default {
+  name: 'HomeSobre',
   methods: {
-    navigateTo(page) {
-      if (page === 'privacy') {
-        this.$router.push('/privacy-policy');
-      } else if (page === 'terms') {
-        this.$router.push('/terms-of-use');
-      } else if (page === 'contato') {
-        this.$router.push('/contato');
-      }
+    changeLanguage(event) {
+      this.$i18n.locale = event.target.value;
     }
   }
 }
@@ -160,22 +161,23 @@ export default {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 32.5px 0;
+    padding: 23.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
 
 .logo {
-    height: 80px;
+    height: 100px;
+    margin: 0 auto;
 }
 
 .trademark-symbol {
-    font-size: 0.9em;
+    font-size: 1.2em;
     font-weight: 700;
     margin-left: 3px;
     color: #000000;
     position: relative;
-    top: -55px;
+    top: -67px;
 }
 
 .contact-info {
@@ -215,8 +217,22 @@ export default {
     padding-right: 5px;
 }
 
+.language-selector {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
 .linha {
-    width: 50%;
+    width: 48%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
@@ -240,7 +256,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 14px;
     position: relative;
 }
 
@@ -249,7 +265,7 @@ nav ul li a {
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
     white-space: nowrap;
     padding-bottom: 5px;
     display: inline-block;

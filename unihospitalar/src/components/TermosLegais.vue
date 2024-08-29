@@ -11,6 +11,12 @@
                       <span class="small-numbers">+55 81 </span> 3472 7201</span>
                       <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
             </div>
+            <div class="language-selector">
+        <select @change="changeLanguage($event)">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </div>
             <hr class="linha">
             <nav>
                 <ul>
@@ -76,10 +82,15 @@
       </div>
   </template>
     
-  <script>
-  export default {
-    name: 'HomeDiferenciais',
-  };
+    <script>
+    export default {
+    name: 'HomeSobre',
+    methods: {
+      changeLanguage(event) {
+        this.$i18n.locale = event.target.value;
+      }
+    }
+  }
   </script>
     
   <style scoped>
@@ -105,14 +116,14 @@
   }
   
   .logo-container {
-      position: absolute;
-      top: 0.3px;
-      left: 0px;
-      background-color: #E5E5E5;
-      padding: 32.5px 0;
-      width: 20%;
-      box-sizing: border-box;
-  }
+    position: absolute;
+    top: 0.39px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 29.2px 0;
+    width: 20%;
+    box-sizing: border-box;
+}
   
   .logo {
       height: 80px;
@@ -163,6 +174,20 @@
       font-size: 0.8em;
       padding-right: 5px;
   }
+
+  .language-selector {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
   
   .linha {
       width: 50%;

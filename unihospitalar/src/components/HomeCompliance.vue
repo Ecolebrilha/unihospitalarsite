@@ -14,6 +14,12 @@
             <a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i> contato@unihospitalar.com.br</a>
           </span>
         </div>
+        <div class="language-selector">
+        <select @change="changeLanguage($event)">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </div>
         <hr class="linha">
         <nav>
           <ul>
@@ -115,9 +121,14 @@
   
   <script>
   export default {
-    name: 'HomeCompliance',
-  };
-  </script>
+  name: 'HomeSobre',
+  methods: {
+    changeLanguage(event) {
+      this.$i18n.locale = event.target.value;
+    }
+  }
+}
+</script>
   
   <style scoped>
   .compliance {
@@ -129,20 +140,207 @@
   }
   
   header {
-    /* Estilo para o cabeçalho */
-  }
-  
-  .banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AE2C2A;
+    padding: 35px 0;
+    box-sizing: border-box;
+    top: -60px;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0.3px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 23.5px 0;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 100px;
+    margin: 0 auto;
+}
+
+.trademark-symbol {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-left: 3px;
+    color: #000000;
+    position: relative;
+    top: -67px;
+}
+
+.contact-info {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
-  }
-  
-  .banner-container img {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 0;
+}
+
+.contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info span:last-child {
+    margin-right: 0;
+}
+
+.contact-info i {
+    margin-right: 8px;
+}
+
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
+}
+
+.language-selector {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.linha {
+    width: 48%;
+    color: #FF8888;
+    border: 0;
+    border-top: 2px solid #FF8888;
+    margin: 0 auto 20px auto;
+}
+
+nav {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 14px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9em;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #FF8888;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li.active a::after {
+    width: 100%;
+}
+
+nav ul li a.router-link-active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #848484;
+}
+
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AE2C2A;
+  top: 100%;
+  right: 80%;
+  transform: translateX(80%);
+  min-width: 180px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+nav ul li .dropdown-content li {
+  padding: 10px;
+  text-align: left;
+}
+
+nav ul li .dropdown-content li a {
+  color: #FFFFFF;
+  padding: 0;
+}
+
+nav ul li .dropdown-content li a:hover {
+  color: #848484;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.banner-container {
+  padding-top: 145px;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    background-color: #F9F9F9;
+}
+
+.banner-container img {
     width: 60%;
     height: auto;
     object-fit: cover;
-  }
+}
   
   main {
     display: flex;
@@ -246,7 +444,6 @@
   }
   
   footer {
-    /* Estilo para o rodapé */
   }
   
   .footer-content {

@@ -138,14 +138,15 @@
 }
 
 header {
-  position: fixed; /* Fixa o header no topo da página */
-    top: 0; /* Posiciona o header no topo da página */
-    left: 0; /* Alinha o header à esquerda da página */
-    width: 100%; /* Faz o header ocupar toda a largura da tela */
-    z-index: 1000; /* Garante que o header fique acima dos outros elementos */
-    background-color: #AE2C2A; /* Cor de fundo do header, ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
+    top: -60px;
+    font-size: 1.2em;
+    position: relative;
 }
 
 .logo-container {
@@ -153,22 +154,23 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 32.5px 0;
+    padding: 23.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
 
 .logo {
-    height: 80px;
+    height: 100px;
+    margin: 0 auto;
 }
 
 .trademark-symbol {
-    font-size: 0.9em;
+    font-size: 1.2em;
     font-weight: 700;
     margin-left: 3px;
     color: #000000;
     position: relative;
-    top: -55px;
+    top: -67px;
 }
 
 .contact-info {
@@ -223,7 +225,7 @@ header {
 }
 
 .linha {
-    width: 50%;
+    width: 48%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
@@ -247,7 +249,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 14px;
     position: relative;
 }
 
@@ -256,7 +258,7 @@ nav ul li a {
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
     white-space: nowrap;
     padding-bottom: 5px;
     display: inline-block;

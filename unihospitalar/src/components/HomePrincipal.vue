@@ -261,11 +261,9 @@ export default {
         track.style.width = `${totalSlides * 6 * 100}%`;
     },
 };
-
 </script>
 
 <style scoped>
-
 .principal {
     text-align: center;
     margin: 0;
@@ -291,22 +289,23 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 32.5px 0;
+    padding: 23.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
 
 .logo {
-    height: 80px;
+    height: 100px;
+    margin: 0 auto;
 }
 
 .trademark-symbol {
-    font-size: 0.9em;
+    font-size: 1.2em;
     font-weight: 700;
     margin-left: 3px;
     color: #000000;
     position: relative;
-    top: -55px;
+    top: -67px;
 }
 
 .contact-info {
@@ -347,7 +346,7 @@ header {
 }
 
 .linha {
-    width: 50%;
+    width: 48%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
@@ -371,7 +370,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 14px;
     position: relative;
 }
 
@@ -380,7 +379,7 @@ nav ul li a {
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
     white-space: nowrap;
     padding-bottom: 5px;
     display: inline-block;
