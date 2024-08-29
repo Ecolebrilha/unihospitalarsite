@@ -146,15 +146,15 @@
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -162,22 +162,23 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 32.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
 
 .logo {
-    height: 80px;
+    height: 100px;
+    margin: 0 auto;
 }
 
 .trademark-symbol {
-    font-size: 0.9em;
+    font-size: 1.2em;
     font-weight: 700;
     margin-left: 3px;
     color: #000000;
     position: relative;
-    top: -55px;
+    top: -67px;
 }
 
 .contact-info {
@@ -232,7 +233,7 @@ header {
 }
 
 .linha {
-    width: 50%;
+    width: 48%;
     color: #FF8888;
     border: 0;
     border-top: 2px solid #FF8888;
@@ -256,7 +257,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 14px;
     position: relative;
 }
 
@@ -265,7 +266,7 @@ nav ul li a {
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
     white-space: nowrap;
     padding-bottom: 5px;
     display: inline-block;
@@ -334,16 +335,22 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .banner-container {
+  padding-top: 145px;
     display: flex;
     justify-content: center;
     margin-top: -60px;
-    margin-bottom: 80px;
+    background-color: #F9F9F9;
 }
 
 .banner-container img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-container img:hover {
+  transform: scale(1.05);
 }
 
 main {

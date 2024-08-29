@@ -1,5 +1,5 @@
 <template>
-    <div class="servicos">
+    <div class="services">
       <header>
         <a href="/">
           <div class="logo-container">
@@ -46,7 +46,7 @@
       </header>
   
       <div class="banner-container">
-        <img src="@/assets/header-diferenciais.jpg" alt="Imagem do Banner">
+        <img src="@/assets/header-servicos.jpg" alt="Imagem do Banner">
       </div>
   
       <main>
@@ -96,7 +96,7 @@
 </script>
   
   <style scoped>
-  .servicos {
+  .services {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
@@ -105,15 +105,15 @@
   }
   
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -121,7 +121,7 @@
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 23.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -302,15 +302,21 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .banner-container img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-container img:hover {
+  transform: scale(1.05);
 }
   
   main {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding-top: 80px;
+  padding-bottom: 100px;
   }
   
   .servicos-content {
@@ -349,47 +355,78 @@ nav ul li.dropdown:hover .dropdown-content {
   
   footer {
     background-color: #EBEBEB;
-    padding: 20px 0;
-  }
-  
-  .footer-content {
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.footer-content {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .footer-logo img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-logo img {
     height: 50px;
-  }
-  
-  .footer-mensagem {
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-mensagem {
     color: rgb(97, 97, 97);
-    font-size: 0.9em;
+    flex: 1;
     text-align: center;
+    font-size: 0.9em;
     margin: 10px 0;
-  }
-  
-  .footer-desenvolvedor a {
-    color: #AE2C2A;
+}
+
+.footer-mensagem p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.footer-desenvolvedor a {
+    color: #FF5555;
     text-decoration: none;
-  }
-  
-  .footer-desenvolvedor a:hover {
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-desenvolvedor a:hover {
+    color: #AE2C2A;
     text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .servicos-content {
-      width: 90%;
-    }
-  
+}
+
+@media (max-width: 768px) {
     .footer-content {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-  }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
+}
   </style>
   

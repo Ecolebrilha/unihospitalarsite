@@ -8,7 +8,7 @@
 <!-- Usar o https://goadopt.io/ no site pro LGPD e Cookies -->
 <!-- Site gratuito de ícones sem licença: https://uxwing.com/ -->
 <template>
-    <div class="principal">
+    <div class="home">
         <header>
             <a href="/"><div class="logo-container">
         <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
@@ -264,7 +264,7 @@ export default {
 </script>
 
 <style scoped>
-.principal {
+.home {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -273,15 +273,15 @@ export default {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -289,7 +289,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 23.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -498,8 +498,12 @@ nav ul li.dropdown:hover .dropdown-content {
     background-color: #FF5555;
 }
 
+main {
+    padding-top: 151px;
+}
+
 .main-content {
-    padding: 40px 80px;
+    padding: 40px 240px;
 }
 
 .header-background {

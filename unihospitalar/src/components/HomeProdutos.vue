@@ -1,5 +1,5 @@
 <template>
-  <div class="produtos">
+  <div class="products">
       <header>
         <a href="/"><div class="logo-container">
         <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
@@ -67,8 +67,8 @@
         </div>
       </section>
     </main>
-
-      <a href="https://www.unihospitalar.com.br/site/uni-hospitalar-produtos.pdf"><button class="btn-produtos">CLIQUE AQUI PARA BAIXAR NOSSA LINHA DE PRODUTOS</button></a>
+    
+    <a href="https://www.unihospitalar.com.br/site/uni-hospitalar-produtos.pdf"><button class="btn-produtos">CLIQUE AQUI PARA BAIXAR NOSSA LINHA DE PRODUTOS</button></a>
   
       <footer>
             <div class="footer-content">
@@ -98,7 +98,7 @@ methods: {
 </script>
 
   <style scoped>
-  .produtos {
+  .products {
   text-align: center;
   margin: 0;
   padding: 0;
@@ -107,15 +107,15 @@ methods: {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -123,7 +123,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 23.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -317,7 +317,8 @@ nav ul li.dropdown:hover .dropdown-content {
 main {
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  padding-top: 80px;
+  padding-bottom: 20px;
 }
 
 .produtos-content {
@@ -361,6 +362,7 @@ main {
   font-size: 1.2em;
   font-weight: bold;
   border-radius: 50px;
+  margin-bottom: 100px;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -370,25 +372,78 @@ main {
 }
 
 footer {
-  background-color: #EBEBEB;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: #EBEBEB;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-  height: 50px;
-  transition: transform 0.3s ease-in-out;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .footer-logo img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-.footer-mensagem p, .footer-desenvolvedor p {
-  color: #333333;
-  margin: 0;
-  font-size: 0.9em;
+.footer-mensagem {
+    color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.footer-desenvolvedor a {
+    color: #FF5555;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-desenvolvedor a:hover {
+    color: #AE2C2A;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
   </style>

@@ -145,15 +145,15 @@
   }
 
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -161,7 +161,7 @@
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 23.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }

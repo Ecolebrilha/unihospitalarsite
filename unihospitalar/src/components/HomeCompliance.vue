@@ -121,7 +121,7 @@
   
   <script>
   export default {
-  name: 'HomeSobre',
+  name: 'HomeCompliance',
   methods: {
     changeLanguage(event) {
       this.$i18n.locale = event.target.value;
@@ -140,15 +140,15 @@
   }
   
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -156,7 +156,7 @@
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 23.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -337,9 +337,14 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .banner-container img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-container img:hover {
+  transform: scale(1.05);
 }
   
   main {
@@ -444,36 +449,79 @@ nav ul li.dropdown:hover .dropdown-content {
   }
   
   footer {
-  }
-  
-  .footer-content {
-    background-color: #AE2C2A;
-    padding: 20px;
+    background-color: #EBEBEB;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
-  }
-  
-  .footer-logo img {
-    width: 100px;
-  }
-  
-  .footer-mensagem {
-    font-size: 0.8em;
-  }
-  
-  .footer-desenvolvedor {
-    font-size: 0.8em;
-  }
-  
-  .footer-desenvolvedor a {
-    color: #FF8888;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-mensagem {
+    color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.footer-desenvolvedor a {
+    color: #FF5555;
     text-decoration: none;
-  }
-  
-  .footer-desenvolvedor a:hover {
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-desenvolvedor a:hover {
+    color: #AE2C2A;
     text-decoration: underline;
-  }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
+}
   </style>
   

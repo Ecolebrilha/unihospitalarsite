@@ -1,5 +1,5 @@
 <template>
-  <div class="news">
+  <div class="about">
     <header>
       <a href="/"><div class="logo-container">
         <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
@@ -129,7 +129,7 @@
 </script>
 
 <style scoped>
-.news {
+.about {
   text-align: center;
   margin: 0;
   padding: 0;
@@ -138,15 +138,15 @@
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -154,7 +154,7 @@ header {
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 23.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -335,15 +335,21 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .banner-container img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-container img:hover {
+  transform: scale(1.05);
 }
 
 main {
   display: flex;
   justify-content: center;
   padding-top: 150px;
+  padding-bottom: 150px;
   background-color: #f9f9f9;
 }
 

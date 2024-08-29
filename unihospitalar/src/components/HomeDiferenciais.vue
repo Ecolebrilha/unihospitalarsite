@@ -1,5 +1,5 @@
 <template>
-    <div class="diferenciais">
+    <div class="differences">
       <header>
         <a href="/"><div class="logo-container">
           <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
@@ -98,7 +98,7 @@
   </script>
   
   <style scoped>
-  .diferenciais {
+  .differences {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -107,15 +107,15 @@
   }
   
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #AE2C2A;
     padding: 35px 0;
     box-sizing: border-box;
-    top: -60px;
     font-size: 1.2em;
-    position: relative;
 }
 
 .logo-container {
@@ -123,7 +123,7 @@
     top: 0.3px;
     left: 0px;
     background-color: #E5E5E5;
-    padding: 23.5px 0;
+    padding: 22.5px 0;
     width: 20%;
     box-sizing: border-box;
 }
@@ -304,13 +304,19 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .banner-container img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-container img:hover {
+  transform: scale(1.05);
 }
   
   main {
-    padding: 40px;
+    padding-top: 80px;
+    padding-bottom: 100px;
   }
   
   .diferenciais-content {
@@ -354,38 +360,79 @@ nav ul li.dropdown:hover .dropdown-content {
   }
   
   footer {
-    background-color: #AE2C2A;
+    background-color: #EBEBEB;
     color: #FFFFFF;
-    padding: 20px 0;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-content {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
-  
-  .footer-logo img {
-    max-width: 100px;
-    height: auto;
-  }
-  
-  .footer-mensagem p, .footer-desenvolvedor p {
-    margin: 0;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-mensagem {
+    color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
     font-size: 0.9em;
-  }
-  
-  .footer-desenvolvedor a {
-    color: #FF8888;
+    margin: 10px 0;
+}
+
+.footer-mensagem p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.footer-desenvolvedor a {
+    color: #FF5555;
     text-decoration: none;
-  }
-  
-  .footer-desenvolvedor a:hover {
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-desenvolvedor a:hover {
+    color: #AE2C2A;
     text-decoration: underline;
-  }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
+}
   </style>
   
