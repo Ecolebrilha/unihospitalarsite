@@ -20,6 +20,12 @@
                     <span class="small-numbers">+55 81 </span> 3472 7201</span>
                     <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
                 </div>
+                <div class="language-selector">
+        <select @change="changeLanguage($event)">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </div>
                 <hr class="linha">
                 <nav>
     <ul>
@@ -248,6 +254,11 @@
 <script>
 export default {
     name: "HomePrincipal",
+    methods: {
+        changeLanguage(event) {
+            this.$i18n.locale = event.target.value;
+        }
+    },
     mounted() {
         const track = document.querySelector(".parceiros-track");
         const slides = Array.from(track.children);
@@ -343,6 +354,20 @@ header {
 .small-numbers {
     font-size: 0.8em;
     padding-right: 5px;
+}
+
+.language-selector {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
 .linha {
@@ -583,10 +608,9 @@ main {
 }
 
 .blocks {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: center;
 }
 
 .block {

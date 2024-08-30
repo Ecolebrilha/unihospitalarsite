@@ -46,6 +46,9 @@
     </header>
 
     <div class="banner-container">
+      <div class="banner-overlay">
+        <h1>Sobre nós</h1>
+      </div>
       <img src="@/assets/header-sobre.jpg" alt="Imagem do Banner">
     </div>
 
@@ -327,11 +330,12 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .banner-container {
+  position: relative;
   padding-top: 145px;
-    display: flex;
-    justify-content: center;
-    margin-top: -60px;
-    background-color: #F9F9F9;
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  background-color: #F9F9F9;
 }
 
 .banner-container img {
@@ -341,8 +345,24 @@ nav ul li.dropdown:hover .dropdown-content {
   transition: transform 0.3s ease-in-out;
 }
 
-.banner-container img:hover {
-  transform: scale(1.05);
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5); /* Vermelho claro e transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay h1 {
+  color: #FFFFFF;
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 main {
