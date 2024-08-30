@@ -26,11 +26,11 @@
         <nav>
           <ul>
             <li><router-link to="/" exact-active-class="active"></router-link></li>
-            <li><router-link to="/Sobre" exact-active-class="active">SOBRE</router-link></li>
-            <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-            <li><router-link to="/Serviços" exact-active-class="active">SERVIÇOS</router-link></li>
-            <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
-            <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+            <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+            <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+            <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+            <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+            <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
             <li class="dropdown">
             <router-link to="/LGPD" exact-active-class="active">
                 LGPD <i class="fas fa-chevron-down"></i>
@@ -40,14 +40,17 @@
                 <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
         </li>
-            <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
+            <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
           </ul>
         </nav>
       </header>
   
       <div class="banner-container">
-        <img src="@/assets/header-servicos.jpg" alt="Imagem do Banner">
+      <div class="banner-overlay">
+        <h1>lgpd</h1>
       </div>
+      <img src="@/assets/header-sobre.jpg" alt="Imagem do Banner">
+    </div>
   
       <main>
         <div class="lgpd-container">
@@ -256,7 +259,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 14px;
+    margin: 0 16px;
     position: relative;
 }
 
@@ -265,7 +268,7 @@ nav ul li a {
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1em;
     white-space: nowrap;
     padding-bottom: 5px;
     display: inline-block;
@@ -332,30 +335,70 @@ nav ul li .dropdown-content li a:hover {
 nav ul li.dropdown:hover .dropdown-content {
   display: block;
 }
-
+  
 .banner-container {
-    display: flex;
-    justify-content: center;
-    margin-top: -60px;
-    margin-bottom: 80px;
+  position: relative;
+  padding-top: 145px;
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  background-color: #F9F9F9;
 }
 
 .banner-container img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5); /* Vermelho claro e transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay h1 {
+  color: #FFFFFF;
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: slideInRight 1.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background-color: #f4f4f4;
 }
 
   .lgpd-container {
     font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
     color: #333;
     padding: 30px;
     max-width: 1200px;
     margin: auto;
     margin-bottom: 50px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   }
   
   .lgpd-header {
@@ -378,7 +421,7 @@ nav ul li.dropdown:hover .dropdown-content {
   .lgpd-section {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -496,6 +539,7 @@ nav ul li.dropdown:hover .dropdown-content {
 
 .footer-desenvolvedor a {
     color: #FF5555;
+    font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }

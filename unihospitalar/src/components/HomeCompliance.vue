@@ -25,12 +25,12 @@
       <hr class="linha">
       <nav>
         <ul>
-          <li><router-link to="/" exact-active-class="active">INÍCIO</router-link></li>
-          <li><router-link to="/Sobre" exact-active-class="active">SOBRE</router-link></li>
-          <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-          <li><router-link to="/Serviços" exact-active-class="active">SERVIÇOS</router-link></li>
-          <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
-          <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
             <router-link to="/LGPD" exact-active-class="active">
               LGPD <i class="fas fa-chevron-down"></i>
@@ -40,13 +40,16 @@
               <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
           </li>
-          <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
+          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </nav>
     </header>
 
     <div class="banner-container">
-      <img src="@/assets/header-parceiros.jpg" alt="Imagem do Banner de Compliance">
+      <div class="banner-overlay">
+        <h1>Compliance</h1>
+      </div>
+      <img src="@/assets/header-parceiros.jpg" alt="Imagem do Banner">
     </div>
 
     <main>
@@ -163,58 +166,82 @@ export default {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #AE2C2A;
-  padding: 20px 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #AE2C2A;
+    padding: 35px 0;
+    box-sizing: border-box;
+    font-size: 1.2em;
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  background-color: #E5E5E5;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-right: auto;
+    position: absolute;
+    top: 0.3px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 22.5px 0;
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .logo {
-  height: 80px;
-  margin-right: 10px;
+    height: 100px;
+    margin: 0 auto;
 }
 
 .trademark-symbol {
-  font-size: 1.2em;
-  font-weight: 700;
-  color: #000;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-left: 3px;
+    color: #000000;
+    position: relative;
+    top: -67px;
 }
 
 .contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFF;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 0;
 }
 
-.contact-info span,
+.contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
 .contact-info a {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  font-size: 0.9em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info span:last-child {
+    margin-right: 0;
 }
 
 .contact-info i {
-  margin-right: 8px;
+    margin-right: 8px;
+}
+
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
 }
 
 .language-selector {
-  margin-left: auto;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .language-selector select {
@@ -222,88 +249,162 @@ header {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .linha {
-  width: 50%;
-  border-top: 2px solid #FF8888;
-  margin: 10px auto;
+    width: 48%;
+    color: #FF8888;
+    border: 0;
+    border-top: 2px solid #FF8888;
+    margin: 0 auto 20px auto;
 }
 
 nav {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0;
 }
 
 nav ul li {
-  margin: 0 10px;
-  position: relative;
+    margin: 0 16px;
+    position: relative;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #FFF;
-  font-weight: bold;
-  font-size: 1em;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: #FF8888;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #FF8888;
+    transition: width 0.3s ease-in-out;
 }
 
-.dropdown {
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li.active a::after {
+    width: 100%;
+}
+
+nav ul li a.router-link-active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #848484;
+}
+
+nav ul li.dropdown {
   position: relative;
 }
 
-.dropdown-content {
+nav ul li .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #FFF;
-  color: #000;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #AE2C2A;
+  top: 100%;
+  right: 80%;
+  transform: translateX(80%);
+  min-width: 180px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+nav ul li .dropdown-content li {
   padding: 10px;
-  z-index: 1000;
+  text-align: left;
 }
 
-.dropdown-content li {
-  margin: 5px 0;
+nav ul li .dropdown-content li a {
+  color: #FFFFFF;
+  padding: 0;
 }
 
-.dropdown:hover .dropdown-content {
+nav ul li .dropdown-content li a:hover {
+  color: #848484;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
   display: block;
 }
-
-.dropdown-content li a {
-  color: #AE2C2A;
-  text-decoration: none;
-}
-
-.dropdown-content li a:hover {
-  color: #FF8888;
-}
-
+  
 .banner-container {
-  margin-top: 140px;
+  position: relative;
+  padding-top: 145px;
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  background-color: #F9F9F9;
 }
 
 .banner-container img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5); /* Vermelho claro e transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay h1 {
+  color: #FFFFFF;
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: slideInRight 1.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 main {
   padding: 50px 20px;
+  background-color: #f4f4f4;
 }
 
 .compliance-overview {
@@ -324,7 +425,8 @@ main {
 .compliance-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 40px;
+  padding-bottom: 80px;
 }
 
 .compliance-section {
@@ -380,39 +482,79 @@ main {
 }
 
 footer {
-  background-color: #E5E5E5;
-  padding: 20px 0;
-  text-align: center;
+    background-color: #EBEBEB;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-  width: 80px;
-  height: auto;
-  object-fit: cover;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-mensagem {
+    color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
 }
 
 .footer-mensagem p {
-  margin: 10px 0;
-  font-size: 0.9em;
+    margin: 0;
+    font-weight: 700;
 }
 
-.footer-desenvolvedor p {
-  font-size: 0.8em;
+.footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
 }
 
-.footer-desenvolvedor p a {
-  text-decoration: none;
-  color: #000;
+.footer-desenvolvedor a {
+    color: #FF5555;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
-.footer-desenvolvedor p a:hover {
-  color: #FF8888;
+.footer-desenvolvedor a:hover {
+    color: #AE2C2A;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
 </style>

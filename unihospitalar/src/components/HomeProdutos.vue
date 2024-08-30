@@ -27,7 +27,7 @@
       <hr class="linha">
       <nav>
         <ul>
-          <li><router-link to="/" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
@@ -48,6 +48,9 @@
     </header>
 
     <div class="banner-container">
+      <div class="banner-overlay">
+        <h1>Nossos Produtos</h1>
+      </div>
       <img src="@/assets/header-produtos.jpg" alt="Imagem do Banner">
     </div>
 
@@ -119,56 +122,76 @@ export default {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #AE2C2A;
-  padding: 20px;
-  box-sizing: border-box;
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #AE2C2A;
+    padding: 35px 0;
+    box-sizing: border-box;
+    font-size: 1.2em;
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  background-color: #E5E5E5;
-  padding: 10px 20px;
-  border-radius: 5px;
+    position: absolute;
+    top: 0.3px;
+    left: 0px;
+    background-color: #E5E5E5;
+    padding: 22.5px 0;
+    width: 20%;
+    box-sizing: border-box;
 }
 
 .logo {
-  height: 80px;
+    height: 100px;
+    margin: 0 auto;
 }
 
 .trademark-symbol {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #000;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-left: 3px;
+    color: #000000;
+    position: relative;
+    top: -67px;
 }
 
 .contact-info {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-  padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-right: 0;
 }
 
-.contact-info span,
+.contact-info span {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
 .contact-info a {
-  display: flex;
-  align-items: center;
-  color: #FF8888;
-  margin: 0 15px;
-  font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #FF8888;
+    margin-right: 30px;
+}
+
+.contact-info span:last-child {
+    margin-right: 0;
 }
 
 .contact-info i {
-  margin-right: 8px;
+    margin-right: 8px;
+}
+
+.small-numbers {
+    font-size: 0.8em;
+    padding-right: 5px;
 }
 
 .language-selector {
@@ -181,63 +204,76 @@ header {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
 .linha {
-  width: 80%;
-  color: #FF8888;
-  border: 0;
-  border-top: 2px solid #FF8888;
-  margin: 20px auto;
+    width: 48%;
+    color: #FF8888;
+    border: 0;
+    border-top: 2px solid #FF8888;
+    margin: 0 auto 20px auto;
 }
 
 nav {
-  margin: 0 auto;
-  width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
-  position: relative;
+    margin: 0 16px;
+    position: relative;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 0.9em;
-  padding-bottom: 5px;
-  display: inline-block;
-  transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: #FF8888;
-  transition: width 0.3s ease-in-out;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #FF8888;
+    transition: width 0.3s ease-in-out;
 }
 
 nav ul li a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 nav ul li.active a::after {
-  width: 100%;
+    width: 100%;
+}
+
+nav ul li a.router-link-active::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #848484;
 }
 
 nav ul li.dropdown {
@@ -249,35 +285,38 @@ nav ul li .dropdown-content {
   position: absolute;
   background-color: #AE2C2A;
   top: 100%;
-  left: 0;
+  right: 80%;
+  transform: translateX(80%);
   min-width: 180px;
   z-index: 1;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li .dropdown-content li {
   padding: 10px;
+  text-align: left;
 }
 
 nav ul li .dropdown-content li a {
   color: #FFFFFF;
+  padding: 0;
 }
 
 nav ul li .dropdown-content li a:hover {
-  color: #FF8888;
+  color: #848484;
 }
 
 nav ul li.dropdown:hover .dropdown-content {
   display: block;
 }
-
+  
 .banner-container {
-  padding-top: 100px;
+  position: relative;
+  padding-top: 145px;
+  margin-top: -60px;
   display: flex;
   justify-content: center;
   background-color: #F9F9F9;
-  margin-bottom: 20px;
 }
 
 .banner-container img {
@@ -287,26 +326,59 @@ nav ul li.dropdown:hover .dropdown-content {
   transition: transform 0.3s ease-in-out;
 }
 
-.banner-container img:hover {
-  transform: scale(1.05);
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5); /* Vermelho claro e transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay h1 {
+  color: #FFFFFF;
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: slideInRight 1.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 main {
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  background-color: #f4f4f4;
 }
 
 .produtos-content {
   display: flex;
   flex-wrap: wrap;
+  padding: 100px 0;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
 }
 
 .card {
   background-color: #FFFFFF;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 30px;
   width: 250px;
   text-align: center;
 }
@@ -318,12 +390,13 @@ main {
 }
 
 .card h2 {
-  color: #333;
-  margin: 10px 0;
+  color: #AE2C2A;
+  margin: 10px 0 40px 0;
 }
 
 .card p {
-  color: #555;
+  color: #707070;
+  text-align: center;
 }
 
 .btn-produtos {
@@ -349,37 +422,79 @@ main {
 }
 
 footer {
-  background-color: #AE2C2A;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
+    background-color: #EBEBEB;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+    margin: 0 0 -30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-  width: 80px;
-  margin-bottom: 10px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-mensagem {
+    color: rgb(97, 97, 97);
+    flex: 1;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 10px 0;
 }
 
 .footer-mensagem p {
-  margin: 10px 0;
+    margin: 0;
+    font-weight: 700;
 }
 
-.footer-desenvolvedor p {
-  margin: 0;
+.footer-desenvolvedor {
+    color: black;
+    font-size: 0.9em;
+    text-align: right;
 }
 
 .footer-desenvolvedor a {
-  color: #FF8888;
-  text-decoration: none;
+    color: #FF5555;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-desenvolvedor a:hover {
-  text-decoration: underline;
+    color: #AE2C2A;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
 </style>

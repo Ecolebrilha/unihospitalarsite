@@ -30,11 +30,11 @@
                 <nav>
     <ul>
         <li><router-link to="/" exact-active-class="active"></router-link></li> 
-        <li><router-link to="/Sobre" exact-active-class="active">SOBRE</router-link></li>
-        <li><router-link to="/Diferenciais" exact-active-class="active">DIFERENCIAIS</router-link></li>
-        <li><router-link to="/Serviços" exact-active-class="active">SERVIÇOS</router-link></li>
-        <li><router-link to="/Produtos" exact-active-class="active">PRODUTOS</router-link></li>
-        <li><router-link to="/Compliance" exact-active-class="active">COMPLIANCE</router-link></li>
+        <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+        <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+        <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+        <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+        <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
         <li class="dropdown">
             <router-link to="/LGPD" exact-active-class="active">
                 LGPD <i class="fas fa-chevron-down"></i>
@@ -44,7 +44,7 @@
                 <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
         </li>
-        <li><router-link to="/Contato" exact-active-class="active">CONTATO</router-link></li>
+        <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
     </ul>
 </nav>
         </header>
@@ -395,7 +395,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 14px;
+    margin: 0 16px;
     position: relative;
 }
 
@@ -404,7 +404,7 @@ nav ul li a {
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1em;
     white-space: nowrap;
     padding-bottom: 5px;
     display: inline-block;
@@ -525,10 +525,11 @@ nav ul li.dropdown:hover .dropdown-content {
 
 main {
     padding-top: 151px;
+    background-color: #f4f4f4;
 }
 
 .main-content {
-    padding: 40px 240px;
+    padding: 40px 400px;
 }
 
 .header-background {
@@ -899,6 +900,7 @@ footer {
 
 .footer-desenvolvedor a {
     color: #FF5555;
+    font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
