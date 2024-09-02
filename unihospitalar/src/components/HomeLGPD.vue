@@ -17,11 +17,18 @@
           </span>
         </div>
         <div class="language-selector">
-        <select @change="changeLanguage($event)">
-          <option value="pt">Português</option>
-          <option value="en">English</option>
-        </select>
-      </div>
+    <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
+      <option value="pt" data-icon="fi fi-br">Português</option>
+      <option value="en" data-icon="fi fi-us">English</option>
+      <option value="es" data-icon="fi fi-es">Español</option>
+    </select>
+
+    <div class="icon-selector">
+      <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
+      <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
+      <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
+    </div>
+  </div>
         <hr class="linha">
         <nav>
           <ul>
@@ -92,8 +99,8 @@
                 armazenamos e protegemos suas informações.
               </p>
               <div class="lgpd-buttons">
-                <button @click="navigateTo('privacy')">Política de Privacidade</button>
-                <button @click="navigateTo('terms')">Termos Legais de Uso</button>
+                <a href="PoliticaPrivacidade"><button>Política de Privacidade</button></a>
+                <a href="TermosLegais"><button>Termos Legais de Uso</button></a>
               </div>
             </div>
           </section>
@@ -105,7 +112,7 @@
                 informações, entre em contato conosco. Estamos à disposição para
                 esclarecer qualquer questão.
               </p>
-              <button class="contact-btn" @click="navigateTo('contato')">FALE CONOSCO</button>
+              <a href="Contato"><button class="contact-btn">FALE CONOSCO</button></a>
             </div>
           </section>
         </div>
@@ -129,10 +136,17 @@
 
 <script>
   export default {
-  name: 'HomeSobre',
+  data() {
+    return {
+      selectedLanguage: 'pt'
+    }
+  },
   methods: {
     changeLanguage(event) {
-      this.$i18n.locale = event.target.value;
+      const value = typeof event === 'string' ? event : event.target.value;
+      this.selectedLanguage = value;
+
+      console.log(`Idioma selecionado: ${value}`);
     }
   }
 }
@@ -222,7 +236,7 @@
 
 .language-selector {
   position: absolute;
-  right: 20px;
+  right: 130px;
   top: 20px;
 }
 
@@ -232,6 +246,37 @@
   border-radius: 5px;
   background-color: #ffffff;
   cursor: pointer;
+}
+
+.custom-select {
+  margin-bottom: 20px;
+}
+
+.icon-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-selector span {
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon-selector span:hover {
+  transform: scale(1.1);
+}
+
+.icon-selector span.fi-fi-br::before {
+  content: '\f1e9';
+}
+
+.icon-selector span.fi-fi-us::before {
+  content: '\f1e8';
+}
+
+.icon-selector span.fi-fi-es::before {
+  content: '\f1ea';
 }
 
 .linha {
@@ -358,7 +403,7 @@ nav ul li.dropdown:hover .dropdown-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(128, 128, 128, 0.5); /* Vermelho claro e transparente */
+  background-color: rgba(128, 128, 128, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;

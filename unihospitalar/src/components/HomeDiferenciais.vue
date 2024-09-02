@@ -17,10 +17,9 @@
         </a></span>
       </div>
       <div class="language-selector">
-        <select @change="changeLanguage($event)">
-          <option value="pt">Português</option>
-          <option value="en">English</option>
-        </select>
+        <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
+        <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
+        <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
       </div>
       <hr class="linha">
       <nav>
@@ -97,8 +96,8 @@
 export default {
   name: 'HomeDiferenciais',
   methods: {
-    changeLanguage(event) {
-      this.$i18n.locale = event.target.value;
+    changeLanguage(language) {
+      this.$i18n.locale = language;
     }
   }
 }
@@ -188,16 +187,22 @@ header {
 
 .language-selector {
   position: absolute;
+  cursor: pointer;
   right: 20px;
   top: 20px;
+  display: flex;
+  gap: 10px;
 }
 
-.language-selector select {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #ffffff;
+.flag-icon {
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.flag-icon:hover {
+  transform: scale(1.2);
 }
 
 .linha {
