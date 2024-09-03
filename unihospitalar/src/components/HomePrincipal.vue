@@ -9,52 +9,88 @@
 <!-- Site gratuito de ícones sem licença: https://uxwing.com/ -->
 <template>
     <div class="home">
-        <header>
-            <a href="/"><div class="logo-container">
-        <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
-        <span class="trademark-symbol">®</span>
-      </div></a>
-            <div class="contact-info">
-                <span class="phone-number">                  
-                    <i class="fas fa-phone"></i>
-                    <span class="small-numbers">+55 81 </span> 3472 7201</span>
-                    <span><a href="mailto:contato@unihospitalar.com.br"><i class="fas fa-envelope"></i>contato@unihospitalar.com.br</a></span>
-                </div>
-                <div class="language-selector">
-    <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
-      <option value="pt" data-icon="fi fi-br">Português</option>
-      <option value="en" data-icon="fi fi-us">English</option>
-      <option value="es" data-icon="fi fi-es">Español</option>
-    </select>
-
-    <div class="icon-selector">
-      <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
-      <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
-      <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
-    </div>
-  </div>
-                <hr class="linha">
-                <nav>
-    <ul>
-        <li><router-link to="/" exact-active-class="active"></router-link></li> 
-        <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-        <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-        <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
-        <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-        <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
-        <li class="dropdown">
-            <router-link to="/LGPD" exact-active-class="active">
+      <header>
+        <button @click="toggleSidebar" class="menu-toggle">☰</button>
+  
+        <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
+          <button class="menu-close" @click="toggleSidebar">
+            ×
+          </button>
+          <ul>
+            <li><router-link to="/" exact-active-class="active"></router-link></li>
+            <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+            <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+            <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+            <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+            <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+            <li class="dropdown">
+              <router-link to="/LGPD" exact-active-class="active">
                 LGPD <i class="fas fa-chevron-down"></i>
-            </router-link>
-            <ul class="dropdown-content">
+              </router-link>
+              <ul class="dropdown-content">
                 <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
                 <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
-            </ul>
-        </li>
-        <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
-    </ul>
-</nav>
-        </header>
+              </ul>
+            </li>
+            <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+          </ul>
+        </div>
+  
+        <a href="/">
+          <div class="logo-container">
+            <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
+          </div>
+        </a>
+  
+        <div class="contact-info">
+          <span class="phone-number">
+            <i class="fas fa-phone"></i>
+            <span class="small-numbers">+55 81 </span> 3472 7201
+          </span>
+          <span>
+            <a href="mailto:contato@unihospitalar.com.br">
+              <i class="fas fa-envelope"></i>contato@unihospitalar.com.br
+            </a>
+          </span>
+        </div>
+  
+        <div class="language-selector">
+          <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
+            <option value="pt" data-icon="fi fi-br">Português</option>
+            <option value="en" data-icon="fi fi-us">English</option>
+            <option value="es" data-icon="fi fi-es">Español</option>
+          </select>
+  
+          <div class="icon-selector">
+            <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
+            <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
+            <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
+          </div>
+        </div>
+  
+        <hr class="linha">
+  
+        <nav>
+          <ul>
+            <li><router-link to="/" exact-active-class="active"></router-link></li>
+            <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+            <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+            <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+            <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+            <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+            <li class="dropdown">
+              <router-link to="/LGPD" exact-active-class="active">
+                LGPD <i class="fas fa-chevron-down"></i>
+              </router-link>
+              <ul class="dropdown-content">
+                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              </ul>
+            </li>
+            <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+          </ul>
+        </nav>
+      </header>
 
         <main>
             <div class="header-background">
@@ -69,9 +105,6 @@
         <section class="main-content">
     <div class="blocks">
         <div class="block">
-            <div class="icon-wrapper">
-                <i class="fas fa-warehouse"></i>
-            </div>
             <div class="image-wrapper">
                 <img src="@/assets/estoque.jpg" alt="Bloco 1">
                 <h3>ESTOQUE</h3>
@@ -79,9 +112,6 @@
             <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
-            <div class="icon-wrapper">
-                <i class="fas fa-star"></i>
-            </div>
             <div class="image-wrapper">
                 <img src="@/assets/diferenciais.jpg" alt="Bloco 2">
                 <h3>DIFERENCIAIS</h3>
@@ -89,9 +119,6 @@
             <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
-            <div class="icon-wrapper">
-                <i class="fas fa-truck"></i>
-            </div>
             <div class="image-wrapper">
                 <img src="@/assets/logistica.jpg" alt="Bloco 3">
                 <h3>LOGÍSTICA</h3>
@@ -99,9 +126,6 @@
             <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
-            <div class="icon-wrapper">
-                <i class="fas fa-briefcase"></i>
-            </div>
             <div class="image-wrapper">
                 <img src="@/assets/principais-clientes.jpg" alt="Bloco 4">
                 <h3>UNIDADE DE NEGÓCIOS</h3>
@@ -109,9 +133,6 @@
             <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
-            <div class="icon-wrapper">
-                <i class="fas fa-user-friends"></i>
-            </div>
             <div class="image-wrapper">
                 <img src="@/assets/principais-produtos.jpg" alt="Bloco 5">
                 <h3>PRINCIPAIS CLIENTES</h3>
@@ -119,9 +140,6 @@
             <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <a href="Compliance">Saiba mais.</a></p>
         </div>
         <div class="block">
-            <div class="icon-wrapper">
-                <i class="fas fa-pills"></i>
-            </div>
             <div class="image-wrapper">
                 <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 6">
                 <h3>PRINCIPAIS PRODUTOS</h3>
@@ -260,25 +278,39 @@
 
 <script>
 export default {
-    name: "HomePrincipal",
-    methods: {
-        changeLanguage(event) {
-            this.$i18n.locale = event.target.value;
-        }
-    },
-    mounted() {
-        const track = document.querySelector(".parceiros-track");
-        const slides = Array.from(track.children);
-        const totalSlides = slides.length;
+  name: "HomePrincipal",
+  data() {
+    return {
+      selectedLanguage: 'pt',
+      sidebarOpen: false
+    };
+  },
+  methods: {
+    changeLanguage(event) {
+      const value = typeof event === 'string' ? event : event.target.value;
+      this.selectedLanguage = value;
+      this.$i18n.locale = value;
 
-        slides.forEach((slide) => {
-            const clone = slide.cloneNode(true);
-            track.appendChild(clone);
-        });
-
-        track.style.width = `${totalSlides * 6 * 100}%`;
+      console.log(`Idioma selecionado: ${value}`);
     },
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
+    }
+  },
+  mounted() {
+    const track = document.querySelector(".parceiros-track");
+    const slides = Array.from(track.children);
+    const totalSlides = slides.length;
+
+    slides.forEach((slide) => {
+      const clone = slide.cloneNode(true);
+      track.appendChild(clone);
+    });
+
+    track.style.width = `${totalSlides * 6 * 100}%`;
+  }
 };
+
 </script>
 
 <style scoped>
@@ -304,53 +336,87 @@ header {
 
 .logo-container {
     position: absolute;
-    top: 0.3px;
-    left: 0px;
-    background-color: #E5E5E5;
-    padding: 22.5px 0;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    padding: 0;
     width: 20%;
+    height: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    height: 100px;
-    margin: 0 auto;
+    max-height: 80px;
+    width: auto;
+    display: block;
 }
 
-.trademark-symbol {
-    font-size: 1.2em;
-    font-weight: 700;
-    margin-left: 3px;
-    color: #000000;
-    position: relative;
-    top: -67px;
+@media (max-width: 1200px) {
+    .logo-container {
+        width: 25%;
+    }
+    
+    .logo {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo-container {
+        width: 30%;
+    }
+
+    .logo {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        width: 40%;
+    }
+
+    .logo {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-container {
+        width: 50%;
+    }
+
+    .logo {
+        max-height: 30px;
+    }
 }
 
 .contact-info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     margin-bottom: 10px;
     padding-right: 0;
+    box-sizing: border-box;
 }
 
-.contact-info span {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #FF8888;
-    margin-right: 30px;
-}
-
+.contact-info span, 
 .contact-info a {
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #FF8888;
-    margin-right: 30px;
+    margin: 5px 15px;
+    font-size: 1em;
 }
 
-.contact-info span:last-child {
+.contact-info span:last-child, 
+.contact-info a:last-child {
     margin-right: 0;
 }
 
@@ -361,6 +427,27 @@ header {
 .small-numbers {
     font-size: 0.8em;
     padding-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info span, 
+    .contact-info a {
+        margin: 10px 0;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info span, 
+    .contact-info a {
+        font-size: 0.8em;
+        margin: 8px 0;
+    }
 }
 
 .language-selector {
@@ -416,11 +503,26 @@ header {
     margin: 0 auto 20px auto;
 }
 
+@media (max-width: 768px) {
+    .linha {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .linha {
+        width: 90%;
+        margin: 0 auto 15px auto;
+    }
+}
+
 nav {
     margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 nav ul {
@@ -477,37 +579,119 @@ nav ul li a:hover {
 }
 
 nav ul li.dropdown {
-  position: relative;
+    position: relative;
 }
 
 nav ul li .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #AE2C2A;
-  top: 100%;
-  right: 80%;
-  transform: translateX(80%);
-  min-width: 180px;
-  z-index: 1;
-  border-radius: 5px;
+    display: none;
+    position: absolute;
+    background-color: #AE2C2A;
+    top: 100%;
+    right: 80%;
+    transform: translateX(80%);
+    min-width: 180px;
+    z-index: 1;
+    border-radius: 5px;
 }
 
 nav ul li .dropdown-content li {
-  padding: 10px;
-  text-align: left;
+    padding: 10px;
+    text-align: left;
 }
 
 nav ul li .dropdown-content li a {
-  color: #FFFFFF;
-  padding: 0;
+    color: #FFFFFF;
+    padding: 0;
 }
 
 nav ul li .dropdown-content li a:hover {
-  color: #848484;
+    color: #848484;
 }
 
 nav ul li.dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    overflow: auto;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-sidebar ul li {
+    margin: 20px 0;
+}
+
+.menu-sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-sidebar ul li a:hover {
+    color: #848484;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-close:hover {
+    color: #848484;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-sidebar.active {
+        display: block;
+    }
 }
 
 .banner-content {
@@ -564,10 +748,6 @@ nav ul li.dropdown:hover .dropdown-content {
 main {
     padding-top: 151px;
     background-color: #f4f4f4;
-}
-
-.main-content {
-    padding: 40px 400px;
 }
 
 .header-background {
@@ -646,18 +826,33 @@ main {
   }
 }
 
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
 .blocks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.blocks .block .image-wrapper img {
+    width: 100%;
+    height: auto;
 }
 
 .block {
     background-color: #f9f9f9;
+    box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 300px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -668,14 +863,10 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.icon-wrapper {
-    font-size: 30px;
-    color: #f05454;
-    margin-bottom: 15px;
-}
-
 .image-wrapper {
     position: relative;
+    text-align: center;
+    opacity: 1.0
 }
 
 .image-wrapper img {
@@ -687,14 +878,16 @@ main {
 
 .image-wrapper h3 {
     position: absolute;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 800;
     bottom: 10px;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -45%);
-    color: #f05454;
+    color: #AE2C2A;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 22px;
+    font-size: 1.5em;
     white-space: nowrap;
 }
 
@@ -717,6 +910,11 @@ main {
 }
 
 @media (max-width: 768px) {
+    .blocks {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
     .block {
         max-width: 100%;
     }
@@ -816,7 +1014,8 @@ main {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
     text-transform: uppercase; 
     font-weight: bold; 
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
+    margin-bottom: 120px;
 }
 
 .partners-button:hover {
@@ -832,6 +1031,7 @@ main {
 
 .parceiros {
     padding: 20px 0;
+    margin-top: 80px;
     background-color: #FEFEFE;
 }
 
@@ -839,7 +1039,19 @@ main {
     margin-bottom: 50px;
     color: #AE2C2A;
     text-align: center;
-    font-size: 2.2em;
+    text-transform: uppercase;
+    font-size: 2.0em;
+    position: relative;
+    display: inline-block;
+}
+
+.parceiros h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #AE2C2A; 
+    margin: 4px auto 0;
 }
 
 @keyframes slide {
