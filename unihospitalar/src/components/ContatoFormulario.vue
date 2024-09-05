@@ -69,6 +69,7 @@
 
 #message {
     font-size: 1.1em;
+    width: 101.5%;
 }
 
 .form-group input:focus,
