@@ -55,12 +55,15 @@
           <button @click="activeSection = 'Licitação'">Licitação</button>
           <button @click="activeSection = 'Financeiro'">Financeiro</button>
         </div>
-
+        
         <div class="content-box">
           <div v-if="activeSection === 'SAC'">
             <h2>Suporte</h2>
-            <p> <i class="fas fa-envelope"></i>sac@unihospitalar.com.br</p>
+            <p> <i class="fas fa-envelope"></i>contato@unihospitalar.com.br</p>
             <p> <i class="fas fa-phone"></i>+55 (81) 3472 7201</p>
+            <div class="info-msg">
+                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+              </div>
             <ContatoFormulario/>
           </div>
 
@@ -68,6 +71,9 @@
             <h2>Comercial</h2>
             <p> <i class="fas fa-envelope"></i>vendas@unihospitalar.com.br</p>
             <p> <i class="fas fa-phone"></i>+55 (81) 3472 7224</p>
+            <div class="info-msg">
+                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+              </div>
             <ContatoFormulario />
           </div>
 
@@ -75,6 +81,9 @@
             <h2>Licitação</h2>
             <p> <i class="fas fa-envelope"></i>licitacao@unihospitalar.com.br</p>
             <p> <i class="fas fa-phone"></i>+55 (81) 3472 7215</p>
+            <div class="info-msg">
+                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+              </div>
             <ContatoFormulario />
           </div>
 
@@ -82,6 +91,9 @@
             <h2>Financeiro</h2>
             <p> <i class="fas fa-envelope"></i>financeiro@unihospitalar.com.br</p>
             <p> <i class="fas fa-phone"></i>+55 (81) 3472 7202</p>
+            <div class="info-msg">
+                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+              </div>
             <ContatoFormulario />
           </div>
         </div>
@@ -454,6 +466,13 @@ h2 {
   font-weight: 700;
   font-size: 3em;
   margin-bottom: 10px;
+}
+
+.msg-info > p {
+    color: black;
+    font-size: 0.93em;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 footer {
