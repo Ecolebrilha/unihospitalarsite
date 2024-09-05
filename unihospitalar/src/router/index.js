@@ -10,6 +10,7 @@ import PoliticaPrivacidade from '@/components/PoliticaPrivacidade.vue';
 import TermosLegais from '@/components/TermosLegais.vue';
 import HomeContato from '@/components/HomeContato.vue';
 import ContatoFormulario from '@/components/ContatoFormulario.vue';
+import HomeParceiros from '@/components/HomeParceiros.vue'
 
 const routes = [
   {
@@ -66,6 +67,11 @@ const routes = [
     path: '/',
     name: 'ContatoFormulario',
     component: ContatoFormulario,
+  },
+  {
+    path: '/Parceiros',
+    name: 'HomeParceiros',
+    component: HomeParceiros,
   },
 ];
 
