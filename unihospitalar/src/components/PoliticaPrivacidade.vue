@@ -446,6 +446,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
   padding: 20px;
   margin: 20px auto;
   border-radius: 15px;
