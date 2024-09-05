@@ -9,7 +9,7 @@ import HomeLGPD from '@/components/HomeLGPD.vue';
 import PoliticaPrivacidade from '@/components/PoliticaPrivacidade.vue';
 import TermosLegais from '@/components/TermosLegais.vue';
 import HomeContato from '@/components/HomeContato.vue';
-
+import ContatoFormulario from '@/components/ContatoFormulario.vue';
 
 const routes = [
   {
@@ -61,6 +61,11 @@ const routes = [
     path: '/Contato',
     name: 'HomeContato',
     component: HomeContato,
+  },
+  {
+    path: '/',
+    name: 'ContatoFormulario',
+    component: ContatoFormulario,
   },
 ];
 
