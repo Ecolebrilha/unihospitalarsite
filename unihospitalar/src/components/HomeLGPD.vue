@@ -1,22 +1,10 @@
 <template>
     <div class="lgpd">
       <header>
-        <a href="/"><div class="logo-container">
-        <img src="@/assets/uni.png" alt="Logo da Uni Hospitalar" class="logo">
-        <span class="trademark-symbol">®</span>
+      <a href="/"><div class="logo-container">
+        <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
       </div></a>
-        <div class="contact-info">
-          <span class="phone-number">
-            <i class="fas fa-phone"></i>
-            <span class="small-numbers">+55 81 </span> 3472 7201
-          </span>
-          <span>
-            <a href="mailto:contato@unihospitalar.com.br">
-              <i class="fas fa-envelope"></i> contato@unihospitalar.com.br
-            </a>
-          </span>
-        </div>
-        <div class="language-selector">
+      <div class="language-selector">
     <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
       <option value="pt" data-icon="fi fi-br">Português</option>
       <option value="en" data-icon="fi fi-us">English</option>
@@ -29,16 +17,16 @@
       <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
     </div>
   </div>
-        <hr class="linha">
-        <nav>
-          <ul>
-            <li><router-link to="/" exact-active-class="active"></router-link></li>
-            <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-            <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-            <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
-            <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-            <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
-            <li class="dropdown">
+  <hr class="linha">
+      <nav>
+        <ul>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li class="dropdown">
             <router-link to="/LGPD" exact-active-class="active">
                 LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
@@ -47,10 +35,10 @@
                 <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
         </li>
-            <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
-          </ul>
-        </nav>
-      </header>
+          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+        </ul>
+      </nav>
+    </header>
   
       <div class="banner-container">
       <div class="banner-overlay">
@@ -168,70 +156,78 @@
     width: 100%;
     z-index: 1000;
     background-color: #AE2C2A;
-    padding: 35px 0;
+    padding: 40px 0;
     box-sizing: border-box;
     font-size: 1.2em;
 }
 
 .logo-container {
     position: absolute;
-    top: 0.3px;
-    left: 0px;
-    background-color: #E5E5E5;
-    padding: 22.5px 0;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    padding: 0;
     width: 20%;
+    height: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    height: 100px;
-    margin: 0 auto;
+    max-height: 80px;
+    width: auto;
+    display: block;
 }
 
-.trademark-symbol {
-    font-size: 1.2em;
-    font-weight: 700;
-    margin-left: 3px;
-    color: #000000;
-    position: relative;
-    top: -67px;
+@media (max-width: 1200px) {
+    .logo-container {
+        width: 25%;
+    }
+    
+    .logo {
+        max-height: 60px;
+    }
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10px;
-    padding-right: 0;
+@media (max-width: 992px) {
+    .logo-container {
+        width: 30%;
+    }
+
+    .logo {
+        max-height: 50px;
+    }
 }
 
-.contact-info span {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+@media (max-width: 768px) {
+    .logo-container {
+        width: 40%;
+    }
+
+    .logo {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-container {
+        width: 50%;
+    }
+
+    .logo {
+        max-height: 30px;
+    }
+}
+
+.linha {
+    width: 48%;
     color: #FF8888;
-    margin-right: 30px;
-}
-
-.contact-info a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #FF8888;
-    margin-right: 30px;
-}
-
-.contact-info span:last-child {
-    margin-right: 0;
-}
-
-.contact-info i {
-    margin-right: 8px;
-}
-
-.small-numbers {
-    font-size: 0.8em;
-    padding-right: 5px;
+    border: 0;
+    border-top: 4px solid #FF8888;
+    margin: 0 auto 20px auto;
 }
 
 .language-selector {
@@ -249,7 +245,7 @@
 }
 
 .custom-select {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .icon-selector {
@@ -258,7 +254,7 @@
 }
 
 .icon-selector span {
-  font-size: 2em;
+  font-size: 1.5em;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -277,14 +273,6 @@
 
 .icon-selector span.fi-fi-es::before {
   content: '\f1ea';
-}
-
-.linha {
-    width: 48%;
-    color: #FF8888;
-    border: 0;
-    border-top: 2px solid #FF8888;
-    margin: 0 auto 20px auto;
 }
 
 nav {
@@ -380,10 +368,10 @@ nav ul li .dropdown-content li a:hover {
 nav ul li.dropdown:hover .dropdown-content {
   display: block;
 }
-  
+
 .banner-container {
   position: relative;
-  padding-top: 145px;
+  padding-top: 107px;
   margin-top: -60px;
   display: flex;
   justify-content: center;
