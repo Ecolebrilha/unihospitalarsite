@@ -459,7 +459,7 @@ main {
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
-  border-bottom: 2px solid #FF8888;
+  border-bottom: 3px solid #FF8888;
   margin-bottom: 10px;
 }
 
