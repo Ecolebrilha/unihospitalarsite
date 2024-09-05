@@ -257,7 +257,7 @@
                 </div>
             </div>
         </section>
-        <a href="Compliance"><button class="partners-button">ver todos os parceiros</button></a>
+        <a href="Parceiros"><button class="partners-button">ver todos os parceiros</button></a>
         </main>
 
         <footer>
