@@ -1,22 +1,52 @@
 <template>
   <div class="about">
     <header>
-      <a href="/"><div class="logo-container">
-        <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
-      </div></a>
-      <div class="language-selector">
-    <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
-      <option value="pt" data-icon="fi fi-br">Português</option>
-      <option value="en" data-icon="fi fi-us">English</option>
-      <option value="es" data-icon="fi fi-es">Español</option>
-    </select>
+      <button @click="toggleSidebar" class="menu-toggle">☰</button>
 
-    <div class="icon-selector">
-      <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
-      <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
-      <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
-    </div>
-  </div>
+      <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
+        <button class="menu-close" @click="toggleSidebar">
+          ×
+        </button>
+        <ul>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li class="dropdown">
+            <router-link to="/LGPD" exact-active-class="active">
+              LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+          </li>
+          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+        </ul>
+      </div>
+
+      <a href="/">
+        <div class="logo-container">
+          <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
+        </div>
+      </a>
+
+      <div class="language-selector">
+        <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
+          <option value="pt" data-icon="fi fi-br">Português</option>
+          <option value="en" data-icon="fi fi-us">English</option>
+          <option value="es" data-icon="fi fi-es">Español</option>
+        </select>
+
+        <div class="icon-selector">
+          <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
+          <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
+          <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
+        </div>
+      </div>
+
       <nav>
         <ul>
           <li><router-link to="/" exact-active-class="active"></router-link></li>
@@ -27,13 +57,13 @@
           <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
             <router-link to="/LGPD" exact-active-class="active">
-                LGPD <i class="fas fa-chevron-down"></i>
+              LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
             <ul class="dropdown-content">
-                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
-        </li>
+          </li>
           <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </nav>
@@ -118,7 +148,8 @@
   export default {
   data() {
     return {
-      selectedLanguage: 'pt'
+      selectedLanguage: 'pt',
+      sidebarOpen: false
     }
   },
   methods: {
@@ -127,6 +158,9 @@
       this.selectedLanguage = value;
 
       console.log(`Idioma selecionado: ${value}`);
+    },
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
     }
   }
 }
@@ -195,23 +229,59 @@ header {
 }
 
 @media (max-width: 768px) {
-    .logo-container {
-        width: 40%;
-    }
-
-    .logo {
-        max-height: 40px;
-    }
 }
 
 @media (max-width: 576px) {
-    .logo-container {
-        width: 50%;
+    header {
+      width: 100%;
+      height: 1px;
     }
 
-    .logo {
-        max-height: 30px;
+    .logo-container {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 90%;
+    height: auto;
+    max-height: 80px;
+}
+
+.language-selector {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -20%);
+        width: 33.33%;
+        max-width: 100px;
+        height: auto;
+        max-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .icon-selector {
+        width: 100%;
+        height: auto;
+    }
+
+    .item {
+        width: 60%;
+    }
+
+    .menu-toggle {
+        font-size: 1.3em;
+    }
+
+    .banner-container {
+      top: -27px;
+    }
+    
 }
 
 .language-selector {
@@ -229,7 +299,7 @@ header {
 }
 
 .custom-select {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .icon-selector {
@@ -353,6 +423,88 @@ nav ul li.dropdown:hover .dropdown-content {
   display: block;
 }
 
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    overflow: auto;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-sidebar ul li {
+    margin: 20px 0;
+}
+
+.menu-sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-sidebar ul li a:hover {
+    color: #848484;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-close:hover {
+    color: #848484;
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-sidebar.active {
+        display: block;
+    }
+}
+
 .banner-container {
   position: relative;
   padding-top: 107px;
@@ -407,6 +559,7 @@ main {
   padding-top: 145px;
   padding-bottom: 150px;
   background-color: #f4f4f4;
+  overflow: hidden;
 }
 
 .content {
@@ -414,6 +567,7 @@ main {
   grid-template-columns: 1fr;
   gap: 50px;
   width: 65%;
+  overflow: hidden;
 }
 
 .item {
@@ -424,6 +578,7 @@ main {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .item:hover {
@@ -495,6 +650,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-top: 20px;
+  max-width: 100%;
 }
 
 .valores-grid span {
@@ -505,6 +661,7 @@ main {
   text-align: center;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .valores-grid span:hover {

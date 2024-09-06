@@ -49,57 +49,73 @@
   
     <main>
       <section class="contact-content">
-        <div class="section-buttons">
-          <button @click="activeSection = 'SAC'">Suporte</button>
-          <button @click="activeSection = 'Comercial'">Comercial</button>
-          <button @click="activeSection = 'Licitação'">Licitação</button>
-          <button @click="activeSection = 'Financeiro'">Financeiro</button>
+    <div class="section-buttons">
+      <button 
+        @click="activeSection = 'SAC'" 
+        :class="{ active: activeSection === 'SAC' }">
+        Suporte
+      </button>
+      <button 
+        @click="activeSection = 'Comercial'" 
+        :class="{ active: activeSection === 'Comercial' }">
+        Comercial
+      </button>
+      <button 
+        @click="activeSection = 'Licitação'" 
+        :class="{ active: activeSection === 'Licitação' }">
+        Licitação
+      </button>
+      <button 
+        @click="activeSection = 'Financeiro'" 
+        :class="{ active: activeSection === 'Financeiro' }">
+        Financeiro
+      </button>
+    </div>
+    
+    <div class="content-box">
+      <div v-if="activeSection === 'SAC'">
+        <h2>Suporte</h2>
+        <p> <i class="fas fa-envelope"></i>contato@unihospitalar.com.br</p>
+        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7201</p>
+        <div class="info-msg">
+          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
         </div>
-        
-        <div class="content-box">
-          <div v-if="activeSection === 'SAC'">
-            <h2>Suporte</h2>
-            <p> <i class="fas fa-envelope"></i>contato@unihospitalar.com.br</p>
-            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7201</p>
-            <div class="info-msg">
-                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
-              </div>
-            <ContatoFormulario/>
-          </div>
-
-          <div v-if="activeSection === 'Comercial'">
-            <h2>Comercial</h2>
-            <p> <i class="fas fa-envelope"></i>vendas@unihospitalar.com.br</p>
-            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7224</p>
-            <div class="info-msg">
-                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
-              </div>
-            <ContatoFormulario />
-          </div>
-
-          <div v-if="activeSection === 'Licitação'">
-            <h2>Licitação</h2>
-            <p> <i class="fas fa-envelope"></i>licitacao@unihospitalar.com.br</p>
-            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7215</p>
-            <div class="info-msg">
-                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
-              </div>
-            <ContatoFormulario />
-          </div>
-
-          <div v-if="activeSection === 'Financeiro'">
-            <h2>Financeiro</h2>
-            <p> <i class="fas fa-envelope"></i>financeiro@unihospitalar.com.br</p>
-            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7202</p>
-            <div class="info-msg">
-                  <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
-              </div>
-            <ContatoFormulario />
-          </div>
+        <ContatoFormulario/>
+      </div>
+      
+      <div v-if="activeSection === 'Comercial'">
+        <h2>Comercial</h2>
+        <p> <i class="fas fa-envelope"></i>vendas@unihospitalar.com.br</p>
+        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7224</p>
+        <div class="info-msg">
+          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
         </div>
-      </section>
-    </main>
-
+        <ContatoFormulario />
+      </div>
+      
+      <div v-if="activeSection === 'Licitação'">
+        <h2>Licitação</h2>
+        <p> <i class="fas fa-envelope"></i>licitacao@unihospitalar.com.br</p>
+        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7215</p>
+        <div class="info-msg">
+          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+        </div>
+        <ContatoFormulario />
+      </div>
+      
+      <div v-if="activeSection === 'Financeiro'">
+        <h2>Financeiro</h2>
+        <p> <i class="fas fa-envelope"></i>financeiro@unihospitalar.com.br</p>
+        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7202</p>
+        <div class="info-msg">
+          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+        </div>
+        <ContatoFormulario />
+      </div>
+    </div>
+  </section>
+  </main>
+  
     <footer>
       <div class="footer-content">
         <div class="footer-logo">
@@ -123,11 +139,20 @@ export default {
   data() {
     return {
       activeSection: 'SAC',
+      selectedLanguage: 'pt'
     };
   },
   components: {
     ContatoFormulario,
   },
+  methods: {
+    changeLanguage(event) {
+      const value = typeof event === 'string' ? event : event.target.value;
+      this.selectedLanguage = value;
+
+      console.log(`Idioma selecionado: ${value}`);
+    }
+  }
 };
 </script>
 
@@ -427,11 +452,16 @@ main {
   font-size: 1.2em;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .section-buttons button:hover {
   background-color: #FF5555;
+  color: white;
+}
+
+.section-buttons .active {
+  background-color: #AE2C2A;
   color: white;
 }
 
@@ -469,10 +499,10 @@ h2 {
 }
 
 .msg-info > p {
-    color: black;
-    font-size: 0.93em;
-    margin-top: 50px;
-    margin-bottom: 30px;
+  color: black;
+  font-size: 0.93em;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 footer {

@@ -82,25 +82,30 @@
                     </div>
                 </section>
             </main>
-        
+
             <footer>
-                <div class="footer-content">
-                    <div class="footer-mensagem">
-                        <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
-                    </div>
-                    <article class="esq"><p><br>
-               Rua Alagoas, 253<br>
-               Ipsep, Recife-PE<br>
-               Fone: +55 81 3472 7201<br>
-               CNPJ: 07.484.373/0001-24</p>
-            </article>
-               <article id="canvas1" class="dir map">
-                <iframe id="map_canvas1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" class="scrolloff"></iframe>
-            </article>
-                </div>
-            </footer>
-        </div>
-     </template>
+  <div class="footer-logo">
+    <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
+  </div>
+  <div class="footer-mensagem">
+    <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
+  </div>
+  <div class="footer-info">
+    <article class="endereco">
+      <p>
+        Rua Alagoas, 253<br>
+        Ipsep, Recife - PE<br>
+        CNPJ: 07.484.373/0001-24
+      </p>
+    </article>
+    <article class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </article>
+  </div>
+</footer>
+  </div>
+</template>
+        
      <script>
      export default {
   data() {
@@ -429,95 +434,42 @@ nav ul li.dropdown:hover .dropdown-content {
           transform: scale(1.1);
       }
 
-      article.dir {
-    width: 33.33333%;
-    float: right;
-    margin-top: 15px;
-    margin-right: 0;
+  footer {
+  background-color: #EBEBEB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px; 
 }
 
-article.esq {
-    width: 33.33333%;
-    float: center;
-    color: black;
-    font-weight: 700;
-    line-height: 1.6em;
-}
-
-footer {
-    background-color: #EBEBEB;
-    color: #FFFFFF;
-    padding: 30px 0 20px 0;
-    margin: 0 0 -30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.footer-logo img {
-    height: 50px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.footer-logo img:hover {
-    transform: scale(1.1);
+.footer-logo {
+  flex: 1;
 }
 
 .footer-mensagem {
-    color: rgb(97, 97, 97);
-    flex: 1;
-    text-align: center;
-    font-size: 0.9em;
-    margin: 10px 0;
+  flex: 2;
+  text-align: center;
+  color: rgb(97, 97, 97);
+  font-weight: 700;
 }
 
-.footer-mensagem p {
-    margin: 0;
-    font-weight: 700;
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.footer-desenvolvedor {
-    color: black;
-    font-size: 0.9em;
-    text-align: right;
+.endereco {
+  color: rgb(97, 97, 97);
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.footer-desenvolvedor a {
-    color: #FF5555;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+.map {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
 }
 
-.footer-desenvolvedor a:hover {
-    color: #AE2C2A;
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-logo {
-        margin-bottom: 10px;
-    }
-
-    .footer-desenvolvedor {
-        text-align: center;
-    }
-}
     </style>
