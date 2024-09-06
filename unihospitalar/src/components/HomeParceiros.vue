@@ -84,6 +84,7 @@
             </main>
 
             <footer>
+
   <div class="footer-logo">
     <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
   </div>
@@ -470,6 +471,21 @@ nav ul li.dropdown:hover .dropdown-content {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .footer-desenvolvedor {
+        text-align: center;
+    }
 }
 
     </style>
