@@ -11,7 +11,7 @@
           <li><router-link to="/" exact-active-class="active"></router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
           <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
           <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
@@ -52,7 +52,7 @@
           <li><router-link to="/" exact-active-class="active"></router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
           <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
           <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
@@ -149,7 +149,7 @@
       <div class="container">
         <h2>Pronto para melhorar seus processos com a Uni Hospitalar?</h2>
         <p>Entre em contato conosco e descubra como podemos ajudar a transformar sua operação.</p>
-        <a href="/contato" class="cta-button">Saiba Mais Sobre Nossos Serviços</a>
+        <a href="/Servicos" class="cta-button">Saiba Mais Sobre Nossos Serviços</a>
       </div>
     </section>
 
@@ -434,7 +434,7 @@ nav ul li .dropdown-content {
 }
 
 nav ul li .dropdown-content li {
-  padding: 10px;
+  padding: 20px;
   text-align: left;
 }
 
@@ -587,7 +587,7 @@ nav ul li.dropdown:hover .dropdown-content {
   font-size: 1.5em;
   font-weight: normal;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  animation: slideInRight 1.8s ease-out;
+  animation: slideInRight 1.5s ease-out;
   line-height: 1.6;
 }
 
@@ -604,7 +604,7 @@ nav ul li.dropdown:hover .dropdown-content {
 
 .features {
   background-color: #fff;
-  padding: 60px 20px;
+  padding: 100px 20px 40px 20px;
 }
 
 .container {
@@ -638,8 +638,19 @@ nav ul li.dropdown:hover .dropdown-content {
 
 .feature-info h2 {
   font-size: 1.5em;
-  margin: 0;
+  margin: 0 0 30px 0;
   color: #AE2C2A;
+  position: relative;
+  display: inline-block;
+}
+
+.feature-info h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FF8888; 
+    margin: 4px auto 0;
 }
 
 .feature-info p {
@@ -736,16 +747,19 @@ nav ul li.dropdown:hover .dropdown-content {
   display: inline-block;
   padding: 15px 30px;
   font-size: 1.2em;
+  font-weight: 700;
   color: #fff;
+  text-transform: uppercase;
   background-color: #AE2C2A;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   margin: 0;
 }
 
 .cta-button:hover {
-  background-color: #9B1B1A;
+  background-color: #C53030;
+  transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {
