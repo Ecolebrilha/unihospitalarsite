@@ -11,6 +11,12 @@ import TermosLegais from '@/components/TermosLegais.vue';
 import HomeContato from '@/components/HomeContato.vue';
 import ContatoFormulario from '@/components/ContatoFormulario.vue';
 import HomeParceiros from '@/components/HomeParceiros.vue'
+import CondutaEtica from '@/components/CondutaEtica.vue';
+import ResponsabilidadeSocial from '@/components/ResponsabilidadeSocial.vue';
+import DireitosHumanos from '@/components/DireitosHumanos.vue';
+import SegurancaDados from '@/components/SegurancaDados.vue';
+import PraticasAntissuborno from '@/components/PraticasAntissuborno.vue';
+import NormasSetoriais from '@/components/NormasSetoriais.vue';
 
 const routes = [
   {
@@ -24,7 +30,7 @@ const routes = [
     component: HomeDiferenciais,
   },
   {
-    path: '/Serviços',
+    path: '/Servicos',
     name: 'NossosServicos',
     component: NossosServicos,
   },
@@ -72,6 +78,36 @@ const routes = [
     path: '/Parceiros',
     name: 'HomeParceiros',
     component: HomeParceiros,
+  },
+  {
+    path: '/CondutaEtica',
+    name: 'CondutaEtica',
+    component: CondutaEtica,
+  },
+  {
+    path: '/ResponsabilidadeSocial',
+    name: 'ResponsabilidadeSocial',
+    component: ResponsabilidadeSocial,
+  },
+  {
+    path: '/DireitosHumanos',
+    name: 'DireitosHumanos',
+    component: DireitosHumanos,
+  },
+  {
+    path: '/SegurancaDados',
+    name: 'SegurancaDados',
+    component: SegurancaDados,
+  },
+  {
+    path: '/PraticasAntissuborno',
+    name: 'PraticasAntissuborno',
+    component: PraticasAntissuborno,
+  },
+  {
+    path: '/NormasSetoriais',
+    name: 'NormasSetoriais',
+    component: NormasSetoriais,
   },
 ];
 
