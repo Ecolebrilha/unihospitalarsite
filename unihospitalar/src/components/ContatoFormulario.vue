@@ -61,6 +61,7 @@
 .form-group textarea {
     width: 100%;
     padding: 10px;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
