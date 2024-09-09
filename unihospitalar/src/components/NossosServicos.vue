@@ -1,40 +1,69 @@
 <template>
   <div class="services">
     <header>
-      <a href="/"><div class="logo-container">
-        <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
-      </div></a>
-      <div class="language-selector">
-    <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
-      <option value="pt" data-icon="fi fi-br">Português</option>
-      <option value="en" data-icon="fi fi-us">English</option>
-      <option value="es" data-icon="fi fi-es">Español</option>
-    </select>
+      <button @click="toggleSidebar" class="menu-toggle">☰</button>
 
-    <div class="icon-selector">
-      <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
-      <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
-      <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
-    </div>
-  </div>
-  <hr class="linha">
+      <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
+        <button class="menu-close" @click="toggleSidebar">
+          ×
+        </button>
+        <ul>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li class="dropdown">
+            <router-link to="/LGPD" exact-active-class="active">
+              LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+          </li>
+          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+        </ul>
+      </div>
+
+      <a href="/">
+        <div class="logo-container">
+          <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
+        </div>
+      </a>
+
+      <div class="language-selector">
+        <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
+          <option value="pt" data-icon="fi fi-br">Português</option>
+          <option value="en" data-icon="fi fi-us">English</option>
+          <option value="es" data-icon="fi fi-es">Español</option>
+        </select>
+
+        <div class="icon-selector">
+          <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
+          <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
+          <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
+        </div>
+      </div>
+
       <nav>
         <ul>
           <li><router-link to="/" exact-active-class="active"></router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
           <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
           <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
             <router-link to="/LGPD" exact-active-class="active">
-                LGPD <i class="fas fa-chevron-down"></i>
+              LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
             <ul class="dropdown-content">
-                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
-        </li>
+          </li>
           <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </nav>
@@ -67,18 +96,23 @@
     </main>
 
     <footer>
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
-        </div>
-        <div class="footer-mensagem">
-          <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
-        </div>
-        <div class="footer-desenvolvedor">
-          <p>Desenvolvido por <a href="github.com/Ecolebrilha">Fernando Leite</a> ツ</p>
-        </div>
-      </div>
-    </footer>
+  <div class="footer-logo">
+    <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
+  </div>
+  <div class="footer-mensagem">
+    <p class="address">
+      Rua Alagoas, 253<br>
+      Ipsep, Recife - PE<br>
+      CNPJ: 07.484.373/0001-24
+    </p>
+    <p class="message">© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
+  </div>
+  <div class="footer-info">
+    <article class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </article>
+  </div>
+</footer>
   </div>
 </template>
 
@@ -163,31 +197,59 @@ header {
 }
 
 @media (max-width: 768px) {
-    .logo-container {
-        width: 40%;
-    }
-
-    .logo {
-        max-height: 40px;
-    }
 }
 
 @media (max-width: 576px) {
-    .logo-container {
-        width: 50%;
+    header {
+      width: 100%;
+      height: 1px;
     }
 
-    .logo {
-        max-height: 30px;
-    }
+    .logo-container {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.linha {
-    width: 48%;
-    color: #FF8888;
-    border: 0;
-    border-top: 4px solid #FF8888;
-    margin: 0 auto 20px auto;
+.logo {
+    width: 90%;
+    height: auto;
+    max-height: 80px;
+}
+
+.language-selector {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -20%);
+        width: 33.33%;
+        max-width: 100px;
+        height: auto;
+        max-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-selector {
+        width: 100%;
+        height: auto;
+    }
+
+    .item {
+        width: 60%;
+    }
+
+    .menu-toggle {
+        font-size: 1.3em;
+    }
+
+    .banner-container {
+      top: -27px;
+    }
+    
 }
 
 .language-selector {
@@ -205,7 +267,7 @@ header {
 }
 
 .custom-select {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .icon-selector {
@@ -312,7 +374,7 @@ nav ul li .dropdown-content {
 }
 
 nav ul li .dropdown-content li {
-  padding: 10px;
+  padding: 20px;
   text-align: left;
 }
 
@@ -327,6 +389,88 @@ nav ul li .dropdown-content li a:hover {
 
 nav ul li.dropdown:hover .dropdown-content {
   display: block;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    overflow: auto;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-sidebar ul li {
+    margin: 20px 0;
+}
+
+.menu-sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-sidebar ul li a:hover {
+    color: #848484;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-close:hover {
+    color: #848484;
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-sidebar.active {
+        display: block;
+    }
 }
 
 .banner-container {
@@ -382,12 +526,12 @@ main {
   justify-content: center;
   padding-top: 0px;
   padding-bottom: 50px;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
 }
 
 .servicos-content {
   padding: 100px 10px;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -395,10 +539,9 @@ main {
 }
 
 .servico-item {
-  background-color: #FFFFFF;
+  background-color: #F4F4F4;
   padding: 30px;
   border-radius: 10px;
-  align-items: center;
   max-width: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -410,14 +553,46 @@ main {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.servico-item h2, .servico-item h3 {
+.servico-item h2 {
   font-weight: bold;
   color: #AE2C2A;
   margin-bottom: 10px;
-  display: flex;
+  display: inline-block;
   justify-content: center;
+  text-align: center;
   align-items: center;
+  position: relative;
   gap: 10px;
+}
+
+.servico-item h3 {
+  font-weight: bold;
+  color: #AE2C2A;
+  margin-bottom: 10px;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FF8888; 
+    margin: 4px auto 0;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FF8888; 
+    margin: 4px auto 0;
 }
 
 .servico-item p {
@@ -427,69 +602,55 @@ main {
 }
 
 footer {
-    background-color: #EBEBEB;
-    color: #FFFFFF;
-    padding: 30px 0 20px 0;
-    margin: 0 0 -30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  background-color: #EBEBEB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px; 
 }
 
-.footer-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.footer-logo img {
-    height: 50px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.footer-logo img:hover {
-    transform: scale(1.1);
+.footer-logo {
+  flex: 1;
 }
 
 .footer-mensagem {
-    color: rgb(97, 97, 97);
-    flex: 1;
-    text-align: center;
-    font-size: 0.9em;
-    margin: 10px 0;
+  flex: 2;
+  text-align: center;
+  color: rgb(97, 97, 97);
+  font-weight: 700;
 }
 
-.footer-mensagem p {
-    margin: 0;
-    font-weight: 700;
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.footer-desenvolvedor {
-    color: black;
-    font-size: 0.9em;
-    text-align: right;
+.endereco {
+  color: rgb(97, 97, 97);
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.footer-desenvolvedor a {
-    color: #FF5555;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
+.address {
+  color: rgb(97, 97, 97);
+  font-weight: 700;
 }
 
-.footer-desenvolvedor a:hover {
-    color: #AE2C2A;
-    text-decoration: underline;
+.message {
+  color: #AE2C2A;
+  font-weight: 700;
+}
+
+.map {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
-    .footer-content {
+    footer {
         flex-direction: column;
         text-align: center;
     }
