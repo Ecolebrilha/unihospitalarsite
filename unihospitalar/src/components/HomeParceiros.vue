@@ -84,7 +84,6 @@
             </main>
 
             <footer>
-
   <div class="footer-logo">
     <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
   </div>
