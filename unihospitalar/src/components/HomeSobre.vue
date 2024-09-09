@@ -11,7 +11,7 @@
           <li><router-link to="/" exact-active-class="active"></router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
           <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
           <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
@@ -52,7 +52,7 @@
           <li><router-link to="/" exact-active-class="active"></router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Serviços" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
           <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
           <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
@@ -129,18 +129,23 @@
     </main>
 
     <footer>
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
-        </div>
-        <div class="footer-mensagem">
-          <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
-        </div>
-        <div class="footer-desenvolvedor">
-          <p>Desenvolvido por <a href="https://github.com/Ecolebrilha" target="_blank" rel="noopener noreferrer">Fernando Leite</a> ツ</p>
-        </div>
-      </div>
-    </footer>
+  <div class="footer-logo">
+    <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
+  </div>
+  <div class="footer-mensagem">
+    <p class="address">
+      Rua Alagoas, 253<br>
+      Ipsep, Recife - PE<br>
+      CNPJ: 07.484.373/0001-24
+    </p>
+    <p class="message">© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
+  </div>
+  <div class="footer-info">
+    <article class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </article>
+  </div>
+</footer>
   </div>
 </template>
 
@@ -406,7 +411,7 @@ nav ul li .dropdown-content {
 }
 
 nav ul li .dropdown-content li {
-  padding: 10px;
+  padding: 20px;
   text-align: left;
 }
 
@@ -558,20 +563,21 @@ main {
   justify-content: center;
   padding-top: 145px;
   padding-bottom: 150px;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   overflow: hidden;
 }
 
 .content {
   display: grid;
   grid-template-columns: 1fr;
+  padding: 10px 0 50px 0;
   gap: 50px;
   width: 65%;
   overflow: hidden;
 }
 
 .item {
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   padding: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -583,7 +589,7 @@ main {
 
 .item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2)
 }
 
 .icon-container {
@@ -616,13 +622,6 @@ main {
   color: #AE2C2A;
   border-bottom: 3px solid #FF8888;
   margin-bottom: 10px;
-}
-
-.text-content h3 {
-  color: #f05454;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #FF8888;
-  font-weight: 800
 }
 
 .p-geral {
@@ -670,69 +669,55 @@ main {
 }
 
 footer {
-    background-color: #EBEBEB;
-    color: #FFFFFF;
-    padding: 30px 0 20px 0;
-    margin: 0 0 -30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  background-color: #EBEBEB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px; 
 }
 
-.footer-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.footer-logo img {
-    height: 50px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.footer-logo img:hover {
-    transform: scale(1.1);
+.footer-logo {
+  flex: 1;
 }
 
 .footer-mensagem {
-    color: rgb(97, 97, 97);
-    flex: 1;
-    text-align: center;
-    font-size: 0.9em;
-    margin: 10px 0;
+  flex: 2;
+  text-align: center;
+  color: rgb(97, 97, 97);
+  font-weight: 700;
 }
 
-.footer-mensagem p {
-    margin: 0;
-    font-weight: 700;
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.footer-desenvolvedor {
-    color: black;
-    font-size: 0.9em;
-    text-align: right;
+.endereco {
+  color: rgb(97, 97, 97);
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.footer-desenvolvedor a {
-    color: #FF5555;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+.address {
+  color: rgb(97, 97, 97);
+  font-weight: 700;
 }
 
-.footer-desenvolvedor a:hover {
-    color: #AE2C2A;
-    text-decoration: underline;
+.message {
+  color: #AE2C2A;
+  font-weight: 700;
+}
+
+.map {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
-    .footer-content {
+    footer {
         flex-direction: column;
         text-align: center;
     }
