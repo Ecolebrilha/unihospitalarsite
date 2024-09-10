@@ -304,7 +304,7 @@ header {
 }
 
 .custom-select {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .icon-selector {
@@ -513,7 +513,7 @@ nav ul li.dropdown:hover .dropdown-content {
 .banner-container {
   position: relative;
   padding-top: 107px;
-  margin-top: -60px;
+  margin-top: -62px;
   display: flex;
   justify-content: center;
   background-color: #F9F9F9;
