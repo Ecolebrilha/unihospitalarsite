@@ -71,9 +71,9 @@
   
       <div class="banner-container">
         <div class="banner-overlay">
-          <h1>Termos Legais</h1>
+          <h1>Responsabilidade Social</h1>
         </div>
-        <img src="@/assets/header-sobre.jpg" alt="Imagem do Banner">
+        <img src="@/assets/header-responsabilidade-social.jpg" alt="Imagem do Banner">
       </div>
   
       <main>
@@ -472,7 +472,7 @@
   .banner-container {
     position: relative;
     padding-top: 145px;
-    margin-top: -60px;
+    margin-top: -62px;
     display: flex;
     justify-content: center;
     background-color: #F9F9F9;
