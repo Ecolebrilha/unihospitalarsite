@@ -271,7 +271,7 @@ header {
 }
 
 .custom-select {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .icon-selector {
@@ -480,7 +480,7 @@ nav ul li.dropdown:hover .dropdown-content {
 .banner-container {
   position: relative;
   padding-top: 107px;
-  margin-top: -60px;
+  margin-top: -62px;
   display: flex;
   justify-content: center;
   background-color: #F9F9F9;
@@ -719,6 +719,39 @@ nav ul li a {
     .footer-desenvolvedor {
         text-align: center;
     }
+}
+
+@media (min-width: 1390px) {
+  .logo-container {
+    width: 20%;
+}
+
+.logo {
+    max-height: 80px;
+    width: auto;
+}
+
+  .language-selector {
+  position: absolute;
+  right: 120px;
+  top: 20px;
+}
+
+.custom-select {
+  margin-bottom: 10px;
+}
+
+.icon-selector span {
+  font-size: 1.5em;
+}
+
+nav ul li {
+    margin: 0 16px;
+}
+
+nav ul li a {
+    font-size: 1em;
+}
 }
 
 </style>
