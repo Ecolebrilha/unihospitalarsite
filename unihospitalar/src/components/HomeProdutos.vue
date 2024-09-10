@@ -188,30 +188,22 @@ header {
     display: block;
 }
 
-@media (max-width: 1200px) {
-    .logo-container {
-        width: 25%;
-    }
-    
-    .logo {
-        max-height: 60px;
-    }
+@media (max-width: 992px) {
+  .logo-container {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 992px) {
-    .logo-container {
-        width: 30%;
-    }
-
-    .logo {
-        max-height: 50px;
-    }
+.logo {
+    width: 80%;
+    height: auto;
+    max-height: 80px;
+ }
 }
 
 @media (max-width: 768px) {
-}
-
-@media (max-width: 576px) {
     header {
       width: 100%;
       height: 1px;
@@ -225,7 +217,7 @@ header {
 }
 
 .logo {
-    width: 90%;
+    width: 70%;
     height: auto;
     max-height: 80px;
 }
@@ -471,7 +463,7 @@ nav ul li.dropdown:hover .dropdown-content {
     color: #848484;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     nav ul {
         display: none;
     }
@@ -650,6 +642,70 @@ footer {
   border-radius: 2px;
 }
 
+@media (min-width: 769px) {
+
+nav ul li {
+    margin: 0 8px;
+}
+
+nav ul li a {
+    font-size: 0.6em;
+}
+
+.language-selector {
+  right: 40px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 3px;
+}
+
+.custom-select {
+  margin-bottom: 10px;
+}
+
+.icon-selector span {
+  font-size: 1em;
+}
+
+}
+
+@media (min-width: 993px) {
+    .logo-container {
+        width: 20%;
+    }
+    
+    .logo {
+        max-height: 60px;
+    }
+
+    nav ul li {
+    margin: 0 10px;
+    }
+
+    nav ul li a {
+    font-size: 0.8em;
+    }
+
+  .language-selector {
+  right: 60px;
+  top: 20px;
+}
+
+.language-selector select {
+  padding: 3px;
+}
+
+.custom-select {
+  margin-bottom: 10px;
+}
+
+.icon-selector span {
+  font-size: 1.1em;
+}
+}
+
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
@@ -664,4 +720,5 @@ footer {
         text-align: center;
     }
 }
+
 </style>
