@@ -71,9 +71,9 @@
   
       <div class="banner-container">
         <div class="banner-overlay">
-          <h1>Termos Legais</h1>
+          <h1>Segurança de Dados</h1>
         </div>
-        <img src="@/assets/header-sobre.jpg" alt="Imagem do Banner">
+        <img src="@/assets/header-seguranca-dados.jpg" alt="Imagem do Banner">
       </div>
   
       <main>
