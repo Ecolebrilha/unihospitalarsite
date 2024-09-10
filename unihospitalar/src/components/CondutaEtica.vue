@@ -71,9 +71,9 @@
   
       <div class="banner-container">
         <div class="banner-overlay">
-          <h1>Termos Legais</h1>
+          <h1>Conduta Ética</h1>
         </div>
-        <img src="@/assets/header-sobre.jpg" alt="Imagem do Banner">
+        <img src="@/assets/header-conduta-etica.jpg" alt="Imagem do Banner">
       </div>
   
       <main>
