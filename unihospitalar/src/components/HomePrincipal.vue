@@ -1,3 +1,7 @@
+<!-- Deixar a tela de Sobre, Contato e Parceiros responsivas (conteúdo principal) -->
+<!-- Deixar os banners responsivos de todas as telas -->
+<!-- Ajustar o banner da tela principal -->
+<!-- Deixar funcional a tradução dos idiomas em todas as telas -->
 <template>
     <div class="home">
         <header>
@@ -75,7 +79,7 @@
           <div class="header-content">
           <h2>Respeito às relações humanas</h2>
           <p>O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
-          <a href="Diferenciais"><button>CONHEÇA NOSSOS SERVIÇOS</button></a>
+          <a href="Diferenciais"><button>CONHEÇA NOSSOS DIFERENCIAIS</button></a>
           </div>
         </div>
 
@@ -428,7 +432,7 @@ header {
 }
 
 .custom-select {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .icon-selector {
