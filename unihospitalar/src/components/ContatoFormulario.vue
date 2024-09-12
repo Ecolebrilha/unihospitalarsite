@@ -80,6 +80,20 @@
     box-shadow: 0 0 8px rgba(174, 44, 42, 0.2);
 }
 
+@media (max-width: 512px) {
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.6em;
+}
+}
+
+@media (max-width: 350px) {
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.6em;
+}
+}
+
 .lbl-box {
     font-size: 14px;
     color: #999;
