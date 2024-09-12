@@ -213,82 +213,6 @@ header {
     display: block;
 }
 
-@media (max-width: 1200px) {
-    .logo-container {
-        width: 25%;
-    }
-    
-    .logo {
-        max-height: 60px;
-    }
-}
-
-@media (max-width: 992px) {
-    .logo-container {
-        width: 30%;
-    }
-
-    .logo {
-        max-height: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 576px) {
-    header {
-      width: 100%;
-      height: 1px;
-    }
-
-    .logo-container {
-    width: 33.33%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    width: 90%;
-    height: auto;
-    max-height: 80px;
-}
-
-.language-selector {
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        transform: translate(-50%, -20%);
-        width: 33.33%;
-        max-width: 100px;
-        height: auto;
-        max-height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icon-selector {
-        width: 100%;
-        height: auto;
-    }
-
-    .item {
-        width: 60%;
-    }
-
-    .menu-toggle {
-        font-size: 1.3em;
-    }
-
-    .banner-container {
-      top: -27px;
-    }
-    
-}
-
 .language-selector {
   position: absolute;
   right: 130px;
@@ -496,20 +420,6 @@ nav ul li.dropdown:hover .dropdown-content {
     color: #848484;
 }
 
-@media (max-width: 576px) {
-    nav ul {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-sidebar.active {
-        display: block;
-    }
-}
-
 .banner-container {
   position: relative;
   padding-top: 107px;
@@ -557,28 +467,26 @@ nav ul li.dropdown:hover .dropdown-content {
     opacity: 1;
   }
 }
-
 main {
   display: flex;
   justify-content: center;
-  padding-top: 145px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   background-color: #FFFFFF;
-  overflow: hidden;
 }
 
 .content {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 10px 0 50px 0;
-  gap: 50px;
-  width: 65%;
-  overflow: hidden;
+  padding: 10px;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .item {
   background-color: #f4f4f4;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   display: flex;
@@ -589,19 +497,19 @@ main {
 
 .item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .icon-container {
   background-color: #AE2C2A;
   color: #ffffff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
-  font-size: 2.5em;
+  margin-right: 15px;
+  font-size: 2em;
   transition: background-color 0.3s ease;
 }
 
@@ -611,9 +519,6 @@ main {
 
 .text-content {
   flex: 1;
-  padding-top: 40px;
-  margin-top: -70px;
-  padding-left: 20px;
 }
 
 .text-content h2 {
@@ -624,31 +529,22 @@ main {
   margin-bottom: 10px;
 }
 
-.p-geral {
-  font-size: 1.2em;
+.p-geral,
+.p-valores {
+  font-size: 1.1em;
   color: #707070;
   text-align: justify;
 }
 
 .p-valores {
-  font-size: 1.2em;
-  color: #707070;
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.p-services {
-  font-size: 1.2em;
-  color: #707070;
-  margin-bottom: 50px;
-  text-align: justify;
+  margin-bottom: 30px;
 }
 
 .valores-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-top: 20px;
   max-width: 100%;
 }
 
@@ -666,6 +562,38 @@ main {
 .valores-grid span:hover {
   background-color: #FF5555;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 5px;
+  }
+
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon-container {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+  }
+
+  .text-content {
+    padding-left: 0;
+  }
+
+  .p-geral,
+  .p-valores {
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 490px) {
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {

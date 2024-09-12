@@ -1,5 +1,4 @@
-<!-- Deixar a tela de Sobre, Contato e Parceiros responsivas (conteúdo principal) -->
-<!-- Deixar os banners responsivos de todas as telas -->
+<!-- Deixar a tela de Contato e Parceiros responsivas (conteúdo principal) -->
 <!-- Ajustar o banner da tela principal -->
 <!-- Deixar funcional a tradução dos idiomas em todas as telas -->
 <template>

@@ -530,75 +530,51 @@ main {
 }
 
 .servicos-content {
-  padding: 100px 10px;
-  background-color: #FFFFFF;
+  padding: 80px 15px;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .servico-item {
-  background-color: #F4F4F4;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 850px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
 }
 
-.servico-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.servico-item h2 {
+.servico-item h2, .servico-item h3 {
   font-weight: bold;
   color: #AE2C2A;
-  margin-bottom: 10px;
-  display: inline-block;
-  justify-content: center;
+  margin-bottom: 12px;
   text-align: center;
-  align-items: center;
-  position: relative;
-  gap: 10px;
-}
-
-.servico-item h3 {
-  font-weight: bold;
-  color: #AE2C2A;
-  margin-bottom: 10px;
-  display: inline-block;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  position: relative;
-  gap: 10px;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #FF8888; 
-    margin: 4px auto 0;
-}
-
-h3::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #FF8888; 
-    margin: 4px auto 0;
+  font-size: 1.8em;
 }
 
 .servico-item p {
-  color: #707070;
-  line-height: 1.6;
+  color: #34495e;
+  font-size: 1.1em;
+  line-height: 1.8;
   text-align: justify;
+}
+
+h2::after, h3::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: #e74c3c;
+  margin-top: 10px;
+}
+
+.servico-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 footer {
