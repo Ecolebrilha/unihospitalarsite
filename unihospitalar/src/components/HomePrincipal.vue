@@ -76,9 +76,9 @@
             <div class="header-background">
           <img src="@/assets/header.jpg" alt="Imagem do Header" class="header-image">
           <div class="header-content">
-          <h2>Respeito às relações humanas</h2>
-          <p>O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
-          <a href="Diferenciais"><button>CONHEÇA NOSSOS DIFERENCIAIS</button></a>
+          <h2 class="banner-h2">Respeito às relações humanas</h2>
+          <p class="banner-p">O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
+          <a href="Diferenciais"><button class="banner-btn">CONHEÇA NOSSOS DIFERENCIAIS</button></a>
           </div>
         </div>
 
@@ -128,29 +128,6 @@
         </div>                 
     </div>
 </section>
-
-            <!-- <section class="ultimas-noticias">
-                <h2>Últimas Notícias</h2>
-                <div class="news">
-                    <div class="news-item">
-                        <img src="@/assets/noticia1.jpg" alt="Notícia 1">
-                        <p>Situações estressantes, sexo ou mesmo almoçar e esperar por alguém são momentos que podem liberar uma vontade imensa de fumar<br><a href="#">ver notícia</a></p>
-                    </div>
-                    <div class="news-item">
-                        <img src="@/assets/noticia2.jpg" alt="Notícia 2">
-                        <p>Garanta mais disposição e saúde com alertas de médicos e nutricionista<br><a href="#">ver notícia</a></p>
-                    </div>
-                    <div class="news-item">
-                        <img src="@/assets/noticia3.jpg" alt="Notícia 3">
-                        <p>O Cálcio é um mineral essencial para a construção e manutenção dos ossos e dos dentes e é muito importante que seja ingerido<br><a href="#">ver notícia</a></p>
-                    </div>
-                    <div class="news-item">
-                        <img src="@/assets/noticia4.jpg" alt="Notícia 4">
-                        <p>Você já ouviu falar nos alimentos funcionais? São alimentos ou ingredientes que produzem efeitos benéficos à saúde<br><a href="#">ver notícia</a></p>
-                    </div>
-                </div>
-                <button class="news-button">ver todas as notícias</button>
-            </section> -->
 
             <section class="parceiros">
         <h2>Nossos Parceiros</h2>
@@ -348,6 +325,10 @@ header {
     .logo {
         max-height: 60px;
     }
+
+    .image-wrapper {
+        font-size: 0.6em;
+    }
 }
 
 @media (max-width: 992px) {
@@ -358,62 +339,6 @@ header {
     .logo {
         max-height: 50px;
     }
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 576px) {
-    header {
-      width: 100%;
-      height: 1px;
-    }
-
-    .logo-container {
-    width: 33.33%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    width: 90%;
-    height: auto;
-    max-height: 80px;
-}
-
-.language-selector {
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        transform: translate(-50%, -20%);
-        width: 33.33%;
-        max-width: 100px;
-        height: auto;
-        max-height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icon-selector {
-        width: 100%;
-        height: auto;
-    }
-
-    .item {
-        width: 60%;
-    }
-
-    .menu-toggle {
-        font-size: 1.3em;
-    }
-
-    .banner-container {
-      top: -27px;
-    }
-    
 }
 
 .language-selector {
@@ -623,150 +548,85 @@ nav ul li.dropdown:hover .dropdown-content {
     color: #848484;
 }
 
-@media (max-width: 576px) {
-    nav ul {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-sidebar.active {
-        display: block;
-    }
-}
-
-.banner-content {
-    width: 98%;
-    background: linear-gradient(90deg, rgba(174, 44, 42, 0.8) 0%, rgba(220, 70, 60, 0.8) 100%);
-    color: #FFFFFF;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
-    margin-top: -52px;
-}
-
-.banner-content:hover {
-    background: linear-gradient(90deg, rgba(220, 70, 60, 0.8) 0%, rgba(174, 44, 42, 0.8) 100%);
-    transform: scale(1.05);
-}
-
-.banner-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner-content p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 800px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.banner-content button {
-    background-color: #FF8888;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #FFFFFF;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.banner-content button:hover {
-    background-color: #FF5555;
-}
-
 main {
     padding-top: 151px;
     background-color: #FEFEFE;
 }
 
 .header-background {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: auto;
-  overflow: hidden;
-  margin-top: -115px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    margin-top: -115px;
 }
 
 .header-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(70%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
 }
 
 .header-content {
-  position: absolute;
-  right: 10%;
-  text-align: right;
-  color: #fff;
-  z-index: 1;
-  animation: fadeIn 2s ease-in-out;
+    position: absolute;
+    right: 10%;
+    text-align: right;
+    color: #fff;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .header-content h2 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  animation: slideInRight 1.5s ease-out;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    animation: slideInRight 1.5s ease-out;
 }
 
 .header-content p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-  line-height: 1.5;
-  animation: slideInRight 1.8s ease-out;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    animation: slideInRight 1.8s ease-out;
 }
 
 .header-content button {
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-  background-color: #f05454;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  animation: slideInRight 2s ease-out;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #f05454;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: slideInRight 2s ease-out;
 }
 
 .header-content button:hover {
-  background-color: #d04343;
-  transform: scale(1.05);
+    background-color: #d04343;
+    transform: scale(1.05);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideInRight {
   from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .main-content {
@@ -853,95 +713,69 @@ main {
 }
 
 @media (max-width: 768px) {
+    .header-image {
+    margin-top: 20px;
+  }
+  
+    h2.banner-h2 {
+    font-size: 0.3em;
+  }
+
+  p.banner-p {
+    font-size: 0.3em;
+  }
+
+  button.banner-btn {
+    font-size: 0.3em;
+  }
+
     .blocks {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-
+    
     .block {
         max-width: 100%;
     }
+    
+    .image-wrapper {
+        font-size: 1.5em;
+    }
 }
 
-.ultimas-noticias {
-    padding: 40px 100px;
-    background-color: #EBEBEB;
+@media (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-sidebar.active {
+        display: block;
+    }
+
+    .header-image {
+    margin-top: 20px;
+  }
+
+    .image-wrapper {
+        font-size: 1em;
+    }
 }
 
-.ultimas-noticias h2 {
-    margin-bottom: 20px;
-    color: #AE2C2A;
-    font-weight: bold;
-    font-size: 2.2em;
-    text-align: center;
+@media (max-width: 400px) {
+    .image-wrapper h3 {
+        font-size: 1em;
+    }
 }
 
-.news {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+@media (max-width: 292px) {
+    .image-wrapper h3 {
+        font-size: 0.6em;
+    }
 
-.news-item {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 5px;
-    padding: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.news-item p {
-    margin: 0;
-    color: #333;
-    text-align: justify;
-}
-
-.news-item a {
-    color: red;
-    font-weight: bold;
-    margin-top: 60px; 
-    display: inline-block; 
-    padding-left: 40%;
-}
-
-.news-item a:hover {
-    color: black;
-}
-
-.news-item img {
-    width: 32%;
-    margin-right: 20px;
-    border-radius: 5px;
-}
-
-.news-button {
-    background-color: #AE2C2A;
-    color: #FFFFFF;
-    margin: 30px 0 10px 0;
-    padding: 12px 24px; 
-    font-size: 16px; 
-    border: none; 
-    border-radius: 50px; 
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
-    text-transform: uppercase; 
-    font-weight: bold; 
-    letter-spacing: 1px; 
-}
-
-.news-button:hover {
-    background-color: #FF5555; 
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); 
-    transform: translateY(-3px); 
-}
-
-.news-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .partners-button {
@@ -1089,17 +923,145 @@ footer {
 }
 
 @media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
+  .logo-container {
+    width: 33.33%;
+  }
 
-    .footer-logo {
-        margin-bottom: 10px;
-    }
+  .logo {
+    width: 70%;
+    max-height: 80px;
+  }
 
-    .footer-desenvolvedor {
-        text-align: center;
-    }
+  .language-selector {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-80%, -50%);
+    width: 33.33%;
+    max-width: 100px;
+    height: auto;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-selector {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-toggle {
+    font-size: 1.3em;
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-sidebar.active {
+    display: block;
+  }
+
+  .header-background {
+    margin-top: -150px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    width: 80%;
+  }
+
+}
+
+@media (min-width: 769px) {
+  nav ul li {
+    margin: 0 8px;
+  }
+
+  nav ul li a {
+    font-size: 0.6em;
+  }
+
+  .language-selector {
+    right: 40px;
+    top: 20px;
+  }
+
+  .language-selector select {
+    padding: 3px;
+  }
+
+  .icon-selector span {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 993px) {
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    max-height: 60px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.8em;
+  }
+
+  .language-selector {
+    right: 60px;
+  }
+
+  .icon-selector span {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1390px) {
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    max-height: 80px;
+  }
+
+  .language-selector {
+    right: 120px;
+  }
+
+  .icon-selector span {
+    font-size: 1.5em;
+  }
+
+  nav ul li {
+    margin: 0 16px;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
 }
 </style>
