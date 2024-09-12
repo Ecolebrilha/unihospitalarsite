@@ -82,22 +82,22 @@
       <button 
         @click="activeSection = 'SAC'" 
         :class="{ active: activeSection === 'SAC' }">
-        Suporte
+      <span>Suporte</span>
       </button>
       <button 
         @click="activeSection = 'Comercial'" 
         :class="{ active: activeSection === 'Comercial' }">
-        Comercial
+      <span>Comercial</span>
       </button>
       <button 
         @click="activeSection = 'Licitação'" 
         :class="{ active: activeSection === 'Licitação' }">
-        Licitação
+      <span>Licitação</span>
       </button>
       <button 
         @click="activeSection = 'Financeiro'" 
         :class="{ active: activeSection === 'Financeiro' }">
-        Financeiro
+      <span>Financeiro</span>
       </button>
     </div>
     
@@ -173,7 +173,8 @@ export default {
   data() {
     return {
       activeSection: 'SAC',
-      selectedLanguage: 'pt'
+      selectedLanguage: 'pt',
+      sidebarOpen: false
     };
   },
   components: {
@@ -185,6 +186,9 @@ export default {
       this.selectedLanguage = value;
 
       console.log(`Idioma selecionado: ${value}`);
+    },
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
     }
   }
 };
@@ -621,107 +625,258 @@ footer {
   border-radius: 2px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
     .content-box {
         width: 45%; 
         padding: 15px;
     }
 
-    .section-buttons {
-        flex-direction: column;
+    .section-buttons button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1250px) {
+    .content-box {
+        width: 55%; 
+        padding: 15px;
     }
 
     .section-buttons button {
-        margin-bottom: 10px;
-        width: 100%;
+        font-size: 1em;
     }
 }
 
 @media (max-width: 992px) {
     .content-box {
-        width: 50%;
+        width: 70%;
+    }
+
+    .section-buttons button {
+        font-size: 0.9em;
     }
 }
 
 @media (max-width: 768px) {
     .content-box {
-        width: 80%;
-        padding: 10px;
-    }
-
-    .section-buttons {
-        margin-top: 10%;
+        width: 70%;
     }
 
     .section-buttons button {
-        padding: 8px 16px;
-        font-size: 1em;
-    }
-
-    .content-box p {
-        font-size: 1.1em;
-    }
-
-    .content-box i {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    .msg-info > p {
-        font-size: 1em;
-        margin-top: 30px;
+        font-size: 0.7em;
     }
 }
 
 @media (max-width: 576px) {
     .content-box {
         width: 70%;
-        padding: 10px;
-    }
-
-    .section-buttons {
-        margin-top: 15%;
     }
 
     .section-buttons button {
-        padding: 6px 12px;
-        font-size: 0.9em;
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 467px) {
+    .content-box {
+        width: 80%;
+    }
+
+    .section-buttons button {
+        font-size: 0.1em;
     }
 
     .content-box p {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .content-box i {
         font-size: 1em;
     }
 
+    .msg-info > p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 300px) {
+  .content-box p {
+        font-size: 0.6em;
+    }
+
     h2 {
-        font-size: 1.5em;
+      font-size: 2em;
+    }
+
+    .content-box i {
+        font-size: 1em;
     }
 
     .msg-info > p {
         font-size: 0.9em;
-        margin-top: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
+  header {
+    height: 1px;
+  }
 
-    .footer-logo {
-        margin-bottom: 10px;
-    }
+  .logo-container {
+    width: 33.33%;
+  }
 
-    .footer-desenvolvedor {
-        text-align: center;
-    }
+  .logo {
+    width: 70%;
+    max-height: 80px;
+  }
+
+  .language-selector {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-80%, -50%);
+    width: 33.33%;
+    max-width: 100px;
+    height: auto;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-selector {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-toggle {
+    font-size: 1.3em;
+    display: block;
+  }
+
+  .banner-container {
+    top: 82px;
+    padding-top: 0px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.2em;
+    padding: 5px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-sidebar.active {
+    display: block;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    width: 80%;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .banner-overlay h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 769px) {
+  nav ul li {
+    margin: 0 8px;
+  }
+
+  nav ul li a {
+    font-size: 0.6em;
+  }
+
+  .language-selector {
+    right: 40px;
+    top: 20px;
+  }
+
+  .language-selector select {
+    padding: 3px;
+  }
+
+  .icon-selector span {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 993px) {
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    max-height: 60px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.8em;
+  }
+
+  .language-selector {
+    right: 60px;
+  }
+
+  .icon-selector span {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1390px) {
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    max-height: 80px;
+  }
+
+  .language-selector {
+    right: 120px;
+  }
+
+  .icon-selector span {
+    font-size: 1.5em;
+  }
+
+  nav ul li {
+    margin: 0 16px;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
 }
 
 </style>
