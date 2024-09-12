@@ -132,7 +132,8 @@
 export default {
   data() {
     return {
-      selectedLanguage: 'pt'
+      selectedLanguage: 'pt',
+      sidebarOpen: false
     }
   },
   methods: {
@@ -141,6 +142,9 @@ export default {
       this.selectedLanguage = value;
 
       console.log(`Idioma selecionado: ${value}`);
+    },
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
     }
   }
 }
