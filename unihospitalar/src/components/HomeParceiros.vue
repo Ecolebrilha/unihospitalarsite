@@ -50,7 +50,6 @@
             <main>
                 <section class="about-content">
                     <div class="about-center">
-                        <h2>PARCEIROS</h2>
                         <div class="partner-logos">
                             <img src="@/assets/parceiro1.jpg" alt="Logo Parceiro1">
                             <img src="@/assets/parceiro2.jpg" alt="Logo Parceiro2">
@@ -392,49 +391,92 @@ nav ul li.dropdown:hover .dropdown-content {
     opacity: 1;
   }
 }
-      main {
-          display: flex;
-          justify-content: center;
-          padding: 200px 0 150px 0;
-      }
-      .about-content {
-        margin-top: -80px;
-        width: 60%;
-        height: 95%;
-        text-align: left;
-        background-color: #ffffff;
-        padding: 20px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-      }
-      .about-center {
-          margin-bottom: 80px;
-          text-align: center;
-      }
-      .about-center h2 {
-        font-size: 1.5em;
-        font-weight: 800;
-        color: #AE2C2A;
-        margin-bottom: 40px;
-        border-bottom: 2px solid #FF8888;
-        padding-bottom: 5px;
-      }
-      .partner-logos {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 80px;
-          justify-items: center;
-          align-items: center;
-      }
-      .partner-logos img {
-          width: 150px;
-          height: auto;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
-      }
-      .partner-logos img:hover {
-          transform: scale(1.1);
-      }
+main {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.about-content {
+  margin-top: 50px;
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.about-center h2 {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: #AE2C2A;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #FF8888;
+  padding-bottom: 10px;
+}
+
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.partner-logos img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.partner-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+  .partner-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    width: 100%;
+  }
+  
+  .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .partner-logos img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partner-logos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .partner-logos img {
+    width: 80px;
+  }
+}
 
       footer {
   background-color: #EBEBEB;
