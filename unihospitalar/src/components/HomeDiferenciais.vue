@@ -541,7 +541,7 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .feature {
-  background-color: #f9f9f9;
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -573,13 +573,13 @@ nav ul li.dropdown:hover .dropdown-content {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #FF8888; 
+    background-color: #e74c3c; 
     margin: 4px auto 0;
 }
 
 .feature-info p {
   font-size: 1em;
-  color: #333;
+  color: #34495e;
   margin: 10px 0;
 }
 
@@ -590,6 +590,7 @@ nav ul li.dropdown:hover .dropdown-content {
 
 .feature-info ul li {
   margin: 5px 0;
+  color: #34495e;
 }
 
 .testimonials {
@@ -608,8 +609,9 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 .testimonial {
-  background-color: #f9f9f9;
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
   border-left: 4px solid #AE2C2A;
+  color: #34495e;
   padding: 15px;
   margin: 20px;
   border-radius: 5px;
