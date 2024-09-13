@@ -464,7 +464,7 @@ main {
 }
 
 .card {
-  background-color: #F4F4F4;
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -490,7 +490,7 @@ main {
 }
 
 .card p {
-  color: #707070;
+  color: #34495e;
   text-align: center;
 }
 
@@ -502,7 +502,7 @@ main {
   font-size: 1.2em;
   font-weight: bold;
   border-radius: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
