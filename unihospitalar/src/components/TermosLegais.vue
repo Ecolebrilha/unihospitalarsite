@@ -536,7 +536,7 @@ main {
 }
 
 .termos-section {
-  background-color: #F4F4F4;
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
   padding: 20px;
   margin-bottom: 80px;
   border-radius: 10px;
@@ -556,14 +556,14 @@ main {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #FF8888; 
+    background-color: #e74c3c; 
     margin: 4px auto 0;
 }
 
 .termos-section p {
   font-size: 1em;
   line-height: 1.6em;
-  color: #6c757d;
+  color: #34495e;
   margin-bottom: 15px;
 }
 
