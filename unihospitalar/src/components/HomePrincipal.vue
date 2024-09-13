@@ -1,6 +1,6 @@
-<!-- Deixar a tela de Contato responsivas (conteúdo principal) -->
-<!-- Ajustar o banner da tela principal -->
+<!-- Deixar a tela de Compliance e Contato responsivas (conteúdo principal) -->
 <!-- Deixar funcional a tradução dos idiomas em todas as telas -->
+<!-- Deixar o formulário de contatos 100% funcional -->
 <template>
     <div class="home">
         <header>
@@ -107,21 +107,21 @@
         </div>
         <div class="block">
             <div class="image-wrapper">
-                <img src="@/assets/principais-clientes.jpg" alt="Bloco 4">
+                <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 4">
                 <h3>UNIDADE DE NEGÓCIOS</h3>
             </div>
             <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <a href="Diferenciais">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
-                <img src="@/assets/principais-produtos.jpg" alt="Bloco 5">
+                <img src="@/assets/principais-clientes.jpg" alt="Bloco 5">
                 <h3>PRINCIPAIS CLIENTES</h3>
             </div>
-            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <a href="Compliance">Saiba mais.</a></p>
+            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <a href="Parceiros">Saiba mais.</a></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
-                <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 6">
+                <img src="@/assets/principais-produtos.jpg" alt="Bloco 6">
                 <h3>PRINCIPAIS PRODUTOS</h3>
             </div>
             <p>Foco na distribuição e padronização de medicamentos hospitalares, oncológicos e excepcionais, trabalhando em nichos específicos. <a href="Produtos">Saiba mais.</a></p>       
@@ -577,6 +577,8 @@ main {
     color: #fff;
     z-index: 1;
     animation: fadeIn 2s ease-in-out;
+    width: 80%;
+    max-width: 600px;
 }
 
 .header-content h2 {
@@ -611,6 +613,95 @@ main {
 .header-content button:hover {
     background-color: #d04343;
     transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+    .header-content {
+        right: 5%;
+    }
+    .header-content h2 {
+        font-size: 2em;
+    }
+    .header-content p {
+        font-size: 1em;
+    }
+    .header-content button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-content {
+        right: 2%;
+    }
+    .header-content h2 {
+        font-size: 1.6em;
+    }
+    .header-content p {
+        font-size: 1em;
+    }
+    .header-content button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-background {
+      margin-top: -135px;
+    }
+    .header-content h2 {
+        font-size: 1.3em;
+        margin: 0.5em 0;
+    }
+    .header-content p {
+        font-size: 0.9em;
+        margin: 0.5em 0;
+    }
+    .header-content button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+  }
+
+    @media (max-width: 576px) {
+    .header-content h2 {
+        font-size: 1em;
+    }
+    .header-content p {
+        font-size: 0.6em;
+    }
+    .header-content button {
+        font-size: 8px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-content h2 {
+        font-size: 0.7em;
+    }
+    .header-content p {
+        font-size: 0.4em;
+    }
+    .header-content button {
+        font-size: 6px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .header-content h2 {
+        font-size: 0.5em;
+    }
+    .header-content p {
+        font-size: 0.2em;
+    }
+    .header-content button {
+        font-size: 4px;
+        padding: 4px 8px;
+    }
 }
 
 @keyframes fadeIn {
@@ -713,22 +804,7 @@ main {
 }
 
 @media (max-width: 768px) {
-    .header-image {
-    margin-top: 20px;
-  }
-  
-    h2.banner-h2 {
-    font-size: 0.3em;
-  }
-
-  p.banner-p {
-    font-size: 0.3em;
-  }
-
-  button.banner-btn {
-    font-size: 0.3em;
-  }
-
+    
     .blocks {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -756,8 +832,8 @@ main {
         display: block;
     }
 
-    .header-image {
-    margin-top: 20px;
+    .header-background {
+    margin-top: -135px;
   }
 
     .image-wrapper {
@@ -817,7 +893,7 @@ main {
     color: #AE2C2A;
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.0em;
+    font-size: 2em;
     position: relative;
     display: inline-block;
 }
@@ -827,7 +903,7 @@ main {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #FF8888; 
+    background-color: #e74c3c; 
     margin: 4px auto 0;
 }
 
@@ -963,10 +1039,6 @@ footer {
 
   .menu-sidebar.active {
     display: block;
-  }
-
-  .header-background {
-    margin-top: -150px;
   }
 
   footer {
