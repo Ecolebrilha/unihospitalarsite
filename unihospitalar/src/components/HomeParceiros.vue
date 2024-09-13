@@ -398,7 +398,7 @@ main {
 }
 
 .about-content {
-  margin-top: 50px;
+  margin: 100px 0 150px 0;
   width: 90%;
   max-width: 1200px;
   height: auto;
@@ -407,15 +407,6 @@ main {
   padding: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-}
-
-.about-center h2 {
-  font-size: 1.8em;
-  font-weight: 800;
-  color: #AE2C2A;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #FF8888;
-  padding-bottom: 10px;
 }
 
 .partner-logos {
@@ -687,4 +678,4 @@ main {
     font-size: 1em;
   }
 }
-    </style>
+</style>
