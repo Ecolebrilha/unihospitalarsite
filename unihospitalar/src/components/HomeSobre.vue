@@ -482,10 +482,11 @@ main {
   gap: 30px;
   max-width: 1000px;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .item {
-  background-color: #f4f4f4;
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
   padding: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -525,8 +526,18 @@ main {
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
-  border-bottom: 3px solid #FF8888;
   margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.text-content h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #e74c3c; 
+    margin: 4px auto 0;
 }
 
 .p-geral,
@@ -629,10 +640,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
-    height: 1px;
-  }
-
   .logo-container {
     width: 33.33%;
   }
