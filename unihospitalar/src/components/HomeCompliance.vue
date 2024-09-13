@@ -85,7 +85,7 @@
       </section>
       
       <section class="compliance-details">
-        <div class="compliance-section slide-in-right">
+        <div class="compliance-section-left slide-in-right">
           <h3><i class="fas fa-book"></i> Código de Conduta</h3>
           <p>Nosso Código de Conduta é um guia para todos os colaboradores, parceiros e fornecedores, assegurando um comportamento ético em todas as nossas atividades.</p>
           <ul>
@@ -95,7 +95,7 @@
           </ul>
         </div>
 
-        <div class="compliance-section slide-in-left">
+        <div class="compliance-section-right slide-in-left">
           <h3><i class="fas fa-file-alt"></i> Políticas e Regulamentos</h3>
           <p>Acesse nossas políticas que reforçam o compromisso com a conformidade e a ética.</p>
           <ul>
@@ -105,13 +105,13 @@
           </ul>
         </div>
 
-        <div class="compliance-section slide-in-right">
+        <div class="compliance-section-left slide-in-right">
           <h3><i class="fas fa-exclamation-triangle"></i> Instruções para Ações Corretivas</h3>
           <p>Identificou alguma irregularidade? Veja como proceder e entre em contato com nosso departamento de compliance para orientação.</p>
           <a href="/contato" class="cta-button"><i class="fas fa-phone"></i> Entre em Contato</a>
         </div>
 
-        <div class="compliance-section slide-in-left">
+        <div class="compliance-section-right slide-in-left">
           <h3><i class="fas fa-link"></i> Links para Documentos Legais</h3>
           <p>Acesse documentos completos como políticas de privacidade, termos de uso, entre outros.</p>
           <ul>
@@ -599,6 +599,7 @@ main {
 }
 
 .compliance-overview p {
+  color: #34495e;
   font-size: 1.2em;
   line-height: 1.5;
 }
@@ -610,45 +611,53 @@ main {
   padding-bottom: 80px;
 }
 
-.compliance-section {
-  background-color: #f4f4f4;
+.compliance-section-left {
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.compliance-section h3 {
+.compliance-section-right {
+  background: linear-gradient(145deg, #ffffff, #e6e9ef);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.compliance-section-left h3, .compliance-section-right h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
   color: #AE2C2A;
 }
 
-.compliance-section p {
+.compliance-section-left p, .compliance-section-right p {
+  color: #34495e;
   font-size: 1em;
   line-height: 1.5;
 }
 
-.compliance-section ul {
+.compliance-section-left ul, .compliance-section-right ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
 
-.compliance-section ul li {
+.compliance-section-left ul li, .compliance-section-right ul li {
   margin-bottom: 10px;
 }
 
-.compliance-section ul li a {
+.compliance-section-left ul li a, .compliance-section-right ul li a {
   text-decoration: none;
   color: #AE2C2A;
   font-weight: bold;
 }
 
-.compliance-section ul li a:hover {
-  color: #FF8888;
+.compliance-section-left ul li a:hover, .compliance-section-right ul li a:hover {
+  color: #FF5555;
 }
 
-.compliance-section .cta-button {
+.compliance-section-left .cta-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #AE2C2A;
@@ -667,7 +676,7 @@ main {
     letter-spacing: 1px; 
 }
 
-.compliance-section .cta-button:hover {
+.compliance-section-left .cta-button:hover {
     background-color: #FF5555; 
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
