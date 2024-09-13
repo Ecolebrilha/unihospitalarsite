@@ -506,6 +506,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 200px;
   padding-top: 20px;
 }
 
@@ -658,6 +659,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    section.contact-content {
+       margin-bottom: 100px;
+    }
+
     .content-box {
         width: 70%;
     }
@@ -668,6 +673,9 @@ footer {
 }
 
 @media (max-width: 576px) {
+    section.contact-content {
+       margin-bottom: 200px;
+    }
     .content-box {
         width: 70%;
     }
@@ -772,6 +780,10 @@ footer {
 
   .menu-sidebar.active {
     display: block;
+  }
+
+  .contact-content {
+    margin: 100px 0 50px 0;
   }
 
   footer {
