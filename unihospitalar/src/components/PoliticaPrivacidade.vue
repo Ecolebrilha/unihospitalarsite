@@ -113,40 +113,36 @@ export default {
   name: 'PoliticaPrivacidade',
   data() {
     return {
+      selectedLanguage: 'pt',
+      sidebarOpen: false,
       sections: [
           {
-          title: "Sobre a Política de Privacidade",
-          icon: "🔍",
+          title: "🔍 Sobre a Política de Privacidade",
           text: "Bem-vindo à Política de Privacidade da Uni Hospitalar. Nós levamos sua privacidade a sério e estamos comprometidos em proteger suas informações pessoais. Coletamos informações pessoais como nome, e-mail, telefone e empresa quando você interage com nossos serviços, sempre com seu consentimento. As informações coletadas são utilizadas para melhorar nossos serviços, personalizar sua experiência e garantir a segurança das transações.",
           backgroundColor: "rgba(245, 245, 245, 0.5);",
         },
         {
-          title: "Segurança e Direitos dos Usuários",
-          icon: "🛡️",
+          title: "🛡️ Segurança e Direitos dos Usuários",
           text: "Implementamos medidas de segurança avançadas para proteger suas informações contra acesso não autorizado e outras ameaças. Não compartilhamos suas informações com terceiros, exceto quando exigido por lei ou para proteger nossos direitos legais. Você tem o direito de acessar, corrigir e excluir suas informações pessoais. Entre em contato conosco para exercer esses direitos.",
           backgroundColor: "rgba(245, 245, 245, 0.5);",
         },
         {
-          title: "Objetivo da Política de Privacidade",
-          icon: "🎯",
+          title: "🎯 Objetivo da Política de Privacidade",
           text: "A Uni Hospitalar valoriza a ética e a integridade em todas as suas ações. Esta Política de Privacidade tem como objetivo informar os titulares de dados pessoais sobre como suas informações são tratadas, assegurando uma relação transparente e segura.",
           backgroundColor: "rgba(245, 245, 245, 0.5);",
         },
         {
-          title: "Nosso Compromisso",
-          icon: "🤝",
+          title: "🤝 Nosso Compromisso",
           text: "A Uni Hospitalar se compromete a oferecer um atendimento de qualidade a todos que acessam nossas plataformas digitais. Baseados no princípio da segurança, protegemos a privacidade e os dados pessoais, apresentando esta Política com clareza sobre o tratamento dos dados de nossos colaboradores, clientes e visitantes.",
           backgroundColor: "rgba(245, 245, 245, 0.5);",
         },
         {
-          title: "Proteção dos Dados Pessoais",
-          icon: "🔐",
+          title: "🔐 Proteção dos Dados Pessoais",
           text: "A Uni Hospitalar adota as melhores práticas de segurança para garantir a integridade e confidencialidade dos dados tratados. Utilizamos mecanismos robustos para proteger contra uso indevido, acessos não autorizados, danos, fraudes e outras ameaças.",
           backgroundColor: "rgba(245, 245, 245, 0.5);",
         },
         {
-          title: "Tratamento de Dados",
-          icon: "📄",
+          title: "📄 Tratamento de Dados",
           text: "A Uni Hospitalar trata os dados pessoais de maneira responsável e ética. Coletamos dados para executar atividades relacionadas aos nossos serviços, incluindo identificação, contato, informações financeiras, dados de navegação, saúde, biometria, entre outros. Todos os dados são utilizados para fins legítimos e de acordo com as legislações vigentes.",
           backgroundColor: "rgba(245, 245, 245, 0.5);",
         },
@@ -561,38 +557,8 @@ main {
   margin-bottom: 4%;
 }
 
-.privacidade-left,
-.privacidade-right {
-  width: 40%;
-  text-align: left;
-  background-color: #F4F4F4;
-  padding: 25px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.privacidade-left h2,
-.privacidade-right h2 {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: 800;
-  color: #AE2C2A;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #FF8888;
-  padding-bottom: 5px;
-}
-
-.privacidade-left p,
-.privacidade-right p {
-  text-align: justify;
-  font-size: 1em;
-  line-height: 1.6em;
-  color: #6c757d;
-  margin-bottom: 20px;
-}
-
 .privacidade-section {
-  background-color: #F4F4F4;
+  background: linear-gradient(145deg, #e6e9ef, #ffffff);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -622,14 +588,14 @@ main {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #FF8888; 
+    background-color: #e74c3c; 
     margin: 4px auto 0;
 }
 
 .text-content p {
   font-size: 1.1em;
   line-height: 1.6em;
-  color: #555;
+  color: #34495e;
 }
 
 @keyframes fadeIn {
@@ -645,12 +611,6 @@ main {
   .privacidade-content {
     flex-direction: column;
     width: 90%;
-  }
-
-  .privacidade-left,
-  .privacidade-right {
-    width: 100%;
-    margin-bottom: 30px;
   }
 
   .privacidade-section {
