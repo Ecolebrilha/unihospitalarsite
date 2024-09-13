@@ -606,7 +606,7 @@ main {
   .lgpd-section {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #F4F4F4;
+    background: linear-gradient(145deg, #e6e9ef, #ffffff);
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -623,6 +623,7 @@ main {
 }
   
   .lgpd-section p {
+    color: #34495e;
     font-size: 1.1em;
     line-height: 1.8;
   }
