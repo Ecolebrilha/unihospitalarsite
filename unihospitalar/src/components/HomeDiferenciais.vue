@@ -457,6 +457,10 @@ nav ul li.dropdown:hover .dropdown-content {
     .content h1 {
     font-size: 1em;
   }
+
+  .banner-overlay h1 {
+    font-size: 1em;
+  }
 }
 
 .banner-container {
@@ -508,18 +512,9 @@ nav ul li.dropdown:hover .dropdown-content {
   margin-bottom: 20px;
 }
 
-.banner-overlay p {
-  color: #FFDDC1;
-  font-size: 1.5em;
-  font-weight: normal;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  animation: slideInRight 1.5s ease-out;
-  line-height: 1.6;
-}
-
 @keyframes slideInRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(80%);
     opacity: 0;
   }
   to {
@@ -650,6 +645,17 @@ nav ul li.dropdown:hover .dropdown-content {
   .testimonial {
     flex: 1 1 100%;
   }
+
+  @keyframes slideInRight {
+  from {
+    transform: translateX(5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 }
 
 .contact-cta {
@@ -842,6 +848,17 @@ footer {
   .footer-logo {
     margin-bottom: 10px;
   }
+
+  @keyframes slideInRight {
+  from {
+    transform: translateX(16%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 }
 
 @media (max-width: 992px) {
@@ -864,7 +881,7 @@ footer {
 
 @media (max-width: 768px) {
   .banner-overlay h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
@@ -895,6 +912,17 @@ footer {
   .icon-selector span {
     font-size: 1em;
   }
+
+  @keyframes slideInRight {
+  from {
+    transform: translateX(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 }
 
 @media (min-width: 993px) {
@@ -921,9 +949,30 @@ footer {
   .icon-selector span {
     font-size: 1.1em;
   }
+
+  @keyframes slideInRight {
+  from {
+    transform: translateX(23%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 }
 
 @media (min-width: 1390px) {
+  @keyframes slideInRight {
+  from {
+    transform: translateX(52%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
   .logo-container {
     width: 20%;
   }
@@ -948,4 +997,52 @@ footer {
     font-size: 1em;
   }
 }
+
+@media (min-width: 300px) {
+  @keyframes slideInRight {
+  from {
+    transform: translateX(6%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+}
+
+@media (min-width: 400px) {
+  @keyframes slideInRight {
+  from {
+    transform: translateX(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-sidebar.active {
+        display: block;
+    }
+    .content h1 {
+    font-size: 1em;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.5em;
+  }
+}
+
 </style>
