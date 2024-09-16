@@ -70,15 +70,13 @@
     </header>
 
     <div class="banner-container">
-  <img src="@/assets/header-diferenciais.jpg" alt="Banner Image">
-  <div class="banner-overlay">
-    <div class="content">
-      <h1>Nosso Diferencial</h1>
-      <p>Conheça o que nos torna únicos no mercado</p>
+      <div class="banner-overlay">
+        <h1>Nosso Diferencial</h1>
+      </div>
+      <img src="@/assets/header-diferenciais.jpg" alt="Imagem do Banner">
     </div>
-  </div>
-</div>
 
+<main>
     <section class="features">
       <div class="container">
         <div class="feature">
@@ -152,6 +150,7 @@
         <a href="/Servicos" class="cta-button">Saiba Mais Sobre Nossos Serviços</a>
       </div>
     </section>
+    </main>
 
     <footer>
   <div class="footer-logo">
@@ -455,6 +454,9 @@ nav ul li.dropdown:hover .dropdown-content {
     .menu-sidebar.active {
         display: block;
     }
+    .content h1 {
+    font-size: 1em;
+  }
 }
 
 .banner-container {
@@ -545,6 +547,7 @@ nav ul li.dropdown:hover .dropdown-content {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin: 20px auto;
   flex: 1 1 calc(50% - 20px);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -640,6 +643,10 @@ nav ul li.dropdown:hover .dropdown-content {
 }
 
 @media (max-width: 480px) {
+  .banner-overlay h1 {
+    font-size: 1em;
+  }
+
   .testimonial {
     flex: 1 1 100%;
   }
@@ -815,7 +822,7 @@ footer {
   }
 
   .banner-overlay h1 {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 5px;
   }
 
@@ -852,6 +859,18 @@ footer {
 
   .banner-overlay p {
     font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-overlay h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-overlay h1 {
+    font-size: 1.5em;
   }
 }
 

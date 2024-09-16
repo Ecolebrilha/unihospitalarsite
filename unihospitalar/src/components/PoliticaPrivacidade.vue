@@ -564,7 +564,7 @@ main {
   justify-content: space-between;
   width: 80%;
   padding: 20px;
-  margin: 20px auto;
+  margin: 50px auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: fadeIn 1s ease;

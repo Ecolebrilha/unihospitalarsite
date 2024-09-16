@@ -79,24 +79,52 @@
       <main>
         <section class="termos-content">
           <div class="termos-section">
-            <h2>Termos de Uso</h2>
-            <p>O nosso site foi desenvolvido para os clientes, colaboradores, parceiros e todos que se relacionam com a Uni Hospitalar, assim como para visitantes interessados em nossos serviços.</p>
-            <p>Estes Termos de Uso podem ser alterados a qualquer momento pela Uni Hospitalar, sendo uma nova versão atualizada publicada em nosso site.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Acesso ao Site</h2>
-            <p>O site da Uni Hospitalar funciona 24 horas por dia, podendo haver interrupções temporárias para manutenção, o que tornará o site indisponível pelo tempo necessário.</p>
-            <p>O acesso ao site é permitido apenas para maiores de 18 anos ou menores de idade que possuam autorização de seus responsáveis legais. Ao acessar, navegar ou utilizar o site da Uni Hospitalar, todos os visitantes concordam com estes Termos de Uso. Caso discorde de qualquer parte deste documento, recomendamos que interrompa imediatamente a navegação.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Uso de Licença e Cópia</h2>
-            <p>É concedida permissão para acessar todo o conteúdo do site da Uni Hospitalar, incluindo a realização de downloads e cópias dos materiais, mas apenas para uso pessoal e não comercial. Esta permissão não implica em cessão de direitos ou qualquer tipo de licença permanente. Esta licença será automaticamente revogada em caso de violação de suas condições, podendo ser rescindida unilateralmente pela Uni Hospitalar a qualquer momento.</p>
-            <p>Os visitantes devem utilizar o site e as informações nele contidas de maneira adequada e lícita, em conformidade com a legislação aplicável e as boas práticas de mercado. O uso indevido do site ou de seus conteúdos pode violar os direitos de propriedade intelectual da Uni Hospitalar, sendo punível nos termos da legislação vigente.</p>
-          </div>
-        </section>
-      </main>
+    <h2>Conformidade com Normas Setoriais</h2>
+    <p>
+      A conformidade com normas setoriais é fundamental para garantir que as operações de uma organização estejam em linha com as exigências legais e regulatórias que governam seu setor específico. Essa prática assegura que a empresa opere de maneira ética e dentro dos parâmetros legais, minimizando riscos e evitando sanções.
+    </p>
+    </div>
+
+    <div class="termos-section">
+    <h2>Responsabilidade pela Conformidade</h2>
+    <p>
+      A responsabilidade pela conformidade com normas setoriais recai sobre todos os níveis da organização. Desde a alta administração até os funcionários operacionais, é imperativo que todos compreendam as regulamentações relevantes e como elas se aplicam às suas funções. A equipe de conformidade desempenha um papel crucial na implementação e monitoramento das práticas necessárias.
+    </p>
+    </div>
+
+    <div class="termos-section">
+    <h2>Obrigações Regulatórias</h2>
+    <p>
+      Cada setor possui suas próprias obrigações regulatórias, que podem incluir requisitos de segurança, práticas ambientais, governança corporativa, entre outros. A organização deve manter-se atualizada em relação a essas obrigações e garantir que seus processos internos estejam ajustados para cumpri-las integralmente.
+    </p>
+    </div>
+
+    <div class="termos-section">
+    <h2>Monitoramento e Avaliação</h2>
+    <p>
+      O monitoramento contínuo é essencial para assegurar a conformidade com normas setoriais. A auditoria interna e a avaliação periódica dos processos operacionais garantem que a organização se mantenha dentro dos padrões exigidos. Qualquer não conformidade deve ser corrigida prontamente para evitar penalidades.
+    </p>
+    </div>
+
+    <div class="termos-section">
+    <h2>Auditorias Externas</h2>
+    <p>
+      As auditorias externas também são uma parte importante da conformidade com normas setoriais. Elas fornecem uma visão independente sobre as práticas da organização e ajudam a identificar possíveis áreas de melhoria ou risco. As organizações devem estar preparadas para essas auditorias e cooperar plenamente com os auditores.
+    </p>
+    </div>
+
+    <div class="termos-section">
+    <h2>Compromisso com a Conformidade</h2>
+    <p>
+      O compromisso com a conformidade setorial não é apenas uma obrigação legal, mas também uma responsabilidade moral da organização. Ao cumprir essas normas, a empresa demonstra seu compromisso com a ética, a segurança e o respeito às regulações que visam proteger o bem-estar de todos os envolvidos.
+    </p>
+    <p>
+      Ao seguir rigorosamente as normas setoriais aplicáveis, a organização não apenas mitiga riscos, mas também fortalece sua reputação no mercado, promovendo a confiança de clientes, parceiros e reguladores.
+    </p>
+    </div>
+
+  </section>
+</main>
   
       <footer>
     <div class="footer-logo">
@@ -553,7 +581,7 @@
   .termos-section p {
     font-size: 1em;
     line-height: 1.6em;
-    color: #6c757d;
+    color: #34495e;
     margin-bottom: 15px;
   }
   

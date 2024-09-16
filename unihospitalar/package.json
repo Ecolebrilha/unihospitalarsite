@@ -10,8 +10,14 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
     "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
     "flag-icons": "^7.2.3",
+    "nodemailer": "^6.9.15",
+    "v-mask": "^2.3.0",
     "vue": "^3.2.13",
     "vue-i18n": "^9.14.0",
     "vue-router": "^4.4.3"
@@ -45,5 +51,10 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

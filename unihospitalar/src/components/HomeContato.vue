@@ -69,127 +69,131 @@
       </nav>
     </header>
 
-      <div class="banner-container">
+    <div class="banner-container">
       <div class="banner-overlay">
         <h1>Contato</h1>
       </div>
       <img src="@/assets/header-contato.jpg" alt="Imagem do Banner">
     </div>
-  
+
     <main>
       <section class="contact-content">
-    <div class="section-buttons">
-      <button 
-        @click="activeSection = 'SAC'" 
-        :class="{ active: activeSection === 'SAC' }">
-      <span>Suporte</span>
-      </button>
-      <button 
-        @click="activeSection = 'Comercial'" 
-        :class="{ active: activeSection === 'Comercial' }">
-      <span>Comercial</span>
-      </button>
-      <button 
-        @click="activeSection = 'Licitação'" 
-        :class="{ active: activeSection === 'Licitação' }">
-      <span>Licitação</span>
-      </button>
-      <button 
-        @click="activeSection = 'Financeiro'" 
-        :class="{ active: activeSection === 'Financeiro' }">
-      <span>Financeiro</span>
-      </button>
-    </div>
-    
-    <div class="content-box">
-      <div v-if="activeSection === 'SAC'">
-        <h2>Suporte</h2>
-        <p> <i class="fas fa-envelope"></i>contato@unihospitalar.com.br</p>
-        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7201</p>
-        <div class="info-msg">
-          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+        <div class="section-buttons">
+          <button 
+            @click="activeSection = 'SAC'" 
+            :class="{ active: activeSection === 'SAC' }">
+            <span>Suporte</span>
+          </button>
+          <button 
+            @click="activeSection = 'Comercial'" 
+            :class="{ active: activeSection === 'Comercial' }">
+            <span>Comercial</span>
+          </button>
+          <button 
+            @click="activeSection = 'Licitação'" 
+            :class="{ active: activeSection === 'Licitação' }">
+            <span>Licitação</span>
+          </button>
+          <button 
+            @click="activeSection = 'Financeiro'" 
+            :class="{ active: activeSection === 'Financeiro' }">
+            <span>Financeiro</span>
+          </button>
         </div>
-        <ContatoFormulario/>
-      </div>
-      
-      <div v-if="activeSection === 'Comercial'">
-        <h2>Comercial</h2>
-        <p> <i class="fas fa-envelope"></i>vendas@unihospitalar.com.br</p>
-        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7224</p>
-        <div class="info-msg">
-          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+
+        <div class="content-box">
+          <div v-if="activeSection === 'SAC'">
+            <h2>Suporte</h2>
+            <p> <i class="fas fa-envelope"></i>contato@unihospitalar.com.br</p>
+            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7201</p>
+            <div class="info-msg">
+              <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+            </div>
+            <ContatoFormulario />
+          </div>
+
+          <div v-if="activeSection === 'Comercial'">
+            <h2>Comercial</h2>
+            <p> <i class="fas fa-envelope"></i>vendas@unihospitalar.com.br</p>
+            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7224</p>
+            <div class="info-msg">
+              <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+            </div>
+            <ContatoFormulario />
+          </div>
+
+          <div v-if="activeSection === 'Licitação'">
+            <h2>Licitação</h2>
+            <p> <i class="fas fa-envelope"></i>licitacao@unihospitalar.com.br</p>
+            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7215</p>
+            <div class="info-msg">
+              <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+            </div>
+            <ContatoFormulario />
+          </div>
+
+          <div v-if="activeSection === 'Financeiro'">
+            <h2>Financeiro</h2>
+            <p> <i class="fas fa-envelope"></i>financeiro@unihospitalar.com.br</p>
+            <p> <i class="fas fa-phone"></i>+55 (81) 3472 7202</p>
+            <div class="info-msg">
+              <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
+            </div>
+            <ContatoFormulario />
+          </div>
         </div>
-        <ContatoFormulario />
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-logo">
+        <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
       </div>
-      
-      <div v-if="activeSection === 'Licitação'">
-        <h2>Licitação</h2>
-        <p> <i class="fas fa-envelope"></i>licitacao@unihospitalar.com.br</p>
-        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7215</p>
-        <div class="info-msg">
-          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
-        </div>
-        <ContatoFormulario />
+      <div class="footer-mensagem">
+        <p class="address">
+          Rua Alagoas, 253<br>
+          Ipsep, Recife - PE<br>
+          CNPJ: 07.484.373/0001-24
+        </p>
+        <p class="message">© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
       </div>
-      
-      <div v-if="activeSection === 'Financeiro'">
-        <h2>Financeiro</h2>
-        <p> <i class="fas fa-envelope"></i>financeiro@unihospitalar.com.br</p>
-        <p> <i class="fas fa-phone"></i>+55 (81) 3472 7202</p>
-        <div class="info-msg">
-          <div class="msg-info"><p><strong>Para enviar sua mensagem, preencha os campos abaixo e em breve retornaremos. Obrigado!</strong></p></div>
-        </div>
-        <ContatoFormulario />
+      <div class="footer-info">
+        <article class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab21d620d9fa3b%3A0x37b3bafc7396bfc6!2sRua%20Alagoas%2C%20253%20-%20Ipsep%2C%20Recife%20-%20PE%2C%2075050-140!5e0!3m2!1spt-BR!2sbr!4v1638317242957!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </article>
       </div>
-    </div>
-  </section>
-  </main>
-  
-  <footer>
-  <div class="footer-logo">
-    <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
-  </div>
-  <div class="footer-mensagem">
-    <p class="address">
-      Rua Alagoas, 253<br>
-      Ipsep, Recife - PE<br>
-      CNPJ: 07.484.373/0001-24
-    </p>
-    <p class="message">© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
-  </div>
-  <div class="footer-info">
-    <article class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </article>
-  </div>
-</footer>
+    </footer>
   </div>
 </template>
 
 <script>
-import ContatoFormulario from './ContatoFormulario.vue';
+import ContatoFormulario from '@/components/ContatoFormulario.vue';
+import { mask } from 'v-mask';
 
 export default {
+  name: 'ContatoPage',
+  components: {
+    ContatoFormulario,
+  },
   data() {
     return {
       activeSection: 'SAC',
       selectedLanguage: 'pt',
-      sidebarOpen: false
+      sidebarOpen: false,
     };
   },
-  components: {
-    ContatoFormulario,
-  },
   methods: {
-    changeLanguage(event) {
-      const value = typeof event === 'string' ? event : event.target.value;
-      this.selectedLanguage = value;
-
-      console.log(`Idioma selecionado: ${value}`);
-    },
     toggleSidebar() {
       this.sidebarOpen = !this.sidebarOpen;
+    },
+    changeLanguage(event) {
+      const language = event.target.value;
+      this.$i18n.locale = language;
+      this.selectedLanguage = language;
     }
+  },
+  directives: {
+    mask
   }
 };
 </script>
@@ -663,13 +667,14 @@ footer {
        margin-bottom: 100px;
     }
 
-    .content-box {
-        width: 70%;
+    .section-buttons button {
+        font-size: 0.9em;
     }
 
-    .section-buttons button {
-        font-size: 0.7em;
+    .content-box {
+        width: 80%;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -677,11 +682,12 @@ footer {
        margin-bottom: 200px;
     }
     .content-box {
-        width: 70%;
+        width: 80%;
     }
 
     .section-buttons button {
-        font-size: 0.5em;
+      padding: 10px 15px;
+        font-size: 0.8em;
     }
 }
 
@@ -691,7 +697,8 @@ footer {
     }
 
     .section-buttons button {
-        font-size: 0.1em;
+      padding: 10px 15px;
+        font-size: 0.6em;
     }
 
     .content-box p {
@@ -707,7 +714,12 @@ footer {
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 378px) {
+  .section-buttons button {
+        padding: 5px 10px;
+        font-size: 0.5em;
+    }
+
   .content-box p {
         font-size: 0.6em;
     }

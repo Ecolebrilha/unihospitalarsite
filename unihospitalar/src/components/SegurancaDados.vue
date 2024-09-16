@@ -77,26 +77,32 @@
       </div>
   
       <main>
-        <section class="termos-content">
-          <div class="termos-section">
-            <h2>Termos de Uso</h2>
-            <p>O nosso site foi desenvolvido para os clientes, colaboradores, parceiros e todos que se relacionam com a Uni Hospitalar, assim como para visitantes interessados em nossos serviços.</p>
-            <p>Estes Termos de Uso podem ser alterados a qualquer momento pela Uni Hospitalar, sendo uma nova versão atualizada publicada em nosso site.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Acesso ao Site</h2>
-            <p>O site da Uni Hospitalar funciona 24 horas por dia, podendo haver interrupções temporárias para manutenção, o que tornará o site indisponível pelo tempo necessário.</p>
-            <p>O acesso ao site é permitido apenas para maiores de 18 anos ou menores de idade que possuam autorização de seus responsáveis legais. Ao acessar, navegar ou utilizar o site da Uni Hospitalar, todos os visitantes concordam com estes Termos de Uso. Caso discorde de qualquer parte deste documento, recomendamos que interrompa imediatamente a navegação.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Uso de Licença e Cópia</h2>
-            <p>É concedida permissão para acessar todo o conteúdo do site da Uni Hospitalar, incluindo a realização de downloads e cópias dos materiais, mas apenas para uso pessoal e não comercial. Esta permissão não implica em cessão de direitos ou qualquer tipo de licença permanente. Esta licença será automaticamente revogada em caso de violação de suas condições, podendo ser rescindida unilateralmente pela Uni Hospitalar a qualquer momento.</p>
-            <p>Os visitantes devem utilizar o site e as informações nele contidas de maneira adequada e lícita, em conformidade com a legislação aplicável e as boas práticas de mercado. O uso indevido do site ou de seus conteúdos pode violar os direitos de propriedade intelectual da Uni Hospitalar, sendo punível nos termos da legislação vigente.</p>
-          </div>
-        </section>
-      </main>
+  <section class="termos-content">
+    <div class="termos-section">
+      <h2>Compromisso com a Segurança de Dados</h2>
+      <p>A Uni Hospitalar valoriza e protege os dados de seus pacientes, colaboradores e parceiros, implementando práticas rigorosas de segurança da informação. Nosso compromisso é garantir a confidencialidade, integridade e disponibilidade dos dados, de acordo com a legislação vigente.</p>
+      <p>Utilizamos tecnologias avançadas e processos controlados para prevenir acessos não autorizados, vazamentos e qualquer forma de manipulação indevida das informações.</p>
+    </div>
+
+    <div class="termos-section">
+      <h2>Políticas de Privacidade e Proteção de Dados</h2>
+      <p>Adotamos uma política de privacidade que visa proteger os dados pessoais de todos os indivíduos com os quais nos relacionamos. Seguimos os princípios estabelecidos pela Lei Geral de Proteção de Dados (LGPD), garantindo que os dados coletados sejam tratados de forma transparente e segura.</p>
+      <p>Coletamos apenas as informações necessárias para a prestação de nossos serviços, e asseguramos que esses dados serão utilizados exclusivamente para os fins aos quais foram destinados.</p>
+    </div>
+
+    <div class="termos-section">
+      <h2>Medidas de Segurança</h2>
+      <p>Entre as medidas de segurança adotadas pela Uni Hospitalar, destacam-se o uso de criptografia, firewalls, sistemas de detecção de intrusões e políticas rigorosas de controle de acesso. Além disso, realizamos auditorias regulares para identificar e corrigir vulnerabilidades.</p>
+      <p>Nossos colaboradores são continuamente treinados para garantir que as melhores práticas de segurança da informação sejam seguidas em todas as operações diárias.</p>
+    </div>
+
+    <div class="termos-section">
+      <h2>Responsabilidade e Conformidade</h2>
+      <p>A Uni Hospitalar se compromete a agir em conformidade com todas as legislações de proteção de dados, incluindo a LGPD, e a cooperar com as autoridades competentes em caso de incidentes de segurança. Estamos comprometidos com a transparência e nos responsabilizamos pela segurança das informações que processamos.</p>
+      <p>Nosso objetivo é garantir que todas as partes interessadas tenham a confiança de que seus dados estão protegidos com o mais alto padrão de segurança possível.</p>
+    </div>
+  </section>
+</main>
   
       <footer>
     <div class="footer-logo">
@@ -553,7 +559,7 @@
   .termos-section p {
     font-size: 1em;
     line-height: 1.6em;
-    color: #6c757d;
+    color: #34495e;
     margin-bottom: 15px;
   }
   

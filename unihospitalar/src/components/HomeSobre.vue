@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="item">
-          <div class="icon-container">
+          <div class="icon-container3">
             <i class="fas fa-bullseye"></i>
           </div>
           <div class="text-content">
@@ -106,7 +106,7 @@
           </div>
         </div>
         <div class="item">
-          <div class="icon-container">
+          <div class="icon-container2">
             <i class="fas fa-heart"></i>
           </div>
           <div class="text-content">
@@ -512,6 +512,35 @@ main {
   margin-right: 15px;
   font-size: 2em;
   transition: background-color 0.3s ease;
+  transform: translate(-5px, -60px);
+}
+
+.icon-container2 {
+  background-color: #AE2C2A;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 2em;
+  transition: background-color 0.3s ease;
+  transform: translate(-5px, -120px);
+}
+
+.icon-container3 {
+  background-color: #AE2C2A;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 2em;
+  transition: background-color 0.3s ease;
+  transform: translate(-5px, -70px);
 }
 
 .item:hover .icon-container {
@@ -526,9 +555,10 @@ main {
   font-size: 1.5em;
   font-weight: 800;
   color: #AE2C2A;
-  margin-bottom: 10px;
+  margin: 30px 0 10px 0;
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 .text-content h2::after {
@@ -702,6 +732,19 @@ footer {
   }
 
   .icon-container {
+    transform: translate(0px, 0px);
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+  }
+
+  .icon-container2 {
+    transform: translate(0px, 0px);
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+  }
+
+  .icon-container3 {
+    transform: translate(0px, 0px);
     margin: 0 0 10px 0;
     font-size: 1.5em;
   }

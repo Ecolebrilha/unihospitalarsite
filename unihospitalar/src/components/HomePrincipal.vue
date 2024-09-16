@@ -1,6 +1,3 @@
-<!-- Deixar a tela de Compliance e Contato responsivas (conteúdo principal) -->
-<!-- Deixar funcional a tradução dos idiomas em todas as telas -->
-<!-- Deixar o formulário de contatos 100% funcional -->
 <template>
     <div class="home">
         <header>

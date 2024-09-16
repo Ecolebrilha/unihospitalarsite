@@ -77,26 +77,26 @@
       </div>
   
       <main>
-        <section class="termos-content">
-          <div class="termos-section">
-            <h2>Termos de Uso</h2>
-            <p>O nosso site foi desenvolvido para os clientes, colaboradores, parceiros e todos que se relacionam com a Uni Hospitalar, assim como para visitantes interessados em nossos serviços.</p>
-            <p>Estes Termos de Uso podem ser alterados a qualquer momento pela Uni Hospitalar, sendo uma nova versão atualizada publicada em nosso site.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Acesso ao Site</h2>
-            <p>O site da Uni Hospitalar funciona 24 horas por dia, podendo haver interrupções temporárias para manutenção, o que tornará o site indisponível pelo tempo necessário.</p>
-            <p>O acesso ao site é permitido apenas para maiores de 18 anos ou menores de idade que possuam autorização de seus responsáveis legais. Ao acessar, navegar ou utilizar o site da Uni Hospitalar, todos os visitantes concordam com estes Termos de Uso. Caso discorde de qualquer parte deste documento, recomendamos que interrompa imediatamente a navegação.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Uso de Licença e Cópia</h2>
-            <p>É concedida permissão para acessar todo o conteúdo do site da Uni Hospitalar, incluindo a realização de downloads e cópias dos materiais, mas apenas para uso pessoal e não comercial. Esta permissão não implica em cessão de direitos ou qualquer tipo de licença permanente. Esta licença será automaticamente revogada em caso de violação de suas condições, podendo ser rescindida unilateralmente pela Uni Hospitalar a qualquer momento.</p>
-            <p>Os visitantes devem utilizar o site e as informações nele contidas de maneira adequada e lícita, em conformidade com a legislação aplicável e as boas práticas de mercado. O uso indevido do site ou de seus conteúdos pode violar os direitos de propriedade intelectual da Uni Hospitalar, sendo punível nos termos da legislação vigente.</p>
-          </div>
-        </section>
-      </main>
+      <section class="termos-content">
+        <div class="termos-section">
+          <h2>Compromisso com os Direitos Humanos</h2>
+          <p>A Uni Hospitalar se compromete com o respeito e a promoção dos direitos humanos em todas as suas atividades. Acreditamos que cada indivíduo tem o direito de ser tratado com dignidade e respeito, independentemente de sua raça, gênero, origem, religião ou condição social.</p>
+          <p>Trabalhamos para garantir que nossos colaboradores, parceiros e pacientes sejam tratados de forma justa, com políticas que promovem a igualdade e combatem qualquer tipo de discriminação.</p>
+        </div>
+
+        <div class="termos-section">
+          <h2>Políticas de Inclusão e Diversidade</h2>
+          <p>Buscamos criar um ambiente inclusivo, onde todas as vozes sejam ouvidas e respeitadas. Nossas políticas de inclusão e diversidade garantem que as oportunidades dentro da Uni Hospitalar sejam acessíveis a todos, sem distinção.</p>
+          <p>Promovemos ações afirmativas que assegurem uma representatividade ampla e o respeito às diferenças, reconhecendo a importância de um ambiente diverso para a inovação e o crescimento.</p>
+        </div>
+
+        <div class="termos-section">
+          <h2>Responsabilidade Social e Direitos Humanos</h2>
+          <p>A Uni Hospitalar atua de forma responsável, respeitando os direitos das comunidades em que está inserida. Participamos de iniciativas que visam o bem-estar social e a preservação dos direitos fundamentais de cada indivíduo, como a saúde, a educação e a segurança.</p>
+          <p>Estamos comprometidos com práticas éticas que priorizam a vida humana e a dignidade de todas as pessoas, reforçando nosso papel na promoção de uma sociedade mais justa e equitativa.</p>
+        </div>
+      </section>
+    </main>
   
       <footer>
     <div class="footer-logo">
@@ -553,7 +553,7 @@
   .termos-section p {
     font-size: 1em;
     line-height: 1.6em;
-    color: #6c757d;
+    color: #34495e;
     margin-bottom: 15px;
   }
   

@@ -79,24 +79,24 @@
       <main>
         <section class="termos-content">
           <div class="termos-section">
-            <h2>Termos de Uso</h2>
-            <p>O nosso site foi desenvolvido para os clientes, colaboradores, parceiros e todos que se relacionam com a Uni Hospitalar, assim como para visitantes interessados em nossos serviços.</p>
-            <p>Estes Termos de Uso podem ser alterados a qualquer momento pela Uni Hospitalar, sendo uma nova versão atualizada publicada em nosso site.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Acesso ao Site</h2>
-            <p>O site da Uni Hospitalar funciona 24 horas por dia, podendo haver interrupções temporárias para manutenção, o que tornará o site indisponível pelo tempo necessário.</p>
-            <p>O acesso ao site é permitido apenas para maiores de 18 anos ou menores de idade que possuam autorização de seus responsáveis legais. Ao acessar, navegar ou utilizar o site da Uni Hospitalar, todos os visitantes concordam com estes Termos de Uso. Caso discorde de qualquer parte deste documento, recomendamos que interrompa imediatamente a navegação.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Uso de Licença e Cópia</h2>
-            <p>É concedida permissão para acessar todo o conteúdo do site da Uni Hospitalar, incluindo a realização de downloads e cópias dos materiais, mas apenas para uso pessoal e não comercial. Esta permissão não implica em cessão de direitos ou qualquer tipo de licença permanente. Esta licença será automaticamente revogada em caso de violação de suas condições, podendo ser rescindida unilateralmente pela Uni Hospitalar a qualquer momento.</p>
-            <p>Os visitantes devem utilizar o site e as informações nele contidas de maneira adequada e lícita, em conformidade com a legislação aplicável e as boas práticas de mercado. O uso indevido do site ou de seus conteúdos pode violar os direitos de propriedade intelectual da Uni Hospitalar, sendo punível nos termos da legislação vigente.</p>
-          </div>
-        </section>
-      </main>
+          <h2>Compromisso com a Sustentabilidade</h2>
+          <p>A Uni Hospitalar está comprometida com a sustentabilidade e o bem-estar social. Acreditamos que é nosso dever contribuir para um futuro mais saudável, reduzindo o impacto ambiental de nossas operações e promovendo práticas sustentáveis em todos os nossos processos.</p>
+          <p>Nossa empresa adota políticas rigorosas de gestão de resíduos, eficiência energética e consumo consciente de recursos naturais, alinhando-se às melhores práticas do setor para garantir a preservação do meio ambiente.</p>
+        </div>
+
+        <div class="termos-section">
+          <h2>Projetos Sociais</h2>
+          <p>Estamos comprometidos em apoiar a comunidade em que atuamos. Através de parcerias com organizações locais, a Uni Hospitalar investe em projetos que promovem saúde e educação, com foco em populações vulneráveis.</p>
+          <p>Além disso, promovemos campanhas de conscientização sobre saúde preventiva, incentivando hábitos saudáveis e promovendo o bem-estar físico e mental de nossa comunidade.</p>
+        </div>
+
+        <div class="termos-section">
+          <h2>Gestão Sustentável</h2>
+          <p>A sustentabilidade faz parte de nossa estratégia de negócios. Implementamos soluções tecnológicas que reduzem o consumo de papel e energia, além de adotar práticas que melhoram a eficiência do uso de recursos. Nossos esforços incluem a instalação de painéis solares e o uso de equipamentos médicos de baixo consumo energético.</p>
+          <p>Além disso, estamos empenhados em formar uma cultura corporativa que valoriza a diversidade, a inclusão e o respeito pelos direitos humanos, promovendo um ambiente de trabalho saudável e seguro para todos.</p>
+        </div>
+      </section>
+    </main>
   
       <footer>
     <div class="footer-logo">
@@ -553,7 +553,7 @@
   .termos-section p {
     font-size: 1em;
     line-height: 1.6em;
-    color: #6c757d;
+    color: #34495e;
     margin-bottom: 15px;
   }
   

@@ -77,26 +77,32 @@
       </div>
   
       <main>
-        <section class="termos-content">
-          <div class="termos-section">
-            <h2>Termos de Uso</h2>
-            <p>O nosso site foi desenvolvido para os clientes, colaboradores, parceiros e todos que se relacionam com a Uni Hospitalar, assim como para visitantes interessados em nossos serviços.</p>
-            <p>Estes Termos de Uso podem ser alterados a qualquer momento pela Uni Hospitalar, sendo uma nova versão atualizada publicada em nosso site.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Acesso ao Site</h2>
-            <p>O site da Uni Hospitalar funciona 24 horas por dia, podendo haver interrupções temporárias para manutenção, o que tornará o site indisponível pelo tempo necessário.</p>
-            <p>O acesso ao site é permitido apenas para maiores de 18 anos ou menores de idade que possuam autorização de seus responsáveis legais. Ao acessar, navegar ou utilizar o site da Uni Hospitalar, todos os visitantes concordam com estes Termos de Uso. Caso discorde de qualquer parte deste documento, recomendamos que interrompa imediatamente a navegação.</p>
-          </div>
-  
-          <div class="termos-section">
-            <h2>Uso de Licença e Cópia</h2>
-            <p>É concedida permissão para acessar todo o conteúdo do site da Uni Hospitalar, incluindo a realização de downloads e cópias dos materiais, mas apenas para uso pessoal e não comercial. Esta permissão não implica em cessão de direitos ou qualquer tipo de licença permanente. Esta licença será automaticamente revogada em caso de violação de suas condições, podendo ser rescindida unilateralmente pela Uni Hospitalar a qualquer momento.</p>
-            <p>Os visitantes devem utilizar o site e as informações nele contidas de maneira adequada e lícita, em conformidade com a legislação aplicável e as boas práticas de mercado. O uso indevido do site ou de seus conteúdos pode violar os direitos de propriedade intelectual da Uni Hospitalar, sendo punível nos termos da legislação vigente.</p>
-          </div>
-        </section>
-      </main>
+  <section class="termos-content">
+    <div class="termos-section">
+      <h2>Compromisso Contra a Corrupção</h2>
+      <p>A Uni Hospitalar se compromete a manter os mais altos padrões éticos em todas as suas operações e a combater qualquer forma de corrupção. Temos uma política rigorosa contra o suborno e garantimos que todos os colaboradores, fornecedores e parceiros cumpram com as normas estabelecidas.</p>
+      <p>Nossa política de anticorrupção proíbe qualquer forma de pagamento ou presente que possa ser interpretado como um suborno ou incentivo indevido.</p>
+    </div>
+
+    <div class="termos-section">
+      <h2>Procedimentos de Denúncia</h2>
+      <p>Oferecemos canais seguros e confidenciais para a denúncia de práticas corruptas ou antiéticas. Incentivamos nossos colaboradores e parceiros a reportarem qualquer suspeita de suborno ou corrupção sem medo de retaliação.</p>
+      <p>Todos os relatos serão investigados de forma justa e rigorosa, e tomaremos as medidas necessárias para corrigir qualquer violação de nossa política de antissuborno.</p>
+    </div>
+
+    <div class="termos-section">
+      <h2>Treinamento e Conscientização</h2>
+      <p>Promovemos treinamentos regulares para todos os colaboradores sobre ética e práticas antissuborno. Nosso objetivo é assegurar que todos entendam a importância de manter a integridade e estejam cientes das políticas e procedimentos para prevenir corrupção.</p>
+      <p>Os treinamentos são atualizados periodicamente para refletir as melhores práticas e mudanças na legislação aplicável.</p>
+    </div>
+
+    <div class="termos-section">
+      <h2>Monitoramento e Cumprimento</h2>
+      <p>Realizamos auditorias e monitoramentos constantes para garantir a conformidade com nossas políticas antissuborno. Qualquer comportamento suspeito é investigado de forma rigorosa, e adotamos medidas corretivas quando necessário.</p>
+      <p>Estamos comprometidos em criar e manter um ambiente de negócios transparente e ético, onde práticas de suborno são inaceitáveis e combatidas com seriedade.</p>
+    </div>
+  </section>
+</main>
   
       <footer>
     <div class="footer-logo">
@@ -553,7 +559,7 @@
   .termos-section p {
     font-size: 1em;
     line-height: 1.6em;
-    color: #6c757d;
+    color: #34495e;
     margin-bottom: 15px;
   }
   

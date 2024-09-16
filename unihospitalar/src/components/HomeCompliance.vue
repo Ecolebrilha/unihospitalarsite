@@ -73,7 +73,7 @@
       <div class="banner-overlay">
         <h1>Compliance</h1>
       </div>
-      <img src="@/assets/header-parceiros.jpg" alt="Imagem do Banner">
+      <img src="@/assets/header-compliance2.jpg" alt="Imagem do Banner">
     </div>
 
     <main>
@@ -611,50 +611,97 @@ main {
   padding-bottom: 80px;
 }
 
-.compliance-section-left {
+.compliance-section-left,
+.compliance-section-right {
   background: linear-gradient(145deg, #e6e9ef, #ffffff);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.compliance-section-right {
-  background: linear-gradient(145deg, #ffffff, #e6e9ef);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.compliance-section-left h3, .compliance-section-right h3 {
+.compliance-section-left h3,
+.compliance-section-right h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
   color: #AE2C2A;
 }
 
-.compliance-section-left p, .compliance-section-right p {
+.compliance-section-left p,
+.compliance-section-right p {
   color: #34495e;
   font-size: 1em;
   line-height: 1.5;
 }
 
-.compliance-section-left ul, .compliance-section-right ul {
+.compliance-section-left ul,
+.compliance-section-right ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
 
-.compliance-section-left ul li, .compliance-section-right ul li {
+.compliance-section-left ul li,
+.compliance-section-right ul li {
   margin-bottom: 10px;
 }
 
-.compliance-section-left ul li a, .compliance-section-right ul li a {
+.compliance-section-left ul li a,
+.compliance-section-right ul li a {
   text-decoration: none;
   color: #AE2C2A;
   font-weight: bold;
 }
 
-.compliance-section-left ul li a:hover, .compliance-section-right ul li a:hover {
+.compliance-section-left ul li a:hover,
+.compliance-section-right ul li a:hover {
   color: #FF5555;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 100px 10px;
+  }
+
+  .compliance-details {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .compliance-overview h2 {
+    font-size: 1.8em;
+  }
+
+  .compliance-overview p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    padding: 100px 10px;
+  }
+
+  .compliance-overview h2 {
+    font-size: 1.5em;
+  }
+
+  .compliance-overview p {
+    font-size: 1em;
+  }
+
+  .compliance-details {
+    padding-bottom: 60px;
+  }
+
+  .compliance-section-left h3,
+  .compliance-section-right h3 {
+    font-size: 1.3em;
+  }
+
+  .compliance-section-left p,
+  .compliance-section-right p {
+    font-size: 0.9em;
+  }
 }
 
 .compliance-section-left .cta-button {
