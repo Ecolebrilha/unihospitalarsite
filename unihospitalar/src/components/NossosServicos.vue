@@ -79,7 +79,7 @@
     <main>
       <section class="servicos-content">
         <div class="servico-item">
-          <h2><i class="fas fa-briefcase-medical"></i> Nossos serviços</h2>
+          <h2><i class="fas fa-briefcase-medical"></i> Nossos Serviços</h2>
           <p>A Uni Hospitalar busca atender de forma eficiente os segmentos públicos e privados, através de profissionais capacitados para interpretar o mercado e assim dar respostas compatíveis e definitivas para o bom atendimento da cadeia de distribuição.</p>
         </div>
 
