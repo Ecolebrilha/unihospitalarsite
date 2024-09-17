@@ -621,6 +621,10 @@ footer {
     display: block;
   }
 
+  .produtos-content {
+    margin-top: 100px;
+  }
+
   footer {
     flex-direction: column;
     text-align: center;

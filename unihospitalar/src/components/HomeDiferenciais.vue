@@ -840,6 +840,10 @@ footer {
     display: block;
   }
 
+  .features {
+    margin-top: 100px;
+  }
+
   footer {
     flex-direction: column;
     text-align: center;

@@ -224,9 +224,6 @@
       }
   }
   
-  @media (max-width: 768px) {
-  }
-  
   @media (max-width: 576px) {
       header {
         width: 100%;
@@ -688,6 +685,10 @@
 
   .menu-sidebar.active {
     display: block;
+  }
+
+  .termos-content {
+    margin-top: 100px;
   }
 
   footer {

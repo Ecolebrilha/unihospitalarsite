@@ -518,7 +518,6 @@ main {
   transform: scale(1.1);
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 1200px) {
   .partner-logos {
     grid-template-columns: repeat(3, 1fr);

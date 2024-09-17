@@ -218,9 +218,6 @@ header {
     }
 }
 
-@media (max-width: 768px) {
-}
-
 @media (max-width: 576px) {
     header {
       width: 100%;

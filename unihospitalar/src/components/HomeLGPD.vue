@@ -244,9 +244,6 @@ export default {
     }
 }
 
-@media (max-width: 768px) {
-}
-
 @media (max-width: 576px) {
     header {
       width: 100%;
@@ -782,6 +779,10 @@ footer {
 
   .menu-sidebar.active {
     display: block;
+  }
+
+  .lgpd-header h1 {
+    margin-top: 100px;
   }
 
   footer {

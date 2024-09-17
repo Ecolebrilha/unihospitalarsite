@@ -78,7 +78,7 @@
 
     <main>
       <section class="compliance-overview" v-bind:class="{ 'slide-in-left': true }">
-        <h2><i class="fas fa-gavel"></i> Compliance e Código de Conduta</h2>
+        <h2><i class="fas fa-balance-scale"></i> Compliance e Código de Conduta</h2>
         <p>
           O nosso compromisso é com a integridade, transparência e conformidade. Explore o Código de Conduta que guia as práticas éticas da Uni Hospitalar e garante o respeito às normas e regulamentos aplicáveis.
         </p>
@@ -101,7 +101,7 @@
           <ul>
             <li><router-link to="/unihospitalarsite/SegurancaDados" exact-active-class="active"><i class="fas fa-lock"></i> Política de Segurança de Dados</router-link></li>
             <li><router-link to="/unihospitalarsite/PraticasAntissuborno" exact-active-class="active"><i class="fas fa-ban"></i> Práticas Antissuborno</router-link></li>
-            <li><router-link to="/unihospitalarsite/NormasSetoriais" exact-active-class="active"><i class="fas fa-balance-scale"></i> Conformidade com Normas Setoriais</router-link></li>
+            <li><router-link to="/unihospitalarsite/NormasSetoriais" exact-active-class="active"><i class="fas fa-gavel"></i> Conformidade com Normas Setoriais</router-link></li>
           </ul>
         </div>
 
@@ -256,9 +256,6 @@ header {
     .logo {
         max-height: 50px;
     }
-}
-
-@media (max-width: 768px) {
 }
 
 @media (max-width: 576px) {
@@ -832,6 +829,10 @@ footer {
 
   .menu-sidebar.active {
     display: block;
+  }
+
+  .compliance-overview {
+    margin-top: 100px;
   }
 
   footer {

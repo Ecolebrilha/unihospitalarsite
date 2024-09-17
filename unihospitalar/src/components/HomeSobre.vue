@@ -723,6 +723,7 @@ footer {
   }
 
   .content {
+    margin-top: 100px;
     padding: 5px;
   }
 
