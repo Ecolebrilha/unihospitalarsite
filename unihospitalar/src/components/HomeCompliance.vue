@@ -73,7 +73,7 @@
       <div class="banner-overlay">
         <h1>Compliance</h1>
       </div>
-      <img src="@/assets/header-compliance2.jpg" alt="Imagem do Banner">
+      <img src="@/assets/header-compliance.jpg" alt="Imagem do Banner">
     </div>
 
     <main>
