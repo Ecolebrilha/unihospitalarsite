@@ -1,73 +1,73 @@
 <template>
     <div class="termos-legais">
       <header>
-        <button @click="toggleSidebar" class="menu-toggle">☰</button>
-  
-        <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
-          <button class="menu-close" @click="toggleSidebar">
-            ×
-          </button>
-          <ul>
-            <li><router-link to="/" exact-active-class="active"></router-link></li>
-            <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-            <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-            <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
-            <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-            <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
-            <li class="dropdown">
-              <router-link to="/LGPD" exact-active-class="active">
-                LGPD <i class="fas fa-chevron-down"></i>
-              </router-link>
-              <ul class="dropdown-content">
-                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
-              </ul>
-            </li>
-            <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
-          </ul>
+      <button @click="toggleSidebar" class="menu-toggle">☰</button>
+
+      <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
+        <button class="menu-close" @click="toggleSidebar">
+          ×
+        </button>
+        <ul>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li class="dropdown">
+            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
+              LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+          </li>
+          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
+        </ul>
+      </div>
+
+      <a href="/unihospitalarsite/">
+        <div class="logo-container">
+          <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
         </div>
-  
-        <a href="/unihospitalarsite/">
-          <div class="logo-container">
-            <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
-          </div>
-        </a>
-  
-        <div class="language-selector">
-          <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
-            <option value="pt" data-icon="fi fi-br">Português</option>
-            <option value="en" data-icon="fi fi-us">English</option>
-            <option value="es" data-icon="fi fi-es">Español</option>
-          </select>
-  
-          <div class="icon-selector">
-            <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
-            <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
-            <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
-          </div>
+      </a>
+
+      <div class="language-selector">
+        <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
+          <option value="pt" data-icon="fi fi-br">Português</option>
+          <option value="en" data-icon="fi fi-us">English</option>
+          <option value="es" data-icon="fi fi-es">Español</option>
+        </select>
+
+        <div class="icon-selector">
+          <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
+          <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
+          <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
         </div>
-  
-        <nav>
-          <ul>
-            <li><router-link to="/" exact-active-class="active"></router-link></li>
-            <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-            <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-            <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
-            <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-            <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
-            <li class="dropdown">
-              <router-link to="/LGPD" exact-active-class="active">
-                LGPD <i class="fas fa-chevron-down"></i>
-              </router-link>
-              <ul class="dropdown-content">
-                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
-              </ul>
-            </li>
-            <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
-          </ul>
-        </nav>
-      </header>
+      </div>
+
+      <nav>
+        <ul>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li class="dropdown">
+            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
+              LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+          </li>
+          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
+        </ul>
+      </nav>
+    </header>
   
       <div class="banner-container">
         <div class="banner-overlay">

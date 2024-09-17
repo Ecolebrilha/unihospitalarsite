@@ -9,21 +9,21 @@
         </button>
         <ul>
           <li><router-link to="/" exact-active-class="active"></router-link></li>
-          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
-          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
-            <router-link to="/LGPD" exact-active-class="active">
+            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
               LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
             <ul class="dropdown-content">
-              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
           </li>
-          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </div>
 
@@ -50,21 +50,21 @@
       <nav>
         <ul>
           <li><router-link to="/" exact-active-class="active"></router-link></li>
-          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
-          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
-            <router-link to="/LGPD" exact-active-class="active">
+            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
               LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
             <ul class="dropdown-content">
-              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
           </li>
-          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </nav>
     </header>
@@ -75,7 +75,7 @@
           <div class="header-content">
           <h2 class="banner-h2">Respeito às relações humanas</h2>
           <p class="banner-p">O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
-          <a href="/unihospitalarsite/Diferenciais"><button class="banner-btn">CONHEÇA NOSSOS DIFERENCIAIS</button></a>
+          <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active"><button class="banner-btn">CONHEÇA NOSSOS DIFERENCIAIS</button></router-link>
           </div>
         </div>
 
@@ -86,42 +86,42 @@
                 <img src="@/assets/estoque.jpg" alt="Bloco 1">
                 <h3>ESTOQUE</h3>
             </div>
-            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <a href="/unihospitalarsite/Diferenciais">Saiba mais.</a></p>
+            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/diferenciais.jpg" alt="Bloco 2">
                 <h3>DIFERENCIAIS</h3>
             </div>
-            <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <a href="/unihospitalarsite/Diferenciais">Saiba mais.</a></p>
+            <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/logistica.jpg" alt="Bloco 3">
                 <h3>LOGÍSTICA</h3>
             </div>
-            <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <a href="/unihospitalarsite/Diferenciais">Saiba mais.</a></p>
+            <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <br> <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 4">
                 <h3>UNIDADE DE NEGÓCIOS</h3>
             </div>
-            <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <a href="/unihospitalarsite/Diferenciais">Saiba mais.</a></p>
+            <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/principais-clientes.jpg" alt="Bloco 5">
                 <h3>PRINCIPAIS CLIENTES</h3>
             </div>
-            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <a href="/unihospitalarsite/Parceiros">Saiba mais.</a></p>
+            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <router-link to="/unihospitalarsite/Parceiros" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/principais-produtos.jpg" alt="Bloco 6">
                 <h3>PRINCIPAIS PRODUTOS</h3>
             </div>
-            <p>Foco na distribuição e padronização de medicamentos hospitalares, oncológicos e excepcionais, trabalhando em nichos específicos. <a href="/unihospitalarsite/Produtos">Saiba mais.</a></p>       
+            <p>Foco na distribuição e padronização de medicamentos hospitalares, oncológicos e excepcionais, trabalhando em nichos específicos. <router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Saiba mais.</router-link></p>       
         </div>                 
     </div>
 </section>
@@ -211,7 +211,7 @@
                 </div>
             </div>
         </section>
-        <a href="/unihospitalarsite/Parceiros"><button class="partners-button">ver todos os parceiros</button></a>
+        <router-link to="/unihospitalarsite/Parceiros" exact-active-class="active"><button class="partners-button">ver todos os parceiros</button></router-link>
         </main>
 
         <footer>

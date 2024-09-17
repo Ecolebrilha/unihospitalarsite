@@ -1,40 +1,70 @@
 <template>
         <div class="parceiros">
-            <header>
-      <a href="/unihospitalarsite/"><div class="logo-container">
-        <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
-      </div></a>
-      <div class="language-selector">
-    <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
-      <option value="pt" data-icon="fi fi-br">Português</option>
-      <option value="en" data-icon="fi fi-us">English</option>
-      <option value="es" data-icon="fi fi-es">Español</option>
-    </select>
+          <header>
+      <button @click="toggleSidebar" class="menu-toggle">☰</button>
 
-    <div class="icon-selector">
-      <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
-      <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
-      <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
-    </div>
-  </div>
+      <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
+        <button class="menu-close" @click="toggleSidebar">
+          ×
+        </button>
+        <ul>
+          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li class="dropdown">
+            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
+              LGPD <i class="fas fa-chevron-down"></i>
+            </router-link>
+            <ul class="dropdown-content">
+              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+            </ul>
+          </li>
+          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
+        </ul>
+      </div>
+
+      <a href="/unihospitalarsite/">
+        <div class="logo-container">
+          <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
+        </div>
+      </a>
+
+      <div class="language-selector">
+        <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
+          <option value="pt" data-icon="fi fi-br">Português</option>
+          <option value="en" data-icon="fi fi-us">English</option>
+          <option value="es" data-icon="fi fi-es">Español</option>
+        </select>
+
+        <div class="icon-selector">
+          <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
+          <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
+          <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
+        </div>
+      </div>
+
       <nav>
         <ul>
           <li><router-link to="/" exact-active-class="active"></router-link></li>
-          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
-          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
-            <router-link to="/LGPD" exact-active-class="active">
-                LGPD <i class="fas fa-chevron-down"></i>
+            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
+              LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
             <ul class="dropdown-content">
-                <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-                <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
-        </li>
-          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+          </li>
+          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </nav>
     </header>
@@ -46,7 +76,6 @@
       <img src="@/assets/header-parceiros.jpg" alt="Imagem do Banner">
     </div>
 
-        
             <main>
                 <section class="about-content">
                     <div class="about-center">
@@ -163,46 +192,6 @@
     max-height: 80px;
     width: auto;
     display: block;
-}
-
-@media (max-width: 1200px) {
-    .logo-container {
-        width: 25%;
-    }
-    
-    .logo {
-        max-height: 60px;
-    }
-}
-
-@media (max-width: 992px) {
-    .logo-container {
-        width: 30%;
-    }
-
-    .logo {
-        max-height: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-container {
-        width: 40%;
-    }
-
-    .logo {
-        max-height: 40px;
-    }
-}
-
-@media (max-width: 576px) {
-    .logo-container {
-        width: 50%;
-    }
-
-    .logo {
-        max-height: 30px;
-    }
 }
 
 .language-selector {
@@ -344,6 +333,95 @@ nav ul li.dropdown:hover .dropdown-content {
   display: block;
 }
 
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #AE2C2A;
+    color: #ffffff;
+    overflow: auto;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-sidebar ul li {
+    margin: 20px 0;
+}
+
+.menu-sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1em;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-sidebar ul li a:hover {
+    color: #848484;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-close:hover {
+    color: #848484;
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-sidebar.active {
+        display: block;
+    }
+    .content h1 {
+    font-size: 1em;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1em;
+  }
+}
+
 .banner-container {
   position: relative;
   padding-top: 107px;
@@ -370,6 +448,17 @@ nav ul li.dropdown:hover .dropdown-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.banner-overlay .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-overlay h1, .banner-overlay p {
+  margin: 0;
 }
 
 .banner-overlay h1 {
@@ -379,11 +468,12 @@ nav ul li.dropdown:hover .dropdown-content {
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: slideInRight 1.5s ease-out;
+  margin-bottom: 20px;
 }
 
 @keyframes slideInRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(80%);
     opacity: 0;
   }
   to {
