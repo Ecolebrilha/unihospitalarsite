@@ -27,7 +27,7 @@
         </ul>
       </div>
 
-      <a href="/">
+      <a href="/unihospitalarsite/">
         <div class="logo-container">
           <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
         </div>
@@ -543,7 +543,7 @@ main {
   transform: translate(-5px, -70px);
 }
 
-.item:hover .icon-container {
+.item:hover .icon-container, .item:hover .icon-container2, .item:hover .icon-container3 {
   background-color: #FF5555;
 }
 

@@ -27,7 +27,7 @@
         </ul>
       </div>
 
-      <a href="/">
+      <a href="/unihospitalarsite/">
         <div class="logo-container">
           <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
         </div>
@@ -89,9 +89,9 @@
           <h3><i class="fas fa-book"></i> Código de Conduta</h3>
           <p>Nosso Código de Conduta é um guia para todos os colaboradores, parceiros e fornecedores, assegurando um comportamento ético em todas as nossas atividades.</p>
           <ul>
-            <li><a href="CondutaEtica"><i class="fas fa-check"></i> Conduta Ética e Integridade</a></li>
-            <li><a href="ResponsabilidadeSocial"><i class="fas fa-globe"></i> Responsabilidade Social e Sustentabilidade</a></li>
-            <li><a href="DireitosHumanos"><i class="fas fa-hands-helping"></i> Respeito aos Direitos Humanos</a></li>
+            <li><a href="/unihospitalarsite/CondutaEtica"><i class="fas fa-check"></i> Conduta Ética e Integridade</a></li>
+            <li><a href="/unihospitalarsite/ResponsabilidadeSocial"><i class="fas fa-globe"></i> Responsabilidade Social e Sustentabilidade</a></li>
+            <li><a href="/unihospitalarsite/DireitosHumanos"><i class="fas fa-hands-helping"></i> Respeito aos Direitos Humanos</a></li>
           </ul>
         </div>
 
@@ -99,24 +99,24 @@
           <h3><i class="fas fa-file-alt"></i> Políticas e Regulamentos</h3>
           <p>Acesse nossas políticas que reforçam o compromisso com a conformidade e a ética.</p>
           <ul>
-            <li><a href="SegurancaDados"><i class="fas fa-lock"></i> Política de Segurança de Dados</a></li>
-            <li><a href="PraticasAntissuborno"><i class="fas fa-ban"></i> Práticas Antissuborno</a></li>
-            <li><a href="NormasSetoriais"><i class="fas fa-balance-scale"></i> Conformidade com Normas Setoriais</a></li>
+            <li><a href="/unihospitalarsite/SegurancaDados"><i class="fas fa-lock"></i> Política de Segurança de Dados</a></li>
+            <li><a href="/unihospitalarsite/PraticasAntissuborno"><i class="fas fa-ban"></i> Práticas Antissuborno</a></li>
+            <li><a href="/unihospitalarsite/NormasSetoriais"><i class="fas fa-balance-scale"></i> Conformidade com Normas Setoriais</a></li>
           </ul>
         </div>
 
         <div class="compliance-section-left slide-in-right">
           <h3><i class="fas fa-exclamation-triangle"></i> Instruções para Ações Corretivas</h3>
           <p>Identificou alguma irregularidade? Veja como proceder e entre em contato com nosso departamento de compliance para orientação.</p>
-          <a href="/contato" class="cta-button"><i class="fas fa-phone"></i> Entre em Contato</a>
+          <a href="/unihospitalarsite/Contato" class="cta-button"><i class="fas fa-phone"></i> Entre em Contato</a>
         </div>
 
         <div class="compliance-section-right slide-in-left">
           <h3><i class="fas fa-link"></i> Links para Documentos Legais</h3>
           <p>Acesse documentos completos como políticas de privacidade, termos de uso, entre outros.</p>
           <ul>
-            <li><a href="/PoliticaPrivacidade"><i class="fas fa-user-shield"></i> Política de Privacidade</a></li>
-            <li><a href="/TermosLegais"><i class="fas fa-file-contract"></i> Termos Legais de Uso</a></li>
+            <li><a href="/unihospitalarsite/PoliticaPrivacidade"><i class="fas fa-user-shield"></i> Política de Privacidade</a></li>
+            <li><a href="/unihospitalarsite/TermosLegais"><i class="fas fa-file-contract"></i> Termos Legais de Uso</a></li>
           </ul>
         </div>
       </section>

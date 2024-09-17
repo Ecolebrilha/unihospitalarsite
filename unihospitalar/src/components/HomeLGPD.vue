@@ -27,7 +27,7 @@
         </ul>
       </div>
 
-      <a href="/">
+      <a href="/unihospitalarsite/">
         <div class="logo-container">
           <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
         </div>
@@ -119,8 +119,8 @@
                 armazenamos e protegemos suas informações.
               </p>
               <div class="lgpd-buttons">
-                <a href="PoliticaPrivacidade"><button>Política de Privacidade</button></a>
-                <a href="TermosLegais"><button>Termos Legais de Uso</button></a>
+                <a href="/unihospitalarsite/PoliticaPrivacidade"><button>Política de Privacidade</button></a>
+                <a href="/unihospitalarsite/TermosLegais"><button>Termos Legais de Uso</button></a>
               </div>
             </div>
           </section>
@@ -133,7 +133,7 @@
                 informações, entre em contato conosco. Estamos à disposição para
                 esclarecer qualquer questão.
               </p>
-              <a href="Contato"><button class="contact-btn">FALE CONOSCO</button></a>
+              <a href="/unihospitalarsite/Contato"><button class="contact-btn">FALE CONOSCO</button></a>
             </div>
           </section>
         </div>

@@ -27,7 +27,7 @@
         </ul>
       </div>
 
-      <a href="/">
+      <a href="/unihospitalarsite/">
         <div class="logo-container">
           <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
         </div>
@@ -147,7 +147,7 @@
       <div class="container">
         <h2>Pronto para melhorar seus processos com a Uni Hospitalar?</h2>
         <p>Entre em contato conosco e descubra como podemos ajudar a transformar sua operação.</p>
-        <a href="/Servicos" class="cta-button">Saiba Mais Sobre Nossos Serviços</a>
+        <a href="/unihospitalarsite/Servicos" class="cta-button">Saiba Mais Sobre Nossos Serviços</a>
       </div>
     </section>
     </main>

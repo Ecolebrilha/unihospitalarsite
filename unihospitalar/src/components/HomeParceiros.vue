@@ -1,7 +1,7 @@
 <template>
         <div class="parceiros">
             <header>
-      <a href="/"><div class="logo-container">
+      <a href="/unihospitalarsite/"><div class="logo-container">
         <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
       </div></a>
       <div class="language-selector">
