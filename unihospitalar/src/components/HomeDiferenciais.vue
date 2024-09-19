@@ -878,9 +878,6 @@ footer {
     font-size: 3em;
   }
 
-  .banner-overlay p {
-    font-size: 1em;
-  }
 }
 
 @media (max-width: 768px) {

@@ -426,7 +426,7 @@ nav ul li.dropdown:hover .dropdown-content {
   margin-top: -62px;
   display: flex;
   justify-content: center;
-  background-color: #F9F9F9;
+  background-color: #FFFFFF;
 }
 
 .banner-container img {
@@ -574,7 +574,7 @@ main {
 .p-valores {
   font-size: 1.1em;
   color: #707070;
-  text-align: justify;
+  text-align: center;
 }
 
 .p-valores {
