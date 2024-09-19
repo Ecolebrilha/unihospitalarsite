@@ -85,7 +85,7 @@
       </section>
       
       <section class="compliance-details">
-        <div class="compliance-section-left slide-in-left">
+        <div class="compliance-section-left slide-in-right">
           <h3><i class="fas fa-book"></i> Código de Conduta</h3>
           <p>Nosso Código de Conduta é um guia para todos os colaboradores, parceiros e fornecedores, assegurando um comportamento ético em todas as nossas atividades.</p>
           <ul>
@@ -95,7 +95,7 @@
           </ul>
         </div>
 
-        <div class="compliance-section-right slide-in-right">
+        <div class="compliance-section-right slide-in-left">
           <h3><i class="fas fa-file-alt"></i> Políticas e Regulamentos</h3>
           <p>Acesse nossas políticas que reforçam o compromisso com a conformidade e a ética.</p>
           <ul>
@@ -105,13 +105,13 @@
           </ul>
         </div>
 
-        <div class="compliance-section-left slide-in-left">
+        <div class="compliance-section-left slide-in-right">
           <h3><i class="fas fa-exclamation-triangle"></i> Instruções para Ações Corretivas</h3>
           <p>Identificou alguma irregularidade? Veja como proceder e entre em contato com nosso departamento de compliance para orientação.</p>
           <router-link to="/unihospitalarsite/Contato"><button class="cta-button"><i class="fas fa-phone"></i> Entre em Contato</button></router-link>
         </div>
 
-        <div class="compliance-section-right slide-in-right">
+        <div class="compliance-section-right slide-in-left">
           <h3><i class="fas fa-link"></i> Links para Documentos Legais</h3>
           <p>Acesse documentos completos como políticas de privacidade, termos de uso, entre outros.</p>
           <ul>
@@ -945,5 +945,4 @@ footer {
     font-size: 1em;
   }
 }
-
 </style>
