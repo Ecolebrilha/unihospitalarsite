@@ -1,3 +1,8 @@
+<!-- Adicionar o navbar de "Início", mudar a cor do header pra uma menos forte que combine com o banner, mudar a fonte do nav bar para a do site antigo:
+'Open Sans', sans-serif;, deixar o header transparente logo de cara, e quando rolar o site fazer com que o header mude de cor, diminuir o tamanho do 
+header também, diminuir o tamanho do footer, remover o endereço, remover o mapa e colocar no lugar dele "Desenvolvido por Uni Hospitalar", remover
+parte dos processos da tela de diferenciais, fazer com que quando mudar de página, a tela volte automaticamente para o topo dela. -->
+
 <template>
     <div class="home">
         <header>

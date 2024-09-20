@@ -79,7 +79,7 @@
     <main>
       <div class="content">
         <div class="item">
-          <div class="icon-container">
+          <div class="icon-container1">
             <i class="fas fa-users"></i>
           </div>
           <div class="text-content">
@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="item">
-          <div class="icon-container3">
+          <div class="icon-container2">
             <i class="fas fa-bullseye"></i>
           </div>
           <div class="text-content">
@@ -97,7 +97,7 @@
           </div>
         </div>
         <div class="item">
-          <div class="icon-container">
+          <div class="icon-container3">
             <i class="fas fa-eye"></i>
           </div>
           <div class="text-content">
@@ -106,7 +106,7 @@
           </div>
         </div>
         <div class="item">
-          <div class="icon-container2">
+          <div class="icon-container4">
             <i class="fas fa-heart"></i>
           </div>
           <div class="text-content">
@@ -501,10 +501,10 @@ main {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.icon-container {
+.icon-container1 {
   background-color: #AE2C2A;
   color: #ffffff;
-  padding: 20px;
+  padding: 20px 17px 20px 17px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -512,7 +512,7 @@ main {
   margin-right: 15px;
   font-size: 2em;
   transition: background-color 0.3s ease;
-  transform: translate(-35px, -90px);
+  transform: translate(-35px, -100px);
 }
 
 .icon-container2 {
@@ -526,10 +526,24 @@ main {
   margin-right: 15px;
   font-size: 2em;
   transition: background-color 0.3s ease;
-  transform: translate(-35px, -150px);
+  transform: translate(-35px, -100px);
 }
 
 .icon-container3 {
+  background-color: #AE2C2A;
+  color: #ffffff;
+  padding: 20px 18px 20px 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 2em;
+  transition: background-color 0.3s ease;
+  transform: translate(-35px, -90px);
+}
+
+.icon-container4 {
   background-color: #AE2C2A;
   color: #ffffff;
   padding: 20px;
@@ -540,10 +554,10 @@ main {
   margin-right: 15px;
   font-size: 2em;
   transition: background-color 0.3s ease;
-  transform: translate(-35px, -100px);
+  transform: translate(-35px, -150px);
 }
 
-.item:hover .icon-container, .item:hover .icon-container2, .item:hover .icon-container3 {
+.item:hover .icon-container, .item:hover .icon-container4, .item:hover .icon-container4 {
   background-color: #FF5555;
 }
 
@@ -746,13 +760,13 @@ footer {
     font-size: 1.5em;
   }
 
-  .icon-container2 {
+  .icon-container4 {
     transform: translate(0px, 0px);
     margin: 0 0 10px 0;
     font-size: 1.5em;
   }
 
-  .icon-container3 {
+  .icon-container4 {
     transform: translate(0px, 0px);
     margin: 0 0 10px 0;
     font-size: 1.5em;
