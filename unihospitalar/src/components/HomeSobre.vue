@@ -487,7 +487,7 @@ main {
 
 .item {
   background: linear-gradient(145deg, #e6e9ef, #ffffff);
-  padding: 20px;
+  padding: 50px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   display: flex;
@@ -512,7 +512,7 @@ main {
   margin-right: 15px;
   font-size: 2em;
   transition: background-color 0.3s ease;
-  transform: translate(-5px, -60px);
+  transform: translate(-35px, -90px);
 }
 
 .icon-container2 {
@@ -526,7 +526,7 @@ main {
   margin-right: 15px;
   font-size: 2em;
   transition: background-color 0.3s ease;
-  transform: translate(-5px, -120px);
+  transform: translate(-35px, -150px);
 }
 
 .icon-container3 {
@@ -540,7 +540,7 @@ main {
   margin-right: 15px;
   font-size: 2em;
   transition: background-color 0.3s ease;
-  transform: translate(-5px, -70px);
+  transform: translate(-35px, -100px);
 }
 
 .item:hover .icon-container, .item:hover .icon-container2, .item:hover .icon-container3 {
