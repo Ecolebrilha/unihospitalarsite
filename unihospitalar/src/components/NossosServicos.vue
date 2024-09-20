@@ -387,24 +387,6 @@ nav ul li.dropdown:hover .dropdown-content {
     color: #848484;
 }
 
-@media (max-width: 576px) {
-    nav ul {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-sidebar.active {
-        display: block;
-    }
-
-    .banner-overlay h1 {
-    font-size: 1em;
-  }
-}
-
 .banner-container {
   position: relative;
   padding-top: 107px;
@@ -468,6 +450,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  margin-top: 20px
 }
 
 .servico-item {
@@ -492,7 +475,7 @@ main {
   color: #34495e;
   font-size: 1.1em;
   line-height: 1.8;
-  text-align: justify;
+  text-align: center;
 }
 
 h2::after, h3::after {
@@ -814,12 +797,10 @@ footer {
     .menu-sidebar.active {
         display: block;
     }
-    .content h1 {
-    font-size: 1em;
-  }
 
   .banner-overlay h1 {
     font-size: 1.5em;
   }
 }
+
 </style>

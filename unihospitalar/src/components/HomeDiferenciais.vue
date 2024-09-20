@@ -699,6 +699,7 @@ nav ul li.dropdown:hover .dropdown-content {
 .cta-button:hover {
   background-color: #C53030;
   transform: translateY(-5px);
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
