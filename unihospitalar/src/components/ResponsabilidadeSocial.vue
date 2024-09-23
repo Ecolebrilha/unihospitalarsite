@@ -385,7 +385,7 @@
   .banner-container {
     position: relative;
     padding-top: 107px;
-    margin-top: -62px;
+    margin-top: -100px;
     display: flex;
     justify-content: center;
     background-color: #F9F9F9;

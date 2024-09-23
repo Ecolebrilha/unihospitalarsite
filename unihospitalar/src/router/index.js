@@ -20,7 +20,7 @@ import NormasSetoriais from '@/components/NormasSetoriais.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/unihospitalarsite/Inicio',
     name: 'HomePrincipal',
     component: HomePrincipal,
   },
@@ -70,7 +70,6 @@ const routes = [
     component: HomeContato,
   },
   {
-    path: '/',
     name: 'ContatoFormulario',
     component: ContatoFormulario,
   },

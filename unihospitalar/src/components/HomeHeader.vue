@@ -7,7 +7,7 @@
           ×
         </button>
         <ul>
-          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/unihospitalarsite/Inicio" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
@@ -26,7 +26,7 @@
         </ul>
       </div>
   
-      <a href="/unihospitalarsite/">
+      <a href="/unihospitalarsite/Inicio">
         <div class="logo-container">
           <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
         </div>
@@ -48,7 +48,7 @@
   
       <nav>
         <ul>
-          <li><router-link to="/" exact-active-class="active"></router-link></li>
+          <li><router-link to="/unihospitalarsite/Inicio" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
@@ -98,9 +98,9 @@ header {
     width: 100%;
     z-index: 1000;
     background-color: #AE2C2A;
-    padding: 40px 0;
+    padding: 20px 0;
     box-sizing: border-box;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .logo-container {
@@ -109,7 +109,7 @@ header {
     left: 0;
     background-color: #FFFFFF;
     padding: 0;
-    width: 20%;
+    width: 15%;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -119,7 +119,7 @@ header {
 }
 
 .logo {
-    max-height: 80px;
+    max-height: 50px;
     width: auto;
     display: block;
 }
@@ -127,7 +127,7 @@ header {
 .language-selector {
   position: absolute;
   right: 130px;
-  top: 20px;
+  top: 5px;
 }
 
 .language-selector select {
@@ -139,7 +139,7 @@ header {
 }
 
 .custom-select {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .icon-selector {
@@ -148,7 +148,7 @@ header {
 }
 
 .icon-selector span {
-  font-size: 1.5em;
+  font-size: 0.9em;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -195,7 +195,7 @@ nav ul li a {
     color: #FFFFFF;
     font-style: italic;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.8em;
     white-space: nowrap;
     padding-bottom: 5px;
     display: inline-block;
@@ -329,4 +329,157 @@ nav ul li.dropdown:hover .dropdown-content {
 
 .menu-close:hover {
     color: #848484;
-}</style>
+}
+
+@media (max-width: 1390px) {
+  .logo-container {
+    width: 15%;
+  }
+
+  .logo {
+    max-height: 50px;
+  }
+
+  .language-selector {
+    right: 30px;
+    top: 5px;
+  }
+
+  .icon-selector span {
+    font-size: 0.9em;
+  }
+
+  nav ul li {
+    margin: 0 12px;
+  }
+
+  nav ul li a {
+    font-size: 0.6em;
+  }
+}
+
+
+@media (max-width: 993px) {
+  .logo-container {
+    width: 15%;
+  }
+
+  .logo {
+    max-height: 35px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.5em;
+  }
+
+  .language-selector {
+    right: 20px;
+    top: 5px;
+  }
+
+  .custom-select {
+    font-size: 10px;
+  }
+
+  .icon-selector {
+    gap: 8px;
+  }
+
+  .icon-selector span {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 25px 0;
+  }
+  
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    max-height: 30px;
+  }
+
+  .language-selector {
+    right: 300px;
+    top: -2px;
+  }
+
+  .language-selector select {
+  padding: 3px;
+}
+
+  .custom-select {
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+
+  .icon-selector {
+    gap: 6px;
+  }
+
+  .icon-selector span {
+    font-size: 0.6em;
+  }
+
+  .menu-toggle {
+    font-size: 0.9em;
+    top: 0px;
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-sidebar.active {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-container {
+    width: 20%;
+  }
+
+  .logo {
+    max-height: 20px;
+  }
+
+  .language-selector {
+    right: 150px;
+    top: -2px;
+  }
+
+  .language-selector select {
+  padding: 3px;
+}
+
+  .custom-select {
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+
+  .icon-selector {
+    gap: 6px;
+  }
+
+  .icon-selector span {
+    font-size: 0.6em;
+  }
+
+  .menu-toggle {
+    font-size: 0.9em;
+    top: 0px;
+    display: block;
+  }
+
+}
+</style>

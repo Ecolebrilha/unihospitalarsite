@@ -4,17 +4,10 @@
     <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
   </div>
   <div class="footer-mensagem">
-    <p class="address">
-      Rua Alagoas, 253<br>
-      Ipsep, Recife - PE<br>
-      CNPJ: 07.484.373/0001-24
-    </p>
-    <p class="message">© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
+    <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
   </div>
-  <div class="footer-info">
-    <article class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </article>
+  <div class="footer-desenvolvedor">
+    <p>Desenvolvido por <a href="/unihospitalarsite/Inicio">Uni Hospitalar ®️</a></p>
   </div>
 </footer>
 </template>
@@ -24,3 +17,61 @@ export default {
   name: 'HomeFooter',
 };
 </script>
+
+<style>
+footer {
+  background-color: #EBEBEB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; 
+}
+
+.footer-logo {
+  flex: 1;
+}
+
+.footer-logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-mensagem {
+  flex: 2;
+  text-align: center;
+  color: rgb(97, 97, 97);
+  font-weight: 700;
+}
+
+.footer-desenvolvedor {
+    flex: 1;
+    color: rgba(97, 97, 97, 0.925);
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.footer-desenvolvedor a {
+    color: #AE2C2A;
+    font-weight: 900;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+.footer-desenvolvedor a:hover {
+    color: #FF5555;
+    text-decoration: underline;
+}
+
+@media (max-width: 1055px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-desenvolvedor {
+    text-align: center;
+    }
+}
+</style>
