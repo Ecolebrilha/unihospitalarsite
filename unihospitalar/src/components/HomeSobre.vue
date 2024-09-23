@@ -1,74 +1,6 @@
 <template>
   <div class="about">
-    <header>
-      <button @click="toggleSidebar" class="menu-toggle">☰</button>
-
-      <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
-        <button class="menu-close" @click="toggleSidebar">
-          ×
-        </button>
-        <ul>
-          <li><router-link to="/" exact-active-class="active"></router-link></li>
-          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
-          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
-          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
-          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
-          <li class="dropdown">
-            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
-              LGPD <i class="fas fa-chevron-down"></i>
-            </router-link>
-            <ul class="dropdown-content">
-              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
-            </ul>
-          </li>
-          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
-        </ul>
-      </div>
-
-      <a href="/unihospitalarsite/">
-        <div class="logo-container">
-          <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
-        </div>
-      </a>
-
-      <div class="language-selector">
-        <select @change="changeLanguage($event)" v-model="selectedLanguage" class="custom-select">
-          <option value="pt" data-icon="fi fi-br">Português</option>
-          <option value="en" data-icon="fi fi-us">English</option>
-          <option value="es" data-icon="fi fi-es">Español</option>
-        </select>
-
-        <div class="icon-selector">
-          <span @click="changeLanguage('pt')" class="fi fi-br" title="Português"></span>
-          <span @click="changeLanguage('en')" class="fi fi-us" title="English"></span>
-          <span @click="changeLanguage('es')" class="fi fi-es" title="Español"></span>
-        </div>
-      </div>
-
-      <nav>
-        <ul>
-          <li><router-link to="/" exact-active-class="active"></router-link></li>
-          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
-          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
-          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
-          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
-          <li class="dropdown">
-            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
-              LGPD <i class="fas fa-chevron-down"></i>
-            </router-link>
-            <ul class="dropdown-content">
-              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
-            </ul>
-          </li>
-          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
-        </ul>
-      </nav>
-    </header>
-
+    <HomeHeader />
     <div class="banner-container">
       <div class="banner-overlay">
         <h1>Sobre nós</h1>
@@ -128,29 +60,19 @@
       </div>
     </main>
 
-    <footer>
-  <div class="footer-logo">
-    <img src="@/assets/footerSelo.png" alt="Imagem Selo do footer">
-  </div>
-  <div class="footer-mensagem">
-    <p class="address">
-      Rua Alagoas, 253<br>
-      Ipsep, Recife - PE<br>
-      CNPJ: 07.484.373/0001-24
-    </p>
-    <p class="message">© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
-  </div>
-  <div class="footer-info">
-    <article class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.962986239422!2d-34.92510330000001!3d-8.105251299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef44fcc1ed1%3A0xfd7040da8c464f4a!2sR.+Alagoas%2C+253+-+Ipsep%2C+Recife+-+PE%2C+51350-560!5e0!3m2!1spt-BR!2sbr!4v1432556341952" width="100%" height="120" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </article>
-  </div>
-</footer>
+    <HomeFooter />
   </div>
 </template>
 
 <script>
-  export default {
+import HomeHeader from '@/components/HomeHeader.vue';
+import HomeFooter from '@/components/HomeFooter.vue';
+
+export default {
+  components: {
+    HomeHeader,
+    HomeFooter
+  },
   data() {
     return {
       selectedLanguage: 'pt',
