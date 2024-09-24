@@ -7,7 +7,7 @@
           ×
         </button>
         <ul>
-          <li><router-link to="/unihospitalarsite/Inicio" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/unihospitalarsite/" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
@@ -26,9 +26,9 @@
         </ul>
       </div>
   
-      <a href="/unihospitalarsite/Inicio">
+      <a href="/unihospitalarsite/">
         <div class="logo-container">
-          <img src="@/assets/logo-uni.jpeg" alt="Logo da Uni Hospitalar" class="logo">
+          <img src="@/assets/logo-uni.png" alt="Logo da Uni Hospitalar" class="logo">
         </div>
       </a>
   
@@ -48,7 +48,7 @@
   
       <nav>
         <ul>
-          <li><router-link to="/unihospitalarsite/Inicio" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/unihospitalarsite/" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
@@ -98,11 +98,10 @@
     window.addEventListener('scroll', this.handleScroll);
     this.scrollToTop();
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
 };
-
   </script>
 
   <style>
@@ -112,15 +111,20 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: transparent;
+  background-color: rgb(174, 44, 42);
   padding: 20px 0;
   box-sizing: border-box;
   font-size: 1.4em;
+  font-family: 'Open Sans', sans-serif;
   transition: background-color 0.3s ease-in-out;
 }
 
 header.scrolled {
-  background-color: rgba(174, 44, 42, 0.85);
+  background-color: rgb(161, 52, 51);
+}
+
+.menu-toggle.scrolled {
+  background-color: rgb(161, 52, 51);
 }
 
 .logo-container {
@@ -428,8 +432,18 @@ nav ul li.dropdown:hover .dropdown-content {
   }
 
   .language-selector {
-    right: 300px;
-    top: -2px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-80%, -50%);
+    width: 33.33%;
+    max-width: 100px;
+    height: auto;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .language-selector select {
@@ -471,11 +485,6 @@ nav ul li.dropdown:hover .dropdown-content {
 
   .logo {
     max-height: 20px;
-  }
-
-  .language-selector {
-    right: 150px;
-    top: -2px;
   }
 
   .language-selector select {

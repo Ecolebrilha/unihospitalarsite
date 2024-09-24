@@ -20,7 +20,7 @@ import NormasSetoriais from '@/components/NormasSetoriais.vue';
 
 const routes = [
   {
-    path: '/unihospitalarsite/Inicio',
+    path: '/unihospitalarsite/',
     name: 'HomePrincipal',
     component: HomePrincipal,
   },
@@ -113,7 +113,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     return { top: 0 };
   }
 });
