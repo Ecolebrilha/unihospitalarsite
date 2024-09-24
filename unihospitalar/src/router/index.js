@@ -70,6 +70,7 @@ const routes = [
     component: HomeContato,
   },
   {
+    path: '/.',
     name: 'ContatoFormulario',
     component: ContatoFormulario,
   },
