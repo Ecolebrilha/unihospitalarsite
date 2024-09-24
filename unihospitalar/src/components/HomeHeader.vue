@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header :class="{'scrolled': isScrolled}">
       <button @click="toggleSidebar" class="menu-toggle">☰</button>
   
       <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
@@ -71,36 +71,56 @@
   
   <script>
   export default {
-    name: 'HomeHeader',
-    data() {
-      return {
-        sidebarOpen: false,
-        selectedLanguage: 'pt'
-      };
+  name: 'HomeHeader',
+  data() {
+    return {
+      sidebarOpen: false,
+      selectedLanguage: 'pt',
+      isScrolled: false
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
     },
-    methods: {
-      toggleSidebar() {
-        this.sidebarOpen = !this.sidebarOpen;
-      },
-      changeLanguage(lang) {
-        this.selectedLanguage = lang;
-        this.$i18n.locale = lang;
-      }
+    changeLanguage(lang) {
+      this.selectedLanguage = lang;
+      this.$i18n.locale = lang;
+    },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0;
+    },
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+    this.scrollToTop();
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+};
+
   </script>
 
   <style>
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #AE2C2A;
-    padding: 20px 0;
-    box-sizing: border-box;
-    font-size: 1.4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  padding: 20px 0;
+  box-sizing: border-box;
+  font-size: 1.4em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+header.scrolled {
+  background-color: rgba(174, 44, 42, 0.85);
 }
 
 .logo-container {
