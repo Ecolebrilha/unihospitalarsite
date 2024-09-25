@@ -1,6 +1,6 @@
 <template>
     <header :class="{'scrolled': isScrolled}">
-      <button @click="toggleSidebar" class="menu-toggle">☰</button>
+      <button @click="toggleSidebar" :class="['menu-toggle', { 'scrolled': isScrolled }]">☰</button>
   
       <div :class="['menu-sidebar', { 'active': sidebarOpen }]">
         <button class="menu-close" @click="toggleSidebar">
@@ -116,6 +116,8 @@ header {
   box-sizing: border-box;
   font-size: 1.4em;
   font-family: 'Open Sans', sans-serif;
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -133,17 +135,18 @@ header.scrolled {
     left: 0;
     background-color: #FFFFFF;
     padding: 0;
-    width: 15%;
+    width: 20%;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
 }
 
 .logo {
-    max-height: 50px;
+    max-height: 100%;
     width: auto;
     display: block;
 }
@@ -221,6 +224,7 @@ nav ul li a {
     font-weight: bold;
     font-size: 0.8em;
     white-space: nowrap;
+    letter-spacing: 0.5px;
     padding-bottom: 5px;
     display: inline-block;
     transition: color 0.3s ease-in-out;
