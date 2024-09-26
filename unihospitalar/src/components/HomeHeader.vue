@@ -124,6 +124,7 @@ header {
 
 header.scrolled {
   background-color: rgb(161, 52, 51);
+  opacity: 0.7;
 }
 
 .menu-toggle.scrolled {

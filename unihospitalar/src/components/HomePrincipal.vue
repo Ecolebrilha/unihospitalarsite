@@ -1,5 +1,5 @@
-<!-- mudar a cor do header pra uma menos forte que combine com o banner, 
- -->
+<!-- Deixar o header em fade transparente e fazer com que SOMENTE o header fique transparente, enquanto o seletor de linguagens,
+o nav e a div da logo fiquem com a transparência normal.-->
 
 <template>
     <div class="home">
@@ -221,7 +221,7 @@ main {
     align-items: center;
     height: auto;
     overflow: hidden;
-    margin-top: -150px;
+    margin-top: -144px;
 }
 
 .header-image {
@@ -276,6 +276,18 @@ main {
     transform: scale(1.05);
 }
 
+@media (max-width: 1600px) {
+    .header-background {
+    margin-top: -145px;
+}
+}
+
+@media (max-width: 1390px) {
+    .header-background {
+    margin-top: -146px;
+}
+}
+
 @media (max-width: 1200px) {
     .header-content {
         right: 5%;
@@ -310,7 +322,7 @@ main {
 
 @media (max-width: 768px) {
     .header-background {
-      margin-top: -165px;
+      margin-top: -161px;
     }
     .header-content h2 {
         font-size: 1.3em;
@@ -485,7 +497,7 @@ main {
 
 @media (max-width: 576px) {
     .header-background {
-    margin-top: -165px;
+    margin-top: -161px;
   }
 
     .image-wrapper {
