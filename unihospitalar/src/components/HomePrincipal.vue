@@ -221,14 +221,14 @@ main {
     align-items: center;
     height: auto;
     overflow: hidden;
-    margin-top: -145px;
+    margin-top: -150px;
 }
 
 .header-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(60%);
 }
 
 .header-content {

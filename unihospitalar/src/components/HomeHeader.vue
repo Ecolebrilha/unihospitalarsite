@@ -7,7 +7,7 @@
           ×
         </button>
         <ul>
-          <li><router-link to="/unihospitalarsite/" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
@@ -48,7 +48,7 @@
   
       <nav>
         <ul>
-          <li><router-link to="/unihospitalarsite/" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
@@ -111,11 +111,12 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgb(174, 44, 42);
+  background-color: rgb(173, 64, 62);
   padding: 20px 0;
   box-sizing: border-box;
-  font-size: 1.4em;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Arial Rounded MT Bold,', sans-serif;
   font-smooth: always;
   text-rendering: optimizeLegibility;
   transition: background-color 0.3s ease-in-out;
@@ -220,9 +221,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #FFFFFF;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
     white-space: nowrap;
     letter-spacing: 0.5px;
     padding-bottom: 5px;
@@ -264,7 +263,7 @@ nav ul li.dropdown {
 nav ul li .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #AE2C2A;
+  background-color: rgb(161, 52, 51);
   top: 100%;
   right: 80%;
   transform: translateX(80%);
@@ -296,7 +295,7 @@ nav ul li.dropdown:hover .dropdown-content {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #AE2C2A;
+    background-color: rgb(173, 64, 62);
     color: #ffffff;
     border: none;
     padding: 10px;
@@ -310,7 +309,7 @@ nav ul li.dropdown:hover .dropdown-content {
     right: 0;
     width: 250px;
     height: 100%;
-    background-color: #AE2C2A;
+    background-color: rgb(173, 64, 62);
     color: #ffffff;
     overflow: auto;
     z-index: 1000;
@@ -334,6 +333,7 @@ nav ul li.dropdown:hover .dropdown-content {
     font-style: italic;
     font-weight: bold;
     font-size: 1em;
+    letter-spacing: 0.5px;
     display: block;
     padding: 10px;
     transition: color 0.3s ease-in-out;
@@ -359,6 +359,12 @@ nav ul li.dropdown:hover .dropdown-content {
     color: #848484;
 }
 
+@media (max-width: 1600px) {
+  nav ul li a {
+    font-size: 0.8em;
+  }
+}
+
 @media (max-width: 1390px) {
   .logo-container {
     width: 15%;
@@ -382,7 +388,7 @@ nav ul li.dropdown:hover .dropdown-content {
   }
 
   nav ul li a {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 }
 
@@ -397,11 +403,11 @@ nav ul li.dropdown:hover .dropdown-content {
   }
 
   nav ul li {
-    margin: 0 10px;
+    margin: 0 8px;
   }
 
   nav ul li a {
-    font-size: 0.5em;
+    font-size: 0.6em;
   }
 
   .language-selector {

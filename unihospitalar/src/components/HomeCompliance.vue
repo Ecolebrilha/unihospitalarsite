@@ -40,7 +40,7 @@
 
         <div class="compliance-section-left enter-right-animation">
           <h3><i class="fas fa-exclamation-triangle"></i> Instruções para Ações Corretivas</h3>
-          <p>Identificou alguma irregularidade? Veja como proceder e entre em contato com nosso departamento de compliance para orientação.</p>
+          <p>Identificou alguma irregularidade? Veja como proceder e entre em contato com nosso departamento para uma melhor orientação.</p>
           <router-link to="/unihospitalarsite/Contato"><button class="cta-button"><i class="fas fa-phone"></i> Entre em Contato</button></router-link>
         </div>
 
@@ -131,7 +131,7 @@ export default {
 .banner-container {
   position: relative;
   padding-top: 107px;
-  margin-top: -100px;
+  margin-top: -105px;
   display: flex;
   justify-content: center;
   background-color: #F9F9F9;

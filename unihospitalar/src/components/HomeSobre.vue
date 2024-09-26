@@ -105,7 +105,7 @@ export default {
 .banner-container {
   position: relative;
   padding-top: 107px;
-  margin-top: -100px;
+  margin-top: -105px;
   display: flex;
   justify-content: center;
   background-color: #FFFFFF;
