@@ -253,7 +253,7 @@ nav ul li a.router-link-active::after {
 }
 
 nav ul li a:hover {
-    color: #848484;
+    color: #999999;
 }
 
 nav ul li.dropdown {
