@@ -131,7 +131,7 @@ header * {
 }
 
 .menu-toggle.scrolled {
-  background-color: rgb(161, 52, 51);
+  background-color: transparent;
 }
 
 .logo-container {
@@ -267,7 +267,7 @@ nav ul li.dropdown {
 nav ul li .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgb(161, 52, 51);
+  background-color: rgb(173, 64, 62);
   top: 100%;
   right: 80%;
   transform: translateX(80%);

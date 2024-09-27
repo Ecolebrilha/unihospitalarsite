@@ -1,6 +1,3 @@
-<!-- Deixar o header em fade transparente e fazer com que SOMENTE o header fique transparente, enquanto o seletor de linguagens,
-o nav e a div da logo fiquem com a transparência normal.-->
-
 <template>
     <div class="home">
       <HomeHeader />
