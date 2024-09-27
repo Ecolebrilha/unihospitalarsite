@@ -123,8 +123,11 @@ header {
 }
 
 header.scrolled {
-  background-color: rgb(161, 52, 51);
-  opacity: 0.7;
+  background-color: rgba(161, 52, 51, 0.7);
+}
+
+header * {
+  background-color: transparent;
 }
 
 .menu-toggle.scrolled {
