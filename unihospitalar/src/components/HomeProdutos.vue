@@ -34,7 +34,7 @@
       </section>
     </main>
 
-    <a href="https://www.unihospitalar.com.br/site/uni-hospitalar-produtos.pdf">
+    <a href="@/assets/uni-hospitalar-produtos.pdf" target="_blank">
       <button class="btn-produtos">
         <i class="fas fa-download"></i> CLIQUE AQUI PARA BAIXAR NOSSA LINHA DE PRODUTOS
       </button>
