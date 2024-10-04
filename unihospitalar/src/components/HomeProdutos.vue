@@ -34,7 +34,7 @@
       </section>
     </main>
 
-    <a href="https://ecolebrilha.github.io/unihospitalar/@/assets/uni-hospitalar-produtos.pdf">
+    <a href="/site/uni-hospitalar-produtos.pdf" target="_blank">
       <button class="btn-produtos">
         <i class="fas fa-download"></i> CLIQUE AQUI PARA BAIXAR NOSSA LINHA DE PRODUTOS
       </button>
