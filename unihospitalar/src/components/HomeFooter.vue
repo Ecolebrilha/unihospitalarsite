@@ -7,7 +7,7 @@
   <p>© 2024 | Uni Hospitalar Ltda. – Todos os direitos reservados</p>
 </div>
 <div class="footer-desenvolvedor">
-  <p>Desenvolvido por <a href="unihospitalarsite/">Uni Hospitalar ®️</a></p>
+  <p>Desenvolvido por <a href="/unihospitalarsite/">Uni Hospitalar ®️</a></p>
 </div>
 </footer>
 </template>
