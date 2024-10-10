@@ -26,7 +26,7 @@
       </ul>
     </div>
 
-    <a href="/">
+    <a href="unihospitalarsite/">
       <div class="logo-container">
         <img src="@/assets/logo-uni.png" alt="Logo da Uni Hospitalar" class="logo">
       </div>
