@@ -20,52 +20,52 @@ import NormasSetoriais from '@/components/NormasSetoriais.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '',
     name: 'HomePrincipal',
     component: HomePrincipal,
   },
   {
-    path: '/unihospitalarsite/Diferenciais',
+    path: '/Diferenciais',
     name: 'HomeDiferenciais',
     component: HomeDiferenciais,
   },
   {
-    path: '/unihospitalarsite/Servicos',
+    path: '/Servicos',
     name: 'NossosServicos',
     component: NossosServicos,
   },
   {
-    path: '/unihospitalarsite/Produtos',
+    path: '/Produtos',
     name: 'HomeProdutos',
     component: HomeProdutos,
   },
   {
-    path: '/unihospitalarsite/Sobre',
+    path: '/Sobre',
     name: 'HomeSobre',
     component: HomeSobre,
   },
   {
-    path: '/unihospitalarsite/Compliance',
+    path: '/Compliance',
     name: 'HomeCompliance',
     component: HomeCompliance,
   },
   {
-    path: '/unihospitalarsite/LGPD',
+    path: '/LGPD',
     name: 'HomeLGPD',
     component: HomeLGPD,
   },
   {
-    path: '/unihospitalarsite/PoliticaPrivacidade',
+    path: '/PoliticaPrivacidade',
     name: 'PoliticaPrivacidade',
     component: PoliticaPrivacidade,
   },
   {
-    path: '/unihospitalarsite/TermosLegais',
+    path: '/TermosLegais',
     name: 'TermosLegais',
     component: TermosLegais,
   },
   {
-    path: '/unihospitalarsite/Contato',
+    path: '/Contato',
     name: 'HomeContato',
     component: HomeContato,
   },
@@ -75,37 +75,37 @@ const routes = [
     component: ContatoFormulario,
   },
   {
-    path: '/unihospitalarsite/Parceiros',
+    path: '/Parceiros',
     name: 'HomeParceiros',
     component: HomeParceiros,
   },
   {
-    path: '/unihospitalarsite/CondutaEtica',
+    path: '/CondutaEtica',
     name: 'CondutaEtica',
     component: CondutaEtica,
   },
   {
-    path: '/unihospitalarsite/ResponsabilidadeSocial',
+    path: '/ResponsabilidadeSocial',
     name: 'ResponsabilidadeSocial',
     component: ResponsabilidadeSocial,
   },
   {
-    path: '/unihospitalarsite/DireitosHumanos',
+    path: '/DireitosHumanos',
     name: 'DireitosHumanos',
     component: DireitosHumanos,
   },
   {
-    path: '/unihospitalarsite/SegurancaDados',
+    path: '/SegurancaDados',
     name: 'SegurancaDados',
     component: SegurancaDados,
   },
   {
-    path: '/unihospitalarsite/PraticasAntissuborno',
+    path: '/PraticasAntissuborno',
     name: 'PraticasAntissuborno',
     component: PraticasAntissuborno,
   },
   {
-    path: '/unihospitalarsite/NormasSetoriais',
+    path: '/NormasSetoriais',
     name: 'NormasSetoriais',
     component: NormasSetoriais,
   },

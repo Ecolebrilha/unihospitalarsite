@@ -52,8 +52,8 @@
                 armazenamos e protegemos suas informações.
               </p>
               <div class="lgpd-buttons">
-                <router-link to="/unihospitalarsite/PoliticaPrivacidade"><button>Política de Privacidade</button></router-link>
-                <router-link to="/unihospitalarsite/TermosLegais"><button>Termos Legais de Uso</button></router-link>
+                <router-link to="/PoliticaPrivacidade"><button>Política de Privacidade</button></router-link>
+                <router-link to="/TermosLegais"><button>Termos Legais de Uso</button></router-link>
               </div>
             </div>
           </section>
@@ -66,7 +66,7 @@
                 informações, entre em contato conosco. Estamos à disposição para
                 esclarecer qualquer questão.
               </p>
-              <router-link to="/unihospitalarsite/Contato"><button class="contact-btn">FALE CONOSCO</button></router-link>
+              <router-link to="/Contato"><button class="contact-btn">FALE CONOSCO</button></router-link>
             </div>
           </section>
         </div>

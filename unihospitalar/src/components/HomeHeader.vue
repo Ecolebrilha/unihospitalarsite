@@ -7,26 +7,26 @@
           ×
         </button>
         <ul>
-          <li><router-link to="/" exact-active-class="active">Início</router-link></li>
-          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
-          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
-          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
-          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li><router-link to="" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
-            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
+            <router-link to="/LGPD" exact-active-class="active">
               LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
             <ul class="dropdown-content">
-              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
           </li>
-          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
+          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </div>
   
-      <a href="/unihospitalarsite/">
+      <a href="">
         <div class="logo-container">
           <img src="@/assets/logo-uni.png" alt="Logo da Uni Hospitalar" class="logo">
         </div>
@@ -48,22 +48,22 @@
   
       <nav>
         <ul>
-          <li><router-link to="/" exact-active-class="active">Início</router-link></li>
-          <li><router-link to="/unihospitalarsite/Sobre" exact-active-class="active">Sobre</router-link></li>
-          <li><router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-          <li><router-link to="/unihospitalarsite/Servicos" exact-active-class="active">Serviços</router-link></li>
-          <li><router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Produtos</router-link></li>
-          <li><router-link to="/unihospitalarsite/Compliance" exact-active-class="active">Compliance</router-link></li>
+          <li><router-link to="" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
+          <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
+          <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
+          <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
+          <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
           <li class="dropdown">
-            <router-link to="/unihospitalarsite/LGPD" exact-active-class="active">
+            <router-link to="/LGPD" exact-active-class="active">
               LGPD <i class="fas fa-chevron-down"></i>
             </router-link>
             <ul class="dropdown-content">
-              <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-              <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+              <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
+              <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
             </ul>
           </li>
-          <li><router-link to="/unihospitalarsite/Contato" exact-active-class="active">Contato</router-link></li>
+          <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
         </ul>
       </nav>
     </header>

@@ -22,9 +22,9 @@
           <h3><i class="fas fa-book"></i> Código de Conduta</h3>
           <p>Nosso Código de Conduta é um guia para todos os colaboradores, parceiros e fornecedores, assegurando um comportamento ético em todas as nossas atividades.</p>
           <ul>
-            <li><router-link to="/unihospitalarsite/CondutaEtica" exact-active-class="active"><i class="fas fa-check"></i> Conduta Ética e Integridade</router-link></li>
-            <li><router-link to="/unihospitalarsite/ResponsabilidadeSocial" exact-active-class="active"><i class="fas fa-globe"></i> Responsabilidade Social e Sustentabilidade</router-link></li>
-            <li><router-link to="/unihospitalarsite/DireitosHumanos" exact-active-class="active"><i class="fas fa-hands-helping"></i> Respeito aos Direitos Humanos</router-link></li>
+            <li><router-link to="/CondutaEtica" exact-active-class="active"><i class="fas fa-check"></i> Conduta Ética e Integridade</router-link></li>
+            <li><router-link to="/ResponsabilidadeSocial" exact-active-class="active"><i class="fas fa-globe"></i> Responsabilidade Social e Sustentabilidade</router-link></li>
+            <li><router-link to="/DireitosHumanos" exact-active-class="active"><i class="fas fa-hands-helping"></i> Respeito aos Direitos Humanos</router-link></li>
           </ul>
         </div>
 
@@ -32,24 +32,24 @@
           <h3><i class="fas fa-file-alt"></i> Políticas e Regulamentos</h3>
           <p>Acesse nossas políticas que reforçam o compromisso com a conformidade e a ética.</p>
           <ul>
-            <li><router-link to="/unihospitalarsite/SegurancaDados" exact-active-class="active"><i class="fas fa-lock"></i> Política de Segurança de Dados</router-link></li>
-            <li><router-link to="/unihospitalarsite/PraticasAntissuborno" exact-active-class="active"><i class="fas fa-ban"></i> Práticas Antissuborno</router-link></li>
-            <li><router-link to="/unihospitalarsite/NormasSetoriais" exact-active-class="active"><i class="fas fa-gavel"></i> Conformidade com Normas Setoriais</router-link></li>
+            <li><router-link to="/SegurancaDados" exact-active-class="active"><i class="fas fa-lock"></i> Política de Segurança de Dados</router-link></li>
+            <li><router-link to="/PraticasAntissuborno" exact-active-class="active"><i class="fas fa-ban"></i> Práticas Antissuborno</router-link></li>
+            <li><router-link to="/NormasSetoriais" exact-active-class="active"><i class="fas fa-gavel"></i> Conformidade com Normas Setoriais</router-link></li>
           </ul>
         </div>
 
         <div class="compliance-section-left enter-right-animation">
           <h3><i class="fas fa-exclamation-triangle"></i> Instruções para Ações Corretivas</h3>
           <p>Identificou alguma irregularidade? Veja como proceder e entre em contato com nosso departamento para uma melhor orientação.</p>
-          <router-link to="/unihospitalarsite/Contato"><button class="cta-button"><i class="fas fa-phone"></i> Entre em Contato</button></router-link>
+          <router-link to="/Contato"><button class="cta-button"><i class="fas fa-phone"></i> Entre em Contato</button></router-link>
         </div>
 
         <div class="compliance-section-right enter-left-animation">
           <h3><i class="fas fa-link"></i> Links para Documentos Legais</h3>
           <p>Acesse documentos completos como políticas de privacidade, termos de uso, entre outros.</p>
           <ul>
-            <li><router-link to="/unihospitalarsite/PoliticaPrivacidade" exact-active-class="active"><i class="fas fa-user-shield"></i> Política de Privacidade</router-link></li>
-            <li><router-link to="/unihospitalarsite/TermosLegais" exact-active-class="active"><i class="fas fa-file-contract"></i> Termos Legais de Uso</router-link></li>
+            <li><router-link to="/PoliticaPrivacidade" exact-active-class="active"><i class="fas fa-user-shield"></i> Política de Privacidade</router-link></li>
+            <li><router-link to="/TermosLegais" exact-active-class="active"><i class="fas fa-file-contract"></i> Termos Legais de Uso</router-link></li>
           </ul>
         </div>
       </section>

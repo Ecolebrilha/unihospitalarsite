@@ -18,42 +18,42 @@
                 <img src="@/assets/estoque.jpg" alt="Bloco 1">
                 <h3>ESTOQUE</h3>
             </div>
-            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
+            <p>Nossa área de armazenamento segue rigorosamente as normas exigidas pela Anvisa. <router-link to="/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/diferenciais.jpg" alt="Bloco 2">
                 <h3>DIFERENCIAIS</h3>
             </div>
-            <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
+            <p>Profissionais preparados e alinhados com a cultura da empresa, somado à linha de produtos e logística. <router-link to="/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/logistica.jpg" alt="Bloco 3">
                 <h3>LOGÍSTICA</h3>
             </div>
-            <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <br> <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
+            <p>Entregas para o Norte e Nordeste em até 48 horas com toda segurança e garantia. <br> <router-link to="/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/unidade-de-negocios.jpg" alt="Bloco 4">
                 <h3>UNIDADE DE NEGÓCIOS</h3>
             </div>
-            <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
+            <p>Estamos abrindo uma nova unidade em Fortaleza, na busca pelo melhor atendimento e prestação de serviço. <router-link to="/Diferenciais" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/principais-clientes.jpg" alt="Bloco 5">
                 <h3>PRINCIPAIS CLIENTES</h3>
             </div>
-            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <router-link to="/unihospitalarsite/Parceiros" exact-active-class="active">Saiba mais.</router-link></p>
+            <p>Buscando melhor atender as demandas do mercado farmacêutico, atendemos a indústrias e hospitais, públicos e privados e clínicas particulares. <router-link to="/Parceiros" exact-active-class="active">Saiba mais.</router-link></p>
         </div>
         <div class="block">
             <div class="image-wrapper">
                 <img src="@/assets/principais-produtos.jpg" alt="Bloco 6">
                 <h3>PRINCIPAIS PRODUTOS</h3>
             </div>
-            <p>Foco na distribuição e padronização de medicamentos hospitalares, oncológicos e excepcionais, trabalhando em nichos específicos. <router-link to="/unihospitalarsite/Produtos" exact-active-class="active">Saiba mais.</router-link></p>       
+            <p>Foco na distribuição e padronização de medicamentos hospitalares, oncológicos e excepcionais, trabalhando em nichos específicos. <router-link to="/Produtos" exact-active-class="active">Saiba mais.</router-link></p>       
         </div>                 
     </div>
 </section>
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </section>
-        <router-link to="/unihospitalarsite/Parceiros" exact-active-class="active"><button class="partners-button">ver todos os parceiros</button></router-link>
+        <router-link to="/Parceiros" exact-active-class="active"><button class="partners-button">ver todos os parceiros</button></router-link>
         </main>
         <HomeFooter />
   </div>
