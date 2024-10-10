@@ -913,22 +913,21 @@ footer {
                 ×
               </button>
               <ul>
-                <li><router-link to="/public/index.html" exact-active-class="active">Início</router-link></li>
-                <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-                <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-                <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
-                <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-                <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+                <li href="/public/index.html" exact-active-class="active">Início</li>
+                <li href="/Sobre" exact-active-class="active">Sobre</li>
+                <li href="/Diferenciais" exact-active-class="active">Diferenciais</li>
+                <li href="/Servicos" exact-active-class="active">Serviços</li>
+                <li href="/Produtos" exact-active-class="active">Produtos</li>
+                <li href="/Compliance" exact-active-class="active">Compliance</li>
                 <li class="dropdown">
-                  <router-link to="/LGPD" exact-active-class="active">
+                  <li href="/LGPD" exact-active-class="active">
                     LGPD <i class="fas fa-chevron-down"></i>
-                  </router-link>
                   <ul class="dropdown-content">
-                    <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-                    <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+                    <li href="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</li>
+                    <li href="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</li>
                   </ul>
                 </li>
-                <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+                <li href="/Contato" exact-active-class="active">Contato</li>
               </ul>
             </div>
         
@@ -954,22 +953,21 @@ footer {
         
             <nav>
               <ul>
-                <li><router-link to="/public/index.html" exact-active-class="active">Início</router-link></li>
-                <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
-                <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
-                <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
-                <li><router-link to="/Produtos" exact-active-class="active">Produtos</router-link></li>
-                <li><router-link to="/Compliance" exact-active-class="active">Compliance</router-link></li>
+                <li href="/public/index.html" exact-active-class="active">Início</li>
+                <li href="/Sobre" exact-active-class="active">Sobre</li>
+                <li href="/Diferenciais" exact-active-class="active">Diferenciais</li>
+                <li href="/Servicos" exact-active-class="active">Serviços</li>
+                <li href="/Produtos" exact-active-class="active">Produtos</li>
+                <li href="/Compliance" exact-active-class="active">Compliance</li>
                 <li class="dropdown">
-                  <router-link to="/LGPD" exact-active-class="active">
+                  <li href="/LGPD" exact-active-class="active">
                     LGPD <i class="fas fa-chevron-down"></i>
-                  </router-link>
                   <ul class="dropdown-content">
-                    <li><router-link to="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</router-link></li>
-                    <li><router-link to="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</router-link></li>
+                    <li href="/PoliticaPrivacidade" exact-active-class="active">Política de Privacidade</li>
+                    <li href="/TermosLegais" exact-active-class="active">Termos Legais de Uso do site</li>
                   </ul>
                 </li>
-                <li><router-link to="/Contato" exact-active-class="active">Contato</router-link></li>
+                <li href="/Contato" exact-active-class="active">Contato</li>
               </ul>
             </nav>
           </header>
@@ -1132,14 +1130,9 @@ footer {
     </div>
   
   <script>
-  import HomeHeader from '@/components/HomeHeader.vue';
-  import HomeFooter from '@/components/HomeFooter.vue';
   
   export default {
-    components: {
-      HomeHeader,
-      HomeFooter
-    },
+  
     data() {
       return {
         selectedLanguage: 'pt',
