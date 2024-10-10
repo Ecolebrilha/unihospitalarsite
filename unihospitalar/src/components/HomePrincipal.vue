@@ -7,7 +7,7 @@
           <div class="header-content">
           <h2 class="banner-h2">Respeito às relações humanas</h2>
           <p class="banner-p">O nosso foco está na distribuição <br> de medicamentos hospitalares, <br> oncológicos e excepcionais.</p>
-          <router-link to="/unihospitalarsite/Diferenciais" exact-active-class="active"><button class="banner-btn">CONHEÇA NOSSOS DIFERENCIAIS</button></router-link>
+          <router-link to="/Diferenciais" exact-active-class="active"><button class="banner-btn">CONHEÇA NOSSOS DIFERENCIAIS</button></router-link>
           </div>
         </div>
 

@@ -7,7 +7,7 @@
           ×
         </button>
         <ul>
-          <li><router-link to="" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/public/index.html" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
@@ -26,7 +26,7 @@
         </ul>
       </div>
   
-      <a href="">
+      <a href="/public/index.html">
         <div class="logo-container">
           <img src="@/assets/logo-uni.png" alt="Logo da Uni Hospitalar" class="logo">
         </div>
@@ -48,7 +48,7 @@
   
       <nav>
         <ul>
-          <li><router-link to="" exact-active-class="active">Início</router-link></li>
+          <li><router-link to="/public/index.html" exact-active-class="active">Início</router-link></li>
           <li><router-link to="/Sobre" exact-active-class="active">Sobre</router-link></li>
           <li><router-link to="/Diferenciais" exact-active-class="active">Diferenciais</router-link></li>
           <li><router-link to="/Servicos" exact-active-class="active">Serviços</router-link></li>
